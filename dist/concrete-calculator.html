@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Concrete Calculator — Cubic Yards, Bags & Volume (2026) | PourCost</title>
+<meta name="description" content="Free concrete calculator for slabs, footings, columns, walls and stairs. Cubic yards, cubic feet, and 40/50/60/80 lb bag counts with a waste allowance. Metric and imperial.">
+<link rel="canonical" href="https://pourcost.com/concrete-calculator.html">
+<meta name="theme-color" content="#14181d">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="PourCost">
+<meta property="og:title" content="Concrete Calculator — Cubic Yards, Bags & Volume (2026)">
+<meta property="og:description" content="Free concrete calculator for slabs, L-shapes, and round pads. Convert dimensions to cubic yards, cubic feet, and 40/60/80 lb bag counts with a waste allowance.">
+<meta property="og:url" content="https://pourcost.com/concrete-calculator.html">
+<meta property="og:image" content="https://pourcost.com/assets/img/og-home.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="/assets/css/site.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "url": "https://pourcost.com/concrete-calculator",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any",
+  "browserRequirements": "Requires JavaScript",
+  "description": "Free concrete calculator for slabs, L-shapes, and round pads. Convert dimensions to cubic yards, cubic feet, and 40/60/80 lb bag counts with a waste allowance.",
+  "isAccessibleForFree": true,
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "PourCost",
+    "url": "https://pourcost.com"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://pourcost.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Concrete Calculator",
+      "item": "https://pourcost.com/concrete-calculator.html"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much does a concrete slab cost per square foot?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A standard residential concrete slab runs $6 to $12 per square foot installed in 2026, with most projects landing near $8 per square foot. That figure includes ready-mix concrete, delivery, a compacted gravel base, forms, reinforcement, placing and finishing labor, control joints, and curing compound — but not major excavation, permits, or decorative finishes.\n\nThe cost per square foot breaks down roughly like this:\n\nConcrete material: $2–$3.30 per sq ft\nLabor (pour and finish): $3–$8 per sq ft — usually the single biggest line\nSite prep and forms: $1–$2.50 per sq ft\nReinforcement: $0.20–$2.00 per sq ft\nCuring and sealer: $0.25–$1.00 per sq ft\n\nSmall slabs cost more per square foot than large ones because the truck delivery, crew minimum, and forms are fixed costs spread over less area. A 10 x 10 pad typically runs $8.50–$15.00 per sq ft, while a 40 x 60 driveway lands closer to $6.50–$12.50 per sq ft. Decorative work — stamped, colored, or exposed aggregate — adds $3 to $10 per sq ft on top.\n\nOne important caveat about scope. Published per-square-foot figures disagree by nearly 40%, and the reason is that they measure different things. A quote at $6 per sq ft is often scoped to exclude delivery fees, control joints, curing compound, and site prep — real costs that a complete project pays. Price the same scope before comparing two bids; a lower number is not a better deal if it is missing items."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does it cost to pour a concrete slab?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pouring a concrete slab costs $4 to $14 per square foot installed, depending on thickness, reinforcement, finish, and how much site work the ground needs. A plain broom-finished 4-inch slab on a flat, accessible site sits at the low end; a thick, reinforced slab on ground that needs grading and fill sits at the high end.\n\nRealistic totals for common sizes at $6–$12 per sq ft:\n\n10 x 10 pad (100 sq ft): $600–$1,200\n12 x 12 pad (144 sq ft): $864–$1,730\n20 x 20 slab (400 sq ft): $2,400–$4,800\n24 x 24 garage pad (576 sq ft): $3,500–$9,000\n30 x 30 slab (900 sq ft): $3,600–$7,200\n\nA useful shortcut: the concrete itself is only about 25% of an installed slab. Labor is usually 45–55%. That is why a slab quoted at $4 per square foot for materials alone is not out of line — it simply excludes the crew."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many bags of concrete do I need?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Divide the pour's volume in cubic feet by the finished yield of one bag, then round up. Standard yields are 0.30 ft³ for a 40 lb bag, 0.45 ft³ for a 60 lb bag, and 0.60 ft³ for an 80 lb bag.\n\nBags = ceil( volume in ft³ x (1 + waste%) / yield per bag )\n\nOne cubic yard of concrete equals about 90 bags of 40 lb, 60 bags of 60 lb, or 45 bags of 80 lb mix.\n\nWorked example — a 10 x 10 ft slab at 4 inches thick:\nVolume = 10 x 10 x (4 ÷ 12) = 33.3 ft³ = 1.23 yd³\nWith 10% waste: 36.7 ft³\n80 lb bags: ceil(36.7 ÷ 0.60) = 62 bags\n60 lb bags: ceil(36.7 ÷ 0.45) = 82 bags\n\nBagged mix stops making sense above roughly 1 cubic yard. Past about 45 bags of 80 lb mix, hauling, mixing, and pouring by hand costs more in time and labor than a ready-mix truck — and cold joints between batches are far more likely."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many yards of concrete do I need?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Multiply length by width by thickness in feet, then divide by 27. There are 27 cubic feet in a cubic yard.\n\nCubic yards = (Length ft x Width ft x Thickness in ÷ 12) ÷ 27\nShortcut: Cubic yards = (sq ft x thickness in) ÷ 324\n\nFor a 20 x 20 ft slab at 4 inches: (400 x 4) ÷ 324 = 4.94 cubic yards. Add 5–10% for waste and order about 5.5 yards.\n\nAs a rule of thumb, one cubic yard covers about 81 sq ft at 4 inches, 65 sq ft at 5 inches, 54 sq ft at 6 inches, and 41 sq ft at 8 inches. A standard ready-mix truck carries about 10 cubic yards."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How thick should a concrete slab be?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Spec it by load, not by rule of thumb:\n\n3.5–4 in — walkways, garden paths, patios, shed and AC pads (foot traffic only)\n4 in — the standard residential minimum; patios and light floors\n5 in — residential driveways and garage floors carrying passenger cars or half-ton pickups\n6 in — driveways taking trucks and RVs, heavy equipment pads, and commercial slabs\n8 in — post-tensioned, heavily loaded, or industrial slabs\n\nFor code: the International Residential Code (R506.1) sets a 3.5-inch minimum for slab-on-grade floors in habitable space, and most jurisdictions amend that to 4 inches. The IRC does not regulate exterior patios and walkways, though local codes often do govern driveways — published driveway standards run from 4 to 7 inches depending on the municipality.\n\nACI 330R-08 puts it plainly: \"As a practical matter, there is no benefit in building slabs less than 4 in. (100 mm) thick.\" Thickness is the cheapest structural upgrade available — bending capacity scales with the square of thickness, so 4 in to 6 in is 50% more concrete but roughly 2.25x the bending resistance."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What PSI concrete do I need for a slab?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Match the strength to the exposure and the load:\n\n3,000 PSI — interior slabs, basement floors, and shop floors that never see salt or freezing\n3,500 PSI — standard patios, sidewalks, and exterior residential work\n4,000 PSI — driveways, garage floors, and any exterior slab in a freeze-thaw climate, specified with 5–7% air entrainment\n4,500–5,000 PSI — heavy vehicle pads, warehouse slabs, and structural work per ACI 318\n\nACI 332 requires 4,000 PSI with air entrainment for exterior residential slabs in freeze-thaw zones. Each 500 PSI step up adds roughly $4–$10 per cubic yard, which is cheap insurance against scaling and spalling. In freeze-thaw climates, air entrainment matters more than an extra inch of thickness — 3,000 PSI slabs without air can scale badly within 5 to 10 years."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I calculate the amount of concrete I need?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Multiply the three dimensions of the pour together, then convert to the unit you will buy in.\n\nCubic feet = Length (ft) x Width (ft) x Thickness (ft)\nCubic yards = Cubic feet ÷ 27\nCubic yards = (sq ft x thickness in) ÷ 324\n\nThe 324 shortcut combines the 12-inch-to-foot conversion and the 27 cubic feet in a cubic yard into one step. For a 20 x 20 ft slab at 4 inches: (400 x 4) ÷ 324 = 4.94 cubic yards.\n\nThen add 5 to 10% for waste — spillage, uneven subgrade, over-excavation, and the mix left in the chute. NRMCA recommends ordering at least 4 to 10% more than the plan volume. Round up to the next quarter yard.\n\nFor shapes other than a rectangle, split the pour into rectangles and add the results."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many cubic feet is a 50 lb bag of concrete?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A 50 lb bag of premixed concrete yields about 0.375 cubic feet — roughly 72 bags per cubic yard.\n\nFull yield table for standard premix bag sizes:\n\n40 lb — 0.30 ft³ per bag · 90 bags per yd³\n50 lb — 0.375 ft³ per bag · 72 bags per yd³\n60 lb — 0.45 ft³ per bag · 60 bags per yd³\n80 lb — 0.60 ft³ per bag · 45 bags per yd³\n\nThe largest bag is always the best value per cubic foot — an 80 lb bag gives you 0.60 ft³ of concrete for fewer trips than two 40 lb bags, and it is the size most hardware stores stock in pallet quantity.\n\nCheck the yield on your actual bag. These are the standard published yields, but some brands and fast-setting mixes yield less. The spec sheet on the bag is authoritative."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I order concrete by the yard from a ready mix company or just use bags?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use bags below about 1 cubic yard — roughly 45 bags of 80 lb mix. Use ready-mix above that.\n\nThe practical differences:\n\nCost per cubic yard is nearly identical. A yard of ready-mix at $155 runs about $155; the same yard in 80 lb bags at $6.50 runs about $292. But bags avoid the delivery trip fee and the short-load surcharge that make a small ready-mix order expensive.\nTime is the real difference. One cubic yard of finished concrete weighs 4,050 lb. Hand-mixing it is a full day for two people plus a mixer rental. A ready-mix pour is about an hour.\nCold joints. Hand-mixed pours that take more than a couple of hours often show visible joints where the water content changed between batches.\nConsistency. Every yard off a truck has the same water-to-cement ratio. Every hand-mixed batch is a guess.\n\nThe exception is a small pour in a backyard the truck cannot reach. If delivery means a pump truck or a long wheelbarrow haul, bags can still win on total cost even past a cubic yard."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the difference between an online calculator and a physical construction calculator?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A physical construction calculator (the circular disc-and-window type you hang on a belt) does arithmetic fast — it multiplies, divides, and runs trig in your head. It does not know anything about concrete.\n\nAn online concrete calculator carries the domain knowledge instead:\n\nIt knows that one cubic yard is 27 cubic feet, and that an 80 lb bag yields 0.60 ft³\nIt knows the 324 shortcut, the 81 sq ft coverage rule, and the standard waste allowance\nIt knows the thickness, PSI, reinforcement, and joint-spacing conventions\nIt carries current regional pricing and can compare ready-mix against bagged mix\n\nThey are complementary rather than competing. The physical calculator is still faster for mental arithmetic on site — \"what is 400 times 4 over 324?\" — and the online tool is what tells you which numbers to multiply and what the answer means for your order."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much concrete do I need for a footing or a column?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The formula is the same, only the shape changes.\n\nStrip footing (a long narrow pour):\nVolume = length x width x depth\n\nA 10 ft x 2 ft footing at 12 inches deep is 20 cu ft — about 0.74 cubic yards.\n\nRound column or sonotube:\nVolume = pi x radius² x height\n\nA 12 inch diameter column at 4 feet tall is 3.14 x 1 x 4 = 12.6 cu ft — about 0.46 cubic yards.\n\nTwo things people forget on columns: add half an inch per side if you are setting the tube in place rather than pouring against a form, and remember a column's weight is what determines the base and footing size — a 12 inch column weighs about 300 lb per foot of height.\n\nThe calculator on this page handles footings, columns, walls, and stairs directly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What size bag of concrete should I buy?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Match the bag to the volume of the job, and match the strength to the job.\n\n40 lb — 0.30 ft³ yield. Best for small patches and footings.\n50 lb — 0.375 ft³ yield. A middle option when 60 and 80 lb are too heavy to handle.\n60 lb — 0.45 ft³ yield. A good middle option for DIY work.\n80 lb — 0.60 ft³ yield. The most common size; heaviest to handle, best value per bag.\n\nFor strength, choose 3,000 PSI for interior or sheltered work, 3,500 PSI for standard exterior residential, and 4,000 PSI with air entrainment for driveways, garage floors, and freeze-thaw climates.\n\nDo not mix bag sizes within one pour. Different mixes and different water contents will show up as visible color and strength differences in the finished surface."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I calculate concrete for a non-rectangular shape?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Break the shape into rectangles, calculate each one, then add the volumes together. It is the same arithmetic every time.\n\nL-shaped slab — split it into a full-length rectangle plus a second rectangle covering the notch:\nPart A = length x width\nPart B = (length − cutout length) x cutout width\nTotal area = A + B\n\nCircular pad — area = π x (diameter ÷ 2)²\n\nFooting — length x width x depth, and do not forget to add the depth of the footing that sits below the grade line.\n\nColumns — π x radius² x height. Add a 1/2 inch allowance per side for the forms.\n\nWalls — length x thickness x height.\n\nStairs — width x (run ÷ 2 x rise) for the solid flight, plus the landing block.\n\nThe calculator on this page handles all of these directly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I convert between cubic feet, cubic yards, and bags?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Three conversions cover almost everything:\n\n1 cubic yard = 27 cubic feet\n1 cubic yard = 90 bags of 40 lb, 72 of 50 lb, 60 of 60 lb, or 45 of 80 lb\n1 cubic yard covers 324 ÷ thickness(inches) square feet\n\nSo 1 cubic yard spreads over 81 sq ft at 4 inches, 65 sq ft at 5 inches, 54 sq ft at 6 inches, and 41 sq ft at 8 inches.\n\nTo convert bag counts to weight, multiply bags by bag size — 45 bags of 80 lb is 3,600 lb, which is the weight of one cubic yard of normal-weight concrete. Around 150 lb per cubic foot is the standard density for structural concrete; lightweight mixes run 90–120 lb per cubic foot, and you must check the bag's published yield for anything non-standard."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the standard thickness of concrete?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "There is no single standard, because thickness follows load. The residential standard is 4 inches, and it covers most work:\n\n3.5–4 in — walkways, garden paths, and light pads\n4 in — patios, shed pads, AC pads, and residential floors (the common standard)\n5 in — driveways and garage floors taking passenger cars\n6 in — heavy vehicle driveways, RV and boat pads, commercial slabs\n8 in — post-tensioned, heavily loaded, or industrial slabs\n\nTwo anchors on this. The IRC (R506.1) sets a 3.5-inch minimum for slab-on-grade floors in habitable space, and most jurisdictions amend that to 4 inches. And ACI 330R-08 puts it bluntly: \"As a practical matter, there is no benefit in building slabs less than 4 in. (100 mm) thick.\"\n\nThickness is the cheapest structural upgrade available — bending capacity scales with the square of thickness, so going from 4 to 6 inches is 50% more concrete but roughly 2.25× the bending resistance."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many cubic yards of concrete do I need?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Divide the plan area by the coverage rate for your slab thickness. One cubic yard of concrete covers:\n\n81 sq ft at 4 inches thick\n\n65 sq ft at 5 inches\n\n54 sq ft at 6 inches\n\n41 sq ft at 8 inches\n\nSo a 400 sq ft slab at 4 inches needs 400 ÷ 81 = 4.94 cubic yards. The same calculation in one step, using thickness in inches, is:\n\nCubic yards = (square feet × thickness in inches) ÷ 324\n\nThen add 5 to 10% for waste — spillage, uneven subgrade and the mix left in the chute — and round up to the next quarter yard. A 400 sq ft slab at 4 inches comes to 5.43 cubic yards ordered. Ready-mix plants sell in quarter-yard and half-yard increments, so ask for 5.5."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I calculate concrete in metric units?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Switch the calculator to metric and it handles the conversion for you, but the underlying shortcut is worth knowing.\n\nCubic metres = length (m) × width (m) × thickness (m)\nCubic yards = cubic metres × 1.308\n\nOne cubic metre of concrete covers 13.1 square metres at 10 cm thick, 10.5 m² at 12.5 cm and 8.7 m² at 15 cm.\n\nFor example, a 6.1 m × 6.1 m slab at 10 cm: 6.1 × 6.1 × 0.10 = 3.72 m³, which is 4.87 cubic yards — the same answer the imperial inputs give.\n\nBag counts work the same way. One cubic metre needs 54 bags of 80 lb mix, 62 bags of 60 lb, 75 bags of 50 lb, or 90 bags of 40 lb. Metric and imperial are the same pour — only the labels change."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much concrete do I need for a triangular slab?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A triangle's plan area is simply base × height ÷ 2, then multiply by thickness for volume.\n\nArea (sq ft) = base (ft) × height (ft) ÷ 2\nVolume (cu ft) = area × thickness (ft)\n\nA triangular pad with a 20 ft base and a 12 ft height gives 20 × 12 ÷ 2 = 120 sq ft of plan area. At 4 inches thick that is 120 × 0.333 = 40 cu ft, or 1.48 cubic yards — about 73 bags of 80 lb mix with waste.\n\nThe perimeter differs by triangle type. A symmetric triangle with the apex centred over the base needs 20 + 2 × √(10² + 12²) = 48.3 ft of edge. A right triangle with the 90° corner at one end needs 20 + 12 + √(20² + 12²) = 52.4 ft. That edge length drives your formwork cost.\n\nThe calculator has a Triangle mode with both options, and a Custom mode if the triangle is only part of the pour."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I calculate concrete for several separate areas on one site?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Calculate each area separately and add the volumes together. Every shape has its own formula, but the arithmetic after that is simple addition.\n\nA common case: a 20 x 20 ft garage pad plus a 10 x 10 ft stoop. The garage is 400 sq ft and the stoop is 100 sq ft, so 500 sq ft total. At 4 inches that is 500 × 0.333 = 166.7 cu ft = 6.17 cubic yards before waste, or 6.79 with a 10% allowance.\n\nThe Custom mode in this calculator does exactly this. Add a rectangle, a round pad and a triangle, enter each one's dimensions, and the area, volume and total edge length are summed live. Shared edges between two areas are counted twice in the edge length, because each area still needs its own form unless the two are cast in a single continuous pour.\n\nOne caution: separate pours on the same site should still be tied together with rebar or a construction joint, and each pour needs its own control joints."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much gravel do I need under a concrete slab?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A 4-inch compacted crushed stone base is the standard under a residential slab, and the volume follows the same shortcut as the concrete.\n\nGravel (yd³) = (square feet × base depth in inches) ÷ 324\n\nFor a 400 sq ft slab at 4 inches: (400 × 4) ÷ 324 = 1.48 cubic yards. At 6 inches it becomes 2.22 cubic yards. Round up and order roughly half a yard extra — the base gets raked and compacted, and material is lost at the edges.\n\nTwo things to get right. First, the gravel must be compacted — a plate compactor or a rented roller, in two or three passes. Concrete poured over loose fill will crack, and no amount of rebar fixes a settling sub-base. Second, the base is what lets water drain out; the vapor barrier goes on top of the compacted base, then the rebar, then the concrete.\n\nThe calculator's Gravel base tile updates the volume whenever you change the base depth."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much waste should I add to my concrete order?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Order 5 to 10% more than the calculated volume. NRMCA's guidance is 4 to 10% for any slab with irregular edges, and most contractors order at the upper end.\n\nWhere the waste comes from: spillage during the pour, uneven subgrade, over-excavation, the mix left in the truck chute, and the fact that a finished slab's true edges rarely match the tape measure exactly.\n\nSet the waste factor to:\n\n0–5% for a square, well-measured slab with straight formwork\n\n10% for most residential work — the standard default\n\n15–20% for irregular shapes, hand-packed forms, or a long access haul where the wheelbarrow loses material\n\nNever plan to order the bare calculated volume. Under-ordering means a cold joint in the middle of a slab, which is the single most visible concrete defect there is."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body data-page="concrete-calculator">
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="/">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 8h18v11H3z"/><path d="M3 8l3-4h12l3 4"/><path d="M8 12h8"/>
+        </svg>
+      </span>
+      <span class="brand-name">Pour<span>Cost</span></span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="main-nav">
+      <span></span>
+    </button>
+    <nav class="main-nav" id="main-nav" aria-label="Main">
+      <ul>
+        <li><a href="/">Slab Cost Calculator</a></li>
+        <li><a href="/concrete-calculator.html">Concrete Calculator</a></li>
+        <li><a href="/cost-per-square-foot.html">Cost Per Sq Ft</a></li>
+        <li><a href="/ready-mix-vs-bags.html">Ready-Mix vs Bags</a></li>
+        <li><a href="/driveway-cost.html">Driveway Cost</a></li>
+        <li><a href="/patio-cost.html">Patio Cost</a></li>
+        <li><a href="/rebar-calculator.html">Rebar Calculator</a></li>
+        <li><a href="/faq.html">FAQ</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- ============ HERO (compressed: calculator reachable fast) ============ -->
+  <section class="hero" style="padding-block:28px 22px">
+    <div class="wrap">
+      <span class="eyebrow">Free Concrete Calculator · Metric &amp; Imperial</span>
+      <h1 style="font-size:clamp(1.9rem,1.3rem+2.2vw,2.75rem);margin-bottom:10px">Concrete Calculator — <em>cubic yards, bags &amp; volume</em></h1>
+      <p class="lead" style="margin-bottom:14px">Enter your pour's dimensions and get cubic yards, cubic feet, and the exact number of 40, 50, 60, or 80 lb bags to buy — with a waste allowance, so you order enough the first time.</p>
+      <div class="trust-row">
+        <span class="trust-item"><svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M2 8l4 4 8-8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> 7 pour shapes</span>
+        <span class="trust-item"><svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M2 8l4 4 8-8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Metric or imperial</span>
+        <span class="trust-item"><svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M2 8l4 4 8-8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Bag count + cost</span>
+        <a class="trust-link" href="/about.html">Pricing &amp; methodology →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CALCULATOR ============ -->
+  <section class="section section--tight" id="calculator" style="padding-top:10px">
+    <div class="wrap">
+      <div class="calc-layout">
+        <div class="calc-panel">
+          <div class="calc-panel__head">
+            <span class="calc-panel__title">Pour Dimensions</span>
+            <div class="seg" style="padding:3px">
+              <input type="radio" name="vsystem" id="vsys-imperial" value="imperial" checked><label for="vsys-imperial">Imperial</label>
+              <input type="radio" name="vsystem" id="vsys-metric" value="metric"><label for="vsys-metric">Metric</label>
+            </div>
+          </div>
+          <div class="calc-panel__body">
+            <form id="volume-form" autocomplete="off">
+              <fieldset class="fieldset">
+                <legend>1 · What are you pouring?</legend>
+                <div class="chips">
+                  <button type="button" class="chip" data-vshape="rect" aria-pressed="true">Slab</button>
+                  <button type="button" class="chip" data-vshape="lshape" aria-pressed="false">L-shape</button>
+                  <button type="button" class="chip" data-vshape="circle" aria-pressed="false">Round pad</button>
+                  <button type="button" class="chip" data-vshape="footing" aria-pressed="false">Footing</button>
+                  <button type="button" class="chip" data-vshape="column" aria-pressed="false">Column</button>
+                  <button type="button" class="chip" data-vshape="wall" aria-pressed="false">Wall</button>
+                  <button type="button" class="chip" data-vshape="stairs" aria-pressed="false">Stairs</button>
+                  <button type="button" class="chip" data-vshape="triangle" aria-pressed="false">Triangle</button>
+                  <button type="button" class="chip" data-vshape="custom" aria-pressed="false">Custom</button>
+                </div>
+                <input type="radio" class="visually-hidden" tabindex="-1" aria-hidden="true" name="vshape" id="vshape-rect" value="rect" checked>
+                <input type="radio" class="visually-hidden" tabindex="-1" aria-hidden="true" name="vshape" id="vshape-lshape" value="lshape">
+                <input type="radio" class="visually-hidden" tabindex="-1" aria-hidden="true" name="vshape" id="vshape-circle" value="circle">
+                <input type="radio" class="visually-hidden" tabindex="-1" aria-hidden="true" name="vshape" id="vshape-footing" value="footing">
+                <input type="radio" class="visually-hidden" tabindex="-1" aria-hidden="true" name="vshape" id="vshape-column" value="column">
+                <input type="radio" class="visually-hidden" tabindex="-1" aria-hidden="true" name="vshape" id="vshape-wall" value="wall">
+                <input type="radio" class="visually-hidden" tabindex="-1" aria-hidden="true" name="vshape" id="vshape-stairs" value="stairs">
+                <input type="radio" class="visually-hidden" tabindex="-1" aria-hidden="true" name="vshape" id="vshape-triangle" value="triangle">
+                <input type="radio" class="visually-hidden" tabindex="-1" aria-hidden="true" name="vshape" id="vshape-custom" value="custom">
+                <p class="field__hint" style="margin-top:10px" id="v-shape-desc">Patios, driveways, garage floors, shed and equipment pads</p>
+              </fieldset>
+
+              <fieldset class="fieldset">
+                <legend>2 · Dimensions</legend>
+
+                <!-- RECT / FOOTING share length + width + thickness -->
+                <div class="field-grid" id="vg-rect">
+                  <div class="field">
+                    <label for="v-length">Length</label>
+                    <div class="input-wrap has-unit"><input type="number" id="v-length" data-dim="len" value="20" min="0" step="0.5" inputmode="decimal"><span class="unit" data-unit="len">ft</span></div>
+                  </div>
+                  <div class="field">
+                    <label for="v-width">Width</label>
+                    <div class="input-wrap has-unit"><input type="number" id="v-width" data-dim="len" value="20" min="0" step="0.5" inputmode="decimal"><span class="unit" data-unit="len">ft</span></div>
+                  </div>
+                  <div class="field">
+                    <label for="v-thickness">Thickness</label>
+                    <div class="input-wrap has-unit"><input type="number" id="v-thickness" data-dim="thick" value="4" min="0" step="0.25" inputmode="decimal"><span class="unit" data-unit="thick">in</span></div>
+                  </div>
+                </div>
+
+                <!-- L-SHAPE -->
+                <div class="field-grid" id="vg-lshape" style="display:none">
+                  <div class="field">
+                    <label for="v-l-length">Full length</label>
+                    <div class="input-wrap has-unit"><input type="number" id="v-l-length" data-dim="len" value="24" min="0" step="0.5" inputmode="decimal"><span class="unit" data-unit="len">ft</span></div>
+                  </div>
+                  <div class="field">
+                    <label for="v-l-width">Full width</label>
+                    <div class="input-wrap has-unit"><input type="number" id="v-l-width" data-dim="len" value="18" min="0" step="0.5" inputmode="decimal"><span class="unit" data-unit="len">ft</span></div>
+                  </div>
+                  <div class="field">
+                    <label for="v-l-notch-l">Notch length</label>
+                    <div class="input-wrap has-unit"><input type="number" id="v-l-notch-l" data-dim="len" value="10" min="0" step="0.5" inputmode="decimal"><span class="unit" data-unit="len">ft</span></div>
+                  </div>
+                  <div class="field">
+                    <label for="v-l-notch-w">Notch width</label>
+                    <div class="input-wrap has-unit"><input type="number" id="v-l-notch-w" data-dim="len" value="8" min="0" step="0.5" inputmode="decimal"><span class="unit" data-unit="len">ft</span></div>
+                  </div>
+                  <div class="field">
+                    <label for="v-thickness-ls">Thickness</label>
+                    <div class="input-wrap has-unit"><input type="number" id="v-thickness-ls" data-dim="thick" value="4" min="0" step="0.25" inputmode="decimal"><span class="unit" data-unit="thick">in</span></div>
+                  </div>
+                </div>
+
+                <!-- CIRCLE -->
+                <div class="field-grid" id="vg-circle" style="display:none">
+                  <div class="field">
+                    <label for="v-diameter">Diameter</label>
+                    <div class="input-wrap has-unit"><input type="number" id="v-diameter" data-dim="len" value="12" min="0" step="0.5" inputmode="decimal"><span class="unit" data-unit="len">ft</span></div>
+                  </div>
+                  <div class="field">
+                    <label for="v-thickness-c">Thickness</label>
+                    <div class="input-wrap has-unit"><input type="number" id="v-thickness-c" data-dim="thick" value="4" min="0" step="0.25" inputmode="decimal"><span class="unit" data-unit="thick">in</span></div>
+                  </div>
+                </div>
+
+                <!-- FOOTING -->
+                <div class="field-grid" id="vg-footing" style="display:none">
+                  <div class="field">
+                    <label for="v-f-length">Length</label>
+                    <div class="input-wrap has-unit"><input type="number" id="v-f-length" data-dim="len" value="10" min="0" step="0.5" inputmode="decimal"><span class="unit" data-unit="len">ft</span></div>
+                  </div>
+                  <div class="field">
+                    <label for="v-f-width">Width</label>
+                    <div class="input-wrap has-unit"><input type="number" id="v-f-width" data-dim="len" value="2" min="0" step="0.25" inputmode="decimal"><span class="unit" data-unit="len">ft</span></div>
+                  </div>
+                  <div class="field">
+                    <label for="v-f-depth">Depth</label>
+                    <div class="input-wrap has-unit"><input type="number" id="v-f-depth" data-dim="thick" value="12" min="0" step="0.25" inputmode="decimal"><span class="unit" data-unit="thick">in</span></div>
+                  </div>
+                  <p class="field__hint" style="grid-column:1/-1">A strip footing is width × depth. For a spread footing, enter length and width as the footing plan size and depth as the thickness.</p>
+                </div>
+
+                <!-- COLUMN -->
+                <div class="field-grid" id="vg-column" style="display:none">
+                  <div class="field">
+                    <label for="v-col-dia">Diameter</label>
+                    <div class="input-wrap has-unit"><input type="number" id="v-col-dia" data-dim="thick" value="12" min="0" step="0.5" inputmode="decimal"><span class="unit" data-unit="thick">in</span></div>
+                  </div>
+                  <div class="field">
+                    <label for="v-height">Height</label>
+                    <div class="input-wrap has-unit"><input type="number" id="v-height" data-dim="thick" value="48" min="0" step="1" inputmode="decimal"><span class="unit" data-unit="thick">in</span></div>
+                  </div>
+                  <p class="field__hint" style="grid-column:1/-1">Round column or sonotube. Add half an inch per side for the form boards if you are setting the tube in place.</p>
+                </div>
+
+                <!-- WALL -->
+                <div class="field-grid" id="vg-wall" style="display:none">
+                  <div class="field">
+                    <label for="v-w-length">Length</label>
+                    <div class="input-wrap has-unit"><input type="number" id="v-w-length" data-dim="len" value="20" min="0" step="0.5" inputmode="decimal"><span class="unit" data-unit="len">ft</span></div>
+                  </div>
+                  <div class="field">
+                    <label for="v-w-thick">Wall thickness</label>
+                    <div class="input-wrap has-unit"><input type="number" id="v-w-thick" data-dim="thick" value="8" min="0" step="0.5" inputmode="decimal"><span class="unit" data-unit="thick">in</span></div>
+                  </div>
+                  <div class="field">
+                    <label for="v-w-height">Wall height</label>
+                    <div class="input-wrap has-unit"><input type="number" id="v-w-height" data-dim="len" value="4" min="0" step="0.5" inputmode="decimal"><span class="unit" data-unit="len">ft</span></div>
+                  </div>
+                  <p class="field__hint" style="grid-column:1/-1">Volume = length × thickness × height. This is the concrete only — it does not include block, mortar, or the void inside a hollow block wall.</p>
+                </div>
+
+                <!-- STAIRS -->
+                <div class="field-grid" id="vg-stairs" style="display:none">
+                  <div class="field">
+                    <label for="v-run">Total run</label>
+                    <div class="input-wrap has-unit"><input type="number" id="v-run" data-dim="len" value="12" min="0" step="0.5" inputmode="decimal"><span class="unit" data-unit="len">ft</span></div>
+                  </div>
+                  <div class="field">
+                    <label for="v-rise">Total rise</label>
+                    <div class="input-wrap has-unit"><input type="number" id="v-rise" data-dim="len" value="6" min="0" step="0.25" inputmode="decimal"><span class="unit" data-unit="len">ft</span></div>
+                  </div>
+                  <div class="field">
+                    <label for="v-st-width">Width</label>
+                    <div class="input-wrap has-unit"><input type="number" id="v-st-width" data-dim="len" value="4" min="0" step="0.5" inputmode="decimal"><span class="unit" data-unit="len">ft</span></div>
+                  </div>
+                  <div class="field">
+                    <label for="v-platform">Landing depth</label>
+                    <div class="input-wrap has-unit"><input type="number" id="v-platform" data-dim="len" value="4" min="0" step="0.5" inputmode="decimal"><span class="unit" data-unit="len">ft</span></div>
+                  </div>
+                  <div class="field">
+                    <label for="v-platformt">Landing thickness</label>
+                    <div class="input-wrap has-unit"><input type="number" id="v-platformt" data-dim="thick" value="4" min="0" step="0.25" inputmode="decimal"><span class="unit" data-unit="thick">in</span></div>
+                  </div>
+                  <div class="field">
+                    <label for="v-risers">Number of risers</label>
+                    <div class="input-wrap has-unit"><input type="number" id="v-risers" value="6" min="1" step="1" inputmode="numeric"><span class="unit">ea</span></div>
+                  </div>
+                  <p class="field__hint" style="grid-column:1/-1">The flight is modelled as a solid stepped mass (run ÷ 2 × rise × width) plus a landing block. That is the exact volume of solid concrete steps, not the hollow sloping underside.</p>
+                </div>
+
+                <!-- TRIANGLE -->
+                <div class="field-grid" id="vg-triangle" style="display:none">
+                  <div class="field">
+                    <label for="v-tri-base">Base</label>
+                    <div class="input-wrap has-unit"><input type="number" id="v-tri-base" data-dim="len" value="20" min="0" step="0.5" inputmode="decimal"><span class="unit" data-unit="len">ft</span></div>
+                  </div>
+                  <div class="field">
+                    <label for="v-tri-height">Height</label>
+                    <div class="input-wrap has-unit"><input type="number" id="v-tri-height" data-dim="len" value="12" min="0" step="0.5" inputmode="decimal"><span class="unit" data-unit="len">ft</span></div>
+                  </div>
+                  <div class="field">
+                    <label for="v-tri-type">Triangle type</label>
+                    <div class="input-wrap">
+                      <select id="v-tri-type">
+                        <option value="iso" selected>Symmetric (apex centred)</option>
+                        <option value="right">Right angle at one corner</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="field">
+                    <label for="v-tri-thickness">Thickness</label>
+                    <div class="input-wrap has-unit"><input type="number" id="v-tri-thickness" data-dim="thick" value="4" min="0" step="0.25" inputmode="decimal"><span class="unit" data-unit="thick">in</span></div>
+                  </div>
+                  <p class="field__hint" style="grid-column:1/-1">Area = base × height ÷ 2. A 20 ft base with a 12 ft height gives 120 sq ft of plan area. Use <strong>Custom</strong> to combine a triangle with a rectangle in one pour.</p>
+                </div>
+
+                <!-- CUSTOM (multiple simple shapes) -->
+                <div class="field-grid" id="vg-custom" style="display:none">
+                  <div style="grid-column:1/-1">
+                    <label class="label" for="v-custom-list">Pour components</label>
+                    <p class="field__hint" style="margin:2px 0 10px">Add each separate area you are pouring. Volumes, areas and edge lengths are added together. Shared edges between components are counted twice because each one still needs its own form.</p>
+                    <div id="v-custom-list" class="custom-list"></div>
+                    <button type="button" class="btn btn--ghost btn--sm" id="v-custom-add" style="margin-top:10px">+ Add a shape</button>
+                  </div>
+                  <div class="field">
+                    <label for="v-custom-thickness">Thickness (all components)</label>
+                    <div class="input-wrap has-unit"><input type="number" id="v-custom-thickness" data-dim="thick" value="4" min="0" step="0.25" inputmode="decimal"><span class="unit" data-unit="thick">in</span></div>
+                  </div>
+                </div>
+              </fieldset>
+
+              <fieldset class="fieldset">
+                <legend>3 · Order options</legend>
+                <div class="field-grid">
+                  <div class="field">
+                    <label for="v-waste">Waste allowance</label>
+                    <div class="input-wrap">
+                      <select id="v-waste">
+                        <option value="0">0% — exact</option>
+                        <option value="5">5%</option>
+                        <option value="10" selected>10% — standard</option>
+                        <option value="15">15%</option>
+                        <option value="20">20% — irregular work</option>
+                      </select>
+                    </div>
+                    <span class="field__hint">NRMCA recommends 4–10%</span>
+                  </div>
+                  <div class="field">
+                    <label for="v-qty">Number of pours</label>
+                    <div class="input-wrap has-unit"><input type="number" id="v-qty" value="1" min="1" step="1" inputmode="numeric"><span class="unit">ea</span></div>
+                  </div>
+                  <div class="field">
+                    <label for="v-base-depth">Gravel base depth</label>
+                    <div class="input-wrap has-unit"><input type="number" id="v-base-depth" data-dim="thick" value="4" min="0" step="0.5" inputmode="decimal"><span class="unit" data-unit="thick">in</span></div>
+                    <span class="field__hint">Compacted crushed stone under the slab</span>
+                  </div>
+                </div>
+                <div class="switch-row" style="margin-top:12px">
+                  <label for="v-showcost">Show material cost comparison</label>
+                  <span class="switch"><input type="checkbox" id="v-showcost" checked><span></span></span>
+                </div>
+                <div class="field-grid" id="v-cost-panel" style="margin-top:14px">
+                  <div class="field">
+                    <label for="v-rmprice">Ready-mix price</label>
+                    <div class="input-wrap input-wrap--dollar has-unit"><input type="number" id="v-rmprice" value="155" min="0" step="1" inputmode="decimal"><span class="unit">/yd³</span></div>
+                  </div>
+                  <div class="field">
+                    <label for="v-bagprice">80 lb bag price</label>
+                    <div class="input-wrap input-wrap--dollar has-unit"><input type="number" id="v-bagprice" value="6.50" min="0" step="0.25" inputmode="decimal"><span class="unit">/bag</span></div>
+                  </div>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+
+        <aside class="results" aria-live="polite">
+          <div class="results__head"><span class="results__title">Your Results</span><span class="badge badge--green">Live</span></div>
+          <div class="results__body">
+            <div class="headline-cost">
+              <div class="headline-cost__label">Cubic yards needed</div>
+              <div class="headline-cost__value" id="v-cuyd">—</div>
+              <div class="headline-cost__sub" id="v-order">—</div>
+            </div>
+            <div class="stat-grid">
+              <div class="stat"><div class="stat__label">Area / footprint</div><div class="stat__value" id="v-area">—</div></div>
+              <div class="stat"><div class="stat__label">Cubic feet</div><div class="stat__value" id="v-cuft">—</div></div>
+              <div class="stat"><div class="stat__label">Cubic metres</div><div class="stat__value" id="v-cum">—</div></div>
+              <div class="stat"><div class="stat__label">Gravel base</div><div class="stat__value" id="v-gravel">—</div></div>
+              <div class="stat"><div class="stat__label">80 lb bags</div><div class="stat__value" id="v-bags80">—</div></div>
+              <div class="stat"><div class="stat__label">60 lb bags</div><div class="stat__value" id="v-bags60">—</div></div>
+              <div class="stat"><div class="stat__label">50 lb bags</div><div class="stat__value" id="v-bags50">—</div></div>
+              <div class="stat"><div class="stat__label">40 lb bags</div><div class="stat__value" id="v-bags40">—</div></div>
+              <div class="stat"><div class="stat__label">Coverage per yd³</div><div class="stat__value" id="v-coverage">—</div></div>
+              <div class="stat"><div class="stat__label">Concrete weight</div><div class="stat__value" id="v-weight">—</div></div>
+            </div>
+            <div class="totals" id="v-cost-panel2" style="display:none">
+              <div class="total-row"><span class="total-row__label">Ready-mix concrete</span><span class="total-row__value" id="v-rmcost">—</span></div>
+              <div class="total-row"><span class="total-row__label">+ Delivery</span><span class="total-row__value" id="v-rmtotal">—</span></div>
+              <div class="total-row"><span class="total-row__label">Bags (80 lb) equivalent</span><span class="total-row__value" id="v-bagcost">—</span></div>
+              <div class="total-row total-row--grand"><span class="total-row__label">Truck loads</span><span class="total-row__value" id="v-trucks">—</span></div>
+            </div>
+            <div class="verdict" id="v-verdict">Enter dimensions to see the comparison.</div>
+            <div id="v-summary" class="results__summary"></div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ REBAR RECOMMENDATION ============ -->
+  <section class="section section--tight" style="padding-top:30px">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Reinforcement guide</span>
+        <h2>What size rebar, and how far apart?</h2>
+        <p>Reinforcement is what stops a slab from cracking along its length as the ground moves and the concrete shrinks. Pick the row that matches your slab thickness and what the slab will carry.</p>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Slab thickness</th>
+              <th>Typical use</th>
+              <th>Bar size</th>
+              <th>Spacing (on center)</th>
+              <th>Lap / overlap</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>3–4 in</td>
+              <td>Patio, shed pad, AC pad, walkway</td>
+              <td><strong>#3</strong> (3/8 in)</td>
+              <td><strong>24 in</strong> on center</td>
+              <td>12 in</td>
+            </tr>
+            <tr class="is-highlight">
+              <td><strong>4 in</strong></td>
+              <td><strong>Residential floor, garage floor</strong></td>
+              <td><strong>#4</strong> (1/2 in)</td>
+              <td><strong>18 in</strong> on center</td>
+              <td>16 in</td>
+            </tr>
+            <tr>
+              <td>5–6 in</td>
+              <td>Driveway, heavy vehicle, RV pad</td>
+              <td><strong>#4–#5</strong></td>
+              <td><strong>12 in</strong> on center</td>
+              <td>16–20 in</td>
+            </tr>
+            <tr>
+              <td>8 in+</td>
+              <td>Commercial, post-tensioned, heavy loads</td>
+              <td><strong>#5–#6</strong></td>
+              <td><strong>6–12 in</strong> on center</td>
+              <td>20–24 in</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="table-note">Lap splice = 40 × bar diameter, so 12 in for #3, 16 in for #4 and 20 in for #5. Reinforcement goes in the <strong>bottom third</strong> of the slab with at least <strong>2 in of cover</strong> measured from the slab edge — 1.5 in is the IRC minimum for #5 and smaller in residential slabs. Where the ground is stable and the load is light, welded wire mesh at 6 in by 6 in is a cheaper alternative, but it is easier to walk out of place than rebar.</p>
+      <p class="small muted mt-3">Rebar is <em>not</em> required for a slab on well-compacted, stable soil with light loads — many patios and shed pads go unreinforced with a fiber mesh or a thickened edge. It is required where the slab spans, carries vehicles, or sits on fill. Check the local code before you skip it.</p>
+    </div>
+  </section>
+
+  <!-- ============ MAGIC NUMBER ============ -->
+  <section class="section section--tight" style="padding-top:26px">
+    <div class="wrap">
+      <div class="magic">
+        <div class="magic__lead">
+          <div class="card__eyebrow">The magic number</div>
+          <div class="magic__num">81</div>
+          <p class="magic__cap">One cubic yard of concrete covers <strong>81 square feet</strong> at 4 inches thick. Take your square footage, divide by 81, and you have your cubic yards — no formula needed.</p>
+        </div>
+        <div class="magic__table">
+          <table>
+            <thead><tr><th>Slab thickness</th><th class="num">Coverage per yd³</th><th class="num">Yd³ per 100 sq ft</th></tr></thead>
+            <tbody>
+              <tr><td>3 in</td><td class="num">108 sq ft</td><td class="num">0.93</td></tr>
+              <tr class="is-highlight"><td><strong>4 in</strong></td><td class="num"><strong>81 sq ft</strong></td><td class="num"><strong>1.23</strong></td></tr>
+              <tr><td>5 in</td><td class="num">65 sq ft</td><td class="num">1.54</td></tr>
+              <tr><td>6 in</td><td class="num">54 sq ft</td><td class="num">1.85</td></tr>
+              <tr><td>8 in</td><td class="num">41 sq ft</td><td class="num">2.47</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ QUICK ANSWERS ============ -->
+  <section class="section section--white section--tight">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Quick answers</span>
+        <h2>The three questions everyone asks first</h2>
+      </div>
+      <div class="grid grid-3">
+        <div class="card card--accent">
+          <div class="card__title">How many bags of concrete do I need?</div>
+          <p class="small">Divide the pour's volume in cubic feet by the bag yield, then round up: 0.30 ft³ for a 40 lb bag, 0.375 ft³ for 50 lb, 0.45 ft³ for 60 lb, 0.60 ft³ for 80 lb.</p>
+          <p class="small mb-0"><strong>A 10 × 10 ft slab at 4 inches</strong> takes 1.23 yd³ — which is <strong>62 bags of 80 lb</strong>, or 82 of 60 lb, once you add 10% for waste.</p>
+        </div>
+        <div class="card card--accent">
+          <div class="card__title">How many yards of concrete do I need?</div>
+          <p class="small">Length × width × thickness (in feet) ÷ 27. Or use the shortcut: (square feet × thickness in inches) ÷ 324.</p>
+          <p class="small mb-0"><strong>A 20 × 20 ft slab at 4 inches</strong> is (400 × 4) ÷ 324 = <strong>4.94 cubic yards</strong>. Order about 5.5 with waste.</p>
+        </div>
+        <div class="card card--accent">
+          <div class="card__title">How much does a concrete slab cost?</div>
+          <p class="small">A standard residential slab runs <strong>$6–$12 per square foot</strong> installed in 2026. Concrete material alone is only about $2–$3.30 per sq ft — labor is usually the biggest line.</p>
+          <p class="small mb-0"><strong>A 20 × 20 slab</strong> with base, forms, mesh, labor, joints, and curing lands around <strong>$3,200–$4,400</strong> depending on scope.</p>
+        </div>
+      </div>
+      <p class="small muted mt-4">Want the full installed price with every line item? <a href="/">Open the concrete slab cost calculator →</a></p>
+    </div>
+  </section>
+
+  <!-- ============ REFERENCE ============ -->
+  <section class="section">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Reference</span>
+        <h2>Bag counts and coverage by size</h2>
+        <p>Bag counts below include a 10% waste allowance.</p>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Slab size</th><th class="num">Area</th><th class="num">Yd³ (4 in)</th><th class="num">40 lb</th><th class="num">50 lb</th><th class="num">60 lb</th><th class="num">80 lb</th></tr></thead>
+          <tbody id="table-bags"></tbody>
+        </table>
+      </div>
+      <p class="table-note">Coverage per cubic yard = 324 ÷ thickness in inches. At 4 inches one yard covers 81 sq ft; at 6 inches, 54 sq ft.</p>
+
+      <h3 class="mt-6" style="margin-bottom:14px">How to calculate each shape</h3>
+      <div class="grid grid-3">
+        <div class="card fcard" data-n="01">
+          <div class="card__title">Slabs &amp; footings</div>
+          <p class="small">Volume = length × width × thickness. Divide by 27 for cubic yards, or use the 324 shortcut with thickness in inches.</p>
+        </div>
+        <div class="card fcard" data-n="02">
+          <div class="card__title">Columns &amp; round pads</div>
+          <p class="small">Volume = π × radius² × height. Add half an inch per side for the form boards on a column pour.</p>
+        </div>
+        <div class="card fcard" data-n="03">
+          <div class="card__title">Walls &amp; stairs</div>
+          <p class="small">Wall = length × thickness × height. Stairs = width × (run ÷ 2 × rise) plus the landing block.</p>
+        </div>
+      </div>
+
+      <h3 class="mt-6" style="margin-bottom:14px">Metric equivalents</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Imperial</th><th class="num">Metric</th><th>Note</th></tr></thead>
+          <tbody>
+            <tr><td>1 cubic yard</td><td class="num">0.765 m³</td><td>27 cubic feet</td></tr>
+            <tr><td>4 in thickness</td><td class="num">10 cm</td><td>The standard residential slab</td></tr>
+            <tr><td>6 in thickness</td><td class="num">15 cm</td><td>Driveways and heavy vehicle pads</td></tr>
+            <tr><td>1 sq ft</td><td class="num">0.093 m²</td><td>Multiply sq ft by 0.093 for sq m</td></tr>
+            <tr><td>1 cu yd per sq ft at 4 in</td><td class="num">0.0152 m³/m²</td><td>Same ratio, metric</td></tr>
+            <tr><td>81 sq ft per yd³</td><td class="num">7.53 m² per m³</td><td>The magic number, metric</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--white" id="faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">FAQ</span>
+        <h2>Concrete calculation questions, answered</h2>
+        <p class="small muted"><span id="faq-count">21</span> questions, each with a real 2026 number.</p>
+      </div>
+      <div class="faq-nav">
+        <a href="#faq-cost-per-sq-ft">How much does a concrete slab cost per squ…</a>
+        <a href="#faq-pour-cost">How much does it cost to pour a concrete s…</a>
+        <a href="#faq-bags-needed">How many bags of concrete do I need?</a>
+        <a href="#faq-yards-needed">How many yards of concrete do I need?</a>
+        <a href="#faq-thickness">How thick should a concrete slab be?</a>
+        <a href="#faq-psi">What PSI concrete do I need for a slab?</a>
+        <a href="#faq-cc-what">How do I calculate the amount of concrete…</a>
+        <a href="#faq-cc-50lb-bag">How many cubic feet is a 50 lb bag of conc…</a>
+        <a href="#faq-cc-yard-or-bags">Should I order concrete by the yard from a…</a>
+        <a href="#faq-cc-online-vs-physical">What's the difference between an online ca…</a>
+        <a href="#faq-cc-footing-column">How much concrete do I need for a footing…</a>
+        <a href="#faq-cc-bag-size">What size bag of concrete should I buy?</a>
+        <a href="#faq-cc-shapes">How do I calculate concrete for a non-rect…</a>
+        <a href="#faq-cc-conversion">How do I convert between cubic feet, cubic…</a>
+        <a href="#faq-standard-thickness">What is the standard thickness of concrete…</a>
+        <a href="#faq-cc-cubic-yards">How many cubic yards of concrete do I need…</a>
+        <a href="#faq-cc-metric">How do I calculate concrete in metric unit…</a>
+        <a href="#faq-cc-triangle">How much concrete do I need for a triangul…</a>
+        <a href="#faq-cc-multiple-shapes">How do I calculate concrete for several se…</a>
+        <a href="#faq-cc-gravel">How much gravel do I need under a concrete…</a>
+        <a href="#faq-cc-waste-factor">How much waste should I add to my concrete…</a>
+      </div>
+      <div class="faq" id="faq-list">
+        <details class="faq-item" id="faq-cost-per-sq-ft">
+          <summary class="faq-q">How much does a concrete slab cost per square foot?</summary>
+          <div class="faq-a"><p>A standard residential concrete slab runs <strong>$6 to $12 per square foot</strong> installed in 2026, with most projects landing near <strong>$8 per square foot</strong>. That figure includes ready-mix concrete, delivery, a compacted gravel base, forms, reinforcement, placing and finishing labor, control joints, and curing compound — but not major excavation, permits, or decorative finishes.</p>
+            <p>The cost per square foot breaks down roughly like this:</p>
+            <p><ul><li><strong>Concrete material:</strong> $2–$3.30 per sq ft</li><li><strong>Labor (pour and finish):</strong> $3–$8 per sq ft — usually the single biggest line</li><li><strong>Site prep and forms:</strong> $1–$2.50 per sq ft</li><li><strong>Reinforcement:</strong> $0.20–$2.00 per sq ft</li><li><strong>Curing and sealer:</strong> $0.25–$1.00 per sq ft</li></ul></p>
+            <p>Small slabs cost more per square foot than large ones because the truck delivery, crew minimum, and forms are fixed costs spread over less area. A 10 x 10 pad typically runs $8.50–$15.00 per sq ft, while a 40 x 60 driveway lands closer to $6.50–$12.50 per sq ft. Decorative work — stamped, colored, or exposed aggregate — adds $3 to $10 per sq ft on top.</p>
+            <p><strong>One important caveat about scope.</strong> Published per-square-foot figures disagree by nearly 40%, and the reason is that they measure different things. A quote at $6 per sq ft is often scoped to exclude delivery fees, control joints, curing compound, and site prep — real costs that a complete project pays. Price the same scope before comparing two bids; a lower number is not a better deal if it is missing items.</p></div>
+        </details>
+        <details class="faq-item" id="faq-pour-cost">
+          <summary class="faq-q">How much does it cost to pour a concrete slab?</summary>
+          <div class="faq-a"><p>Pouring a concrete slab costs <strong>$4 to $14 per square foot</strong> installed, depending on thickness, reinforcement, finish, and how much site work the ground needs. A plain broom-finished 4-inch slab on a flat, accessible site sits at the low end; a thick, reinforced slab on ground that needs grading and fill sits at the high end.</p>
+            <p>Realistic totals for common sizes at $6–$12 per sq ft:</p>
+            <p><ul><li>10 x 10 pad (100 sq ft): $600–$1,200</li><li>12 x 12 pad (144 sq ft): $864–$1,730</li><li>20 x 20 slab (400 sq ft): $2,400–$4,800</li><li>24 x 24 garage pad (576 sq ft): $3,500–$9,000</li><li>30 x 30 slab (900 sq ft): $3,600–$7,200</li></ul></p>
+            <p>A useful shortcut: the concrete itself is only about 25% of an installed slab. Labor is usually 45–55%. That is why a slab quoted at $4 per square foot for materials alone is not out of line — it simply excludes the crew.</p></div>
+        </details>
+        <details class="faq-item" id="faq-bags-needed">
+          <summary class="faq-q">How many bags of concrete do I need?</summary>
+          <div class="faq-a"><p>Divide the pour's volume in cubic feet by the finished yield of one bag, then round up. Standard yields are <strong>0.30 ft³ for a 40 lb bag, 0.45 ft³ for a 60 lb bag, and 0.60 ft³ for an 80 lb bag</strong>.</p>
+            <p><span class="formula">Bags = ceil( volume in ft³ x (1 + waste%) / yield per bag )</span></p>
+            <p>One cubic yard of concrete equals about <strong>90 bags of 40 lb, 60 bags of 60 lb, or 45 bags of 80 lb</strong> mix.</p>
+            <p>Worked example — a 10 x 10 ft slab at 4 inches thick:
+<ul><li>Volume = 10 x 10 x (4 ÷ 12) = 33.3 ft³ = 1.23 yd³</li><li>With 10% waste: 36.7 ft³</li><li>80 lb bags: ceil(36.7 ÷ 0.60) = <strong>62 bags</strong></li><li>60 lb bags: ceil(36.7 ÷ 0.45) = <strong>82 bags</strong></li></ul></p>
+            <p>Bagged mix stops making sense above roughly 1 cubic yard. Past about 45 bags of 80 lb mix, hauling, mixing, and pouring by hand costs more in time and labor than a ready-mix truck — and cold joints between batches are far more likely.</p></div>
+        </details>
+        <details class="faq-item" id="faq-yards-needed">
+          <summary class="faq-q">How many yards of concrete do I need?</summary>
+          <div class="faq-a"><p>Multiply length by width by thickness in feet, then divide by 27. There are 27 cubic feet in a cubic yard.</p>
+            <p><span class="formula">Cubic yards = (Length ft x Width ft x Thickness in ÷ 12) ÷ 27<br>Shortcut: Cubic yards = (sq ft x thickness in) ÷ 324</span></p>
+            <p>For a 20 x 20 ft slab at 4 inches: (400 x 4) ÷ 324 = 4.94 cubic yards. Add 5–10% for waste and order about 5.5 yards.</p>
+            <p>As a rule of thumb, one cubic yard covers about <strong>81 sq ft at 4 inches</strong>, 65 sq ft at 5 inches, 54 sq ft at 6 inches, and 41 sq ft at 8 inches. A standard ready-mix truck carries about 10 cubic yards.</p></div>
+        </details>
+        <details class="faq-item" id="faq-thickness">
+          <summary class="faq-q">How thick should a concrete slab be?</summary>
+          <div class="faq-a"><p>Spec it by load, not by rule of thumb:</p>
+            <p><ul><li><strong>3.5–4 in</strong> — walkways, garden paths, patios, shed and AC pads (foot traffic only)</li><li><strong>4 in</strong> — the standard residential minimum; patios and light floors</li><li><strong>5 in</strong> — residential driveways and garage floors carrying passenger cars or half-ton pickups</li><li><strong>6 in</strong> — driveways taking trucks and RVs, heavy equipment pads, and commercial slabs</li><li><strong>8 in</strong> — post-tensioned, heavily loaded, or industrial slabs</li></ul></p>
+            <p>For code: the International Residential Code (R506.1) sets a <strong>3.5-inch minimum</strong> for slab-on-grade floors in habitable space, and most jurisdictions amend that to 4 inches. The IRC does not regulate exterior patios and walkways, though local codes often do govern driveways — published driveway standards run from 4 to 7 inches depending on the municipality.</p>
+            <p>ACI 330R-08 puts it plainly: <em>"As a practical matter, there is no benefit in building slabs less than 4 in. (100 mm) thick."</em> Thickness is the cheapest structural upgrade available — bending capacity scales with the square of thickness, so 4 in to 6 in is 50% more concrete but roughly 2.25x the bending resistance.</p></div>
+        </details>
+        <details class="faq-item" id="faq-psi">
+          <summary class="faq-q">What PSI concrete do I need for a slab?</summary>
+          <div class="faq-a"><p>Match the strength to the exposure and the load:</p>
+            <p><ul><li><strong>3,000 PSI</strong> — interior slabs, basement floors, and shop floors that never see salt or freezing</li><li><strong>3,500 PSI</strong> — standard patios, sidewalks, and exterior residential work</li><li><strong>4,000 PSI</strong> — driveways, garage floors, and any exterior slab in a freeze-thaw climate, specified with 5–7% air entrainment</li><li><strong>4,500–5,000 PSI</strong> — heavy vehicle pads, warehouse slabs, and structural work per ACI 318</li></ul></p>
+            <p>ACI 332 requires 4,000 PSI with air entrainment for exterior residential slabs in freeze-thaw zones. Each 500 PSI step up adds roughly $4–$10 per cubic yard, which is cheap insurance against scaling and spalling. In freeze-thaw climates, air entrainment matters more than an extra inch of thickness — 3,000 PSI slabs without air can scale badly within 5 to 10 years.</p></div>
+        </details>
+        <details class="faq-item" id="faq-cc-what">
+          <summary class="faq-q">How do I calculate the amount of concrete I need?</summary>
+          <div class="faq-a"><p>Multiply the three dimensions of the pour together, then convert to the unit you will buy in.</p>
+            <p><span class="formula">Cubic feet = Length (ft) x Width (ft) x Thickness (ft)<br>Cubic yards = Cubic feet ÷ 27<br>Cubic yards = (sq ft x thickness in) ÷ 324</span></p>
+            <p>The 324 shortcut combines the 12-inch-to-foot conversion and the 27 cubic feet in a cubic yard into one step. For a 20 x 20 ft slab at 4 inches: (400 x 4) ÷ 324 = 4.94 cubic yards.</p>
+            <p>Then add <strong>5 to 10% for waste</strong> — spillage, uneven subgrade, over-excavation, and the mix left in the chute. NRMCA recommends ordering at least 4 to 10% more than the plan volume. Round up to the next quarter yard.</p>
+            <p>For shapes other than a rectangle, split the pour into rectangles and add the results.</p></div>
+        </details>
+        <details class="faq-item" id="faq-cc-50lb-bag">
+          <summary class="faq-q">How many cubic feet is a 50 lb bag of concrete?</summary>
+          <div class="faq-a"><p>A 50 lb bag of premixed concrete yields about <strong>0.375 cubic feet</strong> — roughly <strong>72 bags per cubic yard</strong>.</p>
+            <p>Full yield table for standard premix bag sizes:</p>
+            <p><ul><li><strong>40 lb</strong> — 0.30 ft³ per bag · 90 bags per yd³</li><li><strong>50 lb</strong> — 0.375 ft³ per bag · 72 bags per yd³</li><li><strong>60 lb</strong> — 0.45 ft³ per bag · 60 bags per yd³</li><li><strong>80 lb</strong> — 0.60 ft³ per bag · 45 bags per yd³</li></ul></p>
+            <p>The largest bag is always the best value per cubic foot — an 80 lb bag gives you 0.60 ft³ of concrete for fewer trips than two 40 lb bags, and it is the size most hardware stores stock in pallet quantity.</p>
+            <p><strong>Check the yield on your actual bag.</strong> These are the standard published yields, but some brands and fast-setting mixes yield less. The spec sheet on the bag is authoritative.</p></div>
+        </details>
+        <details class="faq-item" id="faq-cc-yard-or-bags">
+          <summary class="faq-q">Should I order concrete by the yard from a ready mix company or just use bags?</summary>
+          <div class="faq-a"><p>Use bags below about <strong>1 cubic yard</strong> — roughly 45 bags of 80 lb mix. Use ready-mix above that.</p>
+            <p>The practical differences:</p>
+            <p><ul><li><strong>Cost per cubic yard is nearly identical.</strong> A yard of ready-mix at $155 runs about $155; the same yard in 80 lb bags at $6.50 runs about $292. But bags avoid the delivery trip fee and the short-load surcharge that make a small ready-mix order expensive.</li><li><strong>Time is the real difference.</strong> One cubic yard of finished concrete weighs 4,050 lb. Hand-mixing it is a full day for two people plus a mixer rental. A ready-mix pour is about an hour.</li><li><strong>Cold joints.</strong> Hand-mixed pours that take more than a couple of hours often show visible joints where the water content changed between batches.</li><li><strong>Consistency.</strong> Every yard off a truck has the same water-to-cement ratio. Every hand-mixed batch is a guess.</li></ul></p>
+            <p>The exception is a small pour in a backyard the truck cannot reach. If delivery means a pump truck or a long wheelbarrow haul, bags can still win on total cost even past a cubic yard.</p></div>
+        </details>
+        <details class="faq-item" id="faq-cc-online-vs-physical">
+          <summary class="faq-q">What's the difference between an online calculator and a physical construction calculator?</summary>
+          <div class="faq-a"><p>A physical construction calculator (the circular disc-and-window type you hang on a belt) does arithmetic fast — it multiplies, divides, and runs trig in your head. It does not know anything about concrete.</p>
+            <p>An online concrete calculator carries the domain knowledge instead:</p>
+            <p><ul><li>It knows that one cubic yard is 27 cubic feet, and that an 80 lb bag yields 0.60 ft³</li><li>It knows the 324 shortcut, the 81 sq ft coverage rule, and the standard waste allowance</li><li>It knows the thickness, PSI, reinforcement, and joint-spacing conventions</li><li>It carries current regional pricing and can compare ready-mix against bagged mix</li></ul></p>
+            <p>They are complementary rather than competing. The physical calculator is still faster for mental arithmetic on site — "what is 400 times 4 over 324?" — and the online tool is what tells you <em>which</em> numbers to multiply and what the answer means for your order.</p></div>
+        </details>
+        <details class="faq-item" id="faq-cc-footing-column">
+          <summary class="faq-q">How much concrete do I need for a footing or a column?</summary>
+          <div class="faq-a"><p>The formula is the same, only the shape changes.</p>
+            <p><strong>Strip footing</strong> (a long narrow pour):
+<span class="formula">Volume = length x width x depth</span></p>
+            <p>A 10 ft x 2 ft footing at 12 inches deep is 20 cu ft — about 0.74 cubic yards.</p>
+            <p><strong>Round column or sonotube</strong>:
+<span class="formula">Volume = pi x radius² x height</span></p>
+            <p>A 12 inch diameter column at 4 feet tall is 3.14 x 1 x 4 = 12.6 cu ft — about 0.46 cubic yards.</p>
+            <p>Two things people forget on columns: add half an inch per side if you are setting the tube in place rather than pouring against a form, and remember a column's weight is what determines the base and footing size — a 12 inch column weighs about 300 lb per foot of height.</p>
+            <p>The calculator on this page handles footings, columns, walls, and stairs directly.</p></div>
+        </details>
+        <details class="faq-item" id="faq-cc-bag-size">
+          <summary class="faq-q">What size bag of concrete should I buy?</summary>
+          <div class="faq-a"><p>Match the bag to the volume of the job, and match the strength to the job.</p>
+            <p><ul><li><strong>40 lb</strong> — 0.30 ft³ yield. Best for small patches and footings.</li><li><strong>50 lb</strong> — 0.375 ft³ yield. A middle option when 60 and 80 lb are too heavy to handle.</li><li><strong>60 lb</strong> — 0.45 ft³ yield. A good middle option for DIY work.</li><li><strong>80 lb</strong> — 0.60 ft³ yield. The most common size; heaviest to handle, best value per bag.</li></ul></p>
+            <p>For strength, choose 3,000 PSI for interior or sheltered work, 3,500 PSI for standard exterior residential, and 4,000 PSI with air entrainment for driveways, garage floors, and freeze-thaw climates.</p>
+            <p>Do not mix bag sizes within one pour. Different mixes and different water contents will show up as visible color and strength differences in the finished surface.</p></div>
+        </details>
+        <details class="faq-item" id="faq-cc-shapes">
+          <summary class="faq-q">How do I calculate concrete for a non-rectangular shape?</summary>
+          <div class="faq-a"><p>Break the shape into rectangles, calculate each one, then add the volumes together. It is the same arithmetic every time.</p>
+            <p><strong>L-shaped slab</strong> — split it into a full-length rectangle plus a second rectangle covering the notch:
+<ul><li>Part A = length x width</li><li>Part B = (length − cutout length) x cutout width</li><li>Total area = A + B</li></ul></p>
+            <p><strong>Circular pad</strong> — area = π x (diameter ÷ 2)²</p>
+            <p><strong>Footing</strong> — length x width x depth, and do not forget to add the depth of the footing that sits below the grade line.</p>
+            <p><strong>Columns</strong> — π x radius² x height. Add a 1/2 inch allowance per side for the forms.</p>
+            <p><strong>Walls</strong> — length x thickness x height.</p>
+            <p><strong>Stairs</strong> — width x (run ÷ 2 x rise) for the solid flight, plus the landing block.</p>
+            <p>The calculator on this page handles all of these directly.</p></div>
+        </details>
+        <details class="faq-item" id="faq-cc-conversion">
+          <summary class="faq-q">How do I convert between cubic feet, cubic yards, and bags?</summary>
+          <div class="faq-a"><p>Three conversions cover almost everything:</p>
+            <p><ul><li><strong>1 cubic yard = 27 cubic feet</strong></li><li><strong>1 cubic yard = 90 bags of 40 lb, 72 of 50 lb, 60 of 60 lb, or 45 of 80 lb</strong></li><li><strong>1 cubic yard covers 324 ÷ thickness(inches) square feet</strong></li></ul></p>
+            <p>So 1 cubic yard spreads over 81 sq ft at 4 inches, 65 sq ft at 5 inches, 54 sq ft at 6 inches, and 41 sq ft at 8 inches.</p>
+            <p>To convert bag counts to weight, multiply bags by bag size — 45 bags of 80 lb is 3,600 lb, which is the weight of one cubic yard of normal-weight concrete. Around 150 lb per cubic foot is the standard density for structural concrete; lightweight mixes run 90–120 lb per cubic foot, and you must check the bag's published yield for anything non-standard.</p></div>
+        </details>
+        <details class="faq-item" id="faq-standard-thickness">
+          <summary class="faq-q">What is the standard thickness of concrete?</summary>
+          <div class="faq-a"><p>There is no single standard, because thickness follows load. The residential standard is <strong>4 inches</strong>, and it covers most work:</p>
+            <p><ul><li><strong>3.5–4 in</strong> — walkways, garden paths, and light pads</li><li><strong>4 in</strong> — patios, shed pads, AC pads, and residential floors (the common standard)</li><li><strong>5 in</strong> — driveways and garage floors taking passenger cars</li><li><strong>6 in</strong> — heavy vehicle driveways, RV and boat pads, commercial slabs</li><li><strong>8 in</strong> — post-tensioned, heavily loaded, or industrial slabs</li></ul></p>
+            <p>Two anchors on this. The IRC (R506.1) sets a <strong>3.5-inch minimum</strong> for slab-on-grade floors in habitable space, and most jurisdictions amend that to 4 inches. And ACI 330R-08 puts it bluntly: <em>"As a practical matter, there is no benefit in building slabs less than 4 in. (100 mm) thick."</em></p>
+            <p>Thickness is the cheapest structural upgrade available — bending capacity scales with the square of thickness, so going from 4 to 6 inches is 50% more concrete but roughly 2.25× the bending resistance.</p></div>
+        </details>
+        <details class="faq-item" id="faq-cc-cubic-yards">
+          <summary class="faq-q">How many cubic yards of concrete do I need?</summary>
+          <div class="faq-a"><p>Divide the plan area by the coverage rate for your slab thickness. One cubic yard of concrete covers:</p>
+            <p><ul>
+<li><strong>81 sq ft</strong> at 4 inches thick</li>
+<li><strong>65 sq ft</strong> at 5 inches</li>
+<li><strong>54 sq ft</strong> at 6 inches</li>
+<li><strong>41 sq ft</strong> at 8 inches</li>
+</ul></p>
+            <p>So a 400 sq ft slab at 4 inches needs 400 ÷ 81 = <strong>4.94 cubic yards</strong>. The same calculation in one step, using thickness in inches, is:</p>
+            <p><span class="formula">Cubic yards = (square feet × thickness in inches) ÷ 324</span></p>
+            <p>Then add <strong>5 to 10% for waste</strong> — spillage, uneven subgrade and the mix left in the chute — and round up to the next quarter yard. A 400 sq ft slab at 4 inches comes to <strong>5.43 cubic yards</strong> ordered. Ready-mix plants sell in quarter-yard and half-yard increments, so ask for 5.5.</p></div>
+        </details>
+        <details class="faq-item" id="faq-cc-metric">
+          <summary class="faq-q">How do I calculate concrete in metric units?</summary>
+          <div class="faq-a"><p>Switch the calculator to metric and it handles the conversion for you, but the underlying shortcut is worth knowing.</p>
+            <p><span class="formula">Cubic metres = length (m) × width (m) × thickness (m)<br>Cubic yards = cubic metres × 1.308</span></p>
+            <p>One cubic metre of concrete covers <strong>13.1 square metres</strong> at 10 cm thick, <strong>10.5 m²</strong> at 12.5 cm and <strong>8.7 m²</strong> at 15 cm.</p>
+            <p>For example, a 6.1 m × 6.1 m slab at 10 cm: 6.1 × 6.1 × 0.10 = 3.72 m³, which is <strong>4.87 cubic yards</strong> — the same answer the imperial inputs give.</p>
+            <p>Bag counts work the same way. One cubic metre needs <strong>54 bags</strong> of 80 lb mix, <strong>62 bags</strong> of 60 lb, <strong>75 bags</strong> of 50 lb, or <strong>90 bags</strong> of 40 lb. Metric and imperial are the same pour — only the labels change.</p></div>
+        </details>
+        <details class="faq-item" id="faq-cc-triangle">
+          <summary class="faq-q">How much concrete do I need for a triangular slab?</summary>
+          <div class="faq-a"><p>A triangle's plan area is simply <strong>base × height ÷ 2</strong>, then multiply by thickness for volume.</p>
+            <p><span class="formula">Area (sq ft) = base (ft) × height (ft) ÷ 2<br>Volume (cu ft) = area × thickness (ft)</span></p>
+            <p>A triangular pad with a 20 ft base and a 12 ft height gives 20 × 12 ÷ 2 = <strong>120 sq ft</strong> of plan area. At 4 inches thick that is 120 × 0.333 = 40 cu ft, or <strong>1.48 cubic yards</strong> — about 73 bags of 80 lb mix with waste.</p>
+            <p>The perimeter differs by triangle type. A symmetric triangle with the apex centred over the base needs 20 + 2 × √(10² + 12²) = <strong>48.3 ft</strong> of edge. A right triangle with the 90° corner at one end needs 20 + 12 + √(20² + 12²) = <strong>52.4 ft</strong>. That edge length drives your formwork cost.</p>
+            <p>The calculator has a <strong>Triangle</strong> mode with both options, and a <strong>Custom</strong> mode if the triangle is only part of the pour.</p></div>
+        </details>
+        <details class="faq-item" id="faq-cc-multiple-shapes">
+          <summary class="faq-q">How do I calculate concrete for several separate areas on one site?</summary>
+          <div class="faq-a"><p>Calculate each area separately and <strong>add the volumes together</strong>. Every shape has its own formula, but the arithmetic after that is simple addition.</p>
+            <p>A common case: a 20 x 20 ft garage pad plus a 10 x 10 ft stoop. The garage is 400 sq ft and the stoop is 100 sq ft, so 500 sq ft total. At 4 inches that is 500 × 0.333 = 166.7 cu ft = <strong>6.17 cubic yards</strong> before waste, or 6.79 with a 10% allowance.</p>
+            <p>The <strong>Custom</strong> mode in this calculator does exactly this. Add a rectangle, a round pad and a triangle, enter each one's dimensions, and the area, volume and total edge length are summed live. Shared edges between two areas are counted twice in the edge length, because each area still needs its own form unless the two are cast in a single continuous pour.</p>
+            <p>One caution: separate pours on the same site should still be tied together with rebar or a construction joint, and each pour needs its own control joints.</p></div>
+        </details>
+        <details class="faq-item" id="faq-cc-gravel">
+          <summary class="faq-q">How much gravel do I need under a concrete slab?</summary>
+          <div class="faq-a"><p>A 4-inch compacted crushed stone base is the standard under a residential slab, and the volume follows the same shortcut as the concrete.</p>
+            <p><span class="formula">Gravel (yd³) = (square feet × base depth in inches) ÷ 324</span></p>
+            <p>For a 400 sq ft slab at 4 inches: (400 × 4) ÷ 324 = <strong>1.48 cubic yards</strong>. At 6 inches it becomes 2.22 cubic yards. Round up and order roughly half a yard extra — the base gets raked and compacted, and material is lost at the edges.</p>
+            <p>Two things to get right. First, the gravel must be <strong>compacted</strong> — a plate compactor or a rented roller, in two or three passes. Concrete poured over loose fill will crack, and no amount of rebar fixes a settling sub-base. Second, the base is what lets water drain out; the vapor barrier goes on top of the compacted base, then the rebar, then the concrete.</p>
+            <p>The calculator's <strong>Gravel base</strong> tile updates the volume whenever you change the base depth.</p></div>
+        </details>
+        <details class="faq-item" id="faq-cc-waste-factor">
+          <summary class="faq-q">How much waste should I add to my concrete order?</summary>
+          <div class="faq-a"><p>Order <strong>5 to 10% more</strong> than the calculated volume. NRMCA's guidance is 4 to 10% for any slab with irregular edges, and most contractors order at the upper end.</p>
+            <p>Where the waste comes from: spillage during the pour, uneven subgrade, over-excavation, the mix left in the truck chute, and the fact that a finished slab's true edges rarely match the tape measure exactly.</p>
+            <p>Set the waste factor to:</p>
+            <p><ul>
+<li><strong>0–5%</strong> for a square, well-measured slab with straight formwork</li>
+<li><strong>10%</strong> for most residential work — the standard default</li>
+<li><strong>15–20%</strong> for irregular shapes, hand-packed forms, or a long access haul where the wheelbarrow loses material</li>
+</ul></p>
+            <p>Never plan to order the bare calculated volume. Under-ordering means a cold joint in the middle of a slab, which is the single most visible concrete defect there is.</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tight">
+    <div class="wrap">
+      <div class="cta-band">
+        <div>
+          <h2>Now price it</h2>
+          <p>Volume is half the answer. The concrete slab cost calculator turns the same dimensions into a full installed price with every line item broken out.</p>
+        </div>
+        <div class="cluster">
+          <a class="btn btn--primary" href="/">Open the slab cost calculator</a>
+          <a class="btn btn--light" href="/ready-mix-vs-bags.html">Ready-mix vs bags</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="/">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 8h18v11H3z"/><path d="M3 8l3-4h12l3 4"/><path d="M8 12h8"/>
+            </svg>
+          </span>
+          <span class="brand-name">Pour<span>Cost</span></span>
+        </a>
+        <p>Free concrete slab cost calculator and estimating tools. 2026 U.S. pricing benchmarks you can override with your own local quotes.</p>
+        <p class="small" style="color:#6b7280">Planning estimates only. Not a quote, contract, structural design, or code determination.</p>
+      </div>
+      <div>
+        <h4>Calculators</h4>
+        <ul>
+          <li><a href="/">Concrete Slab Cost Calculator</a></li>
+          <li><a href="/concrete-calculator.html">Concrete Volume &amp; Bags</a></li>
+          <li><a href="/ready-mix-vs-bags.html">Ready-Mix vs Bags</a></li>
+          <li><a href="/rebar-calculator.html">Rebar Calculator</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Cost Guides</h4>
+        <ul>
+          <li><a href="/cost-per-square-foot.html">Cost Per Square Foot</a></li>
+          <li><a href="/driveway-cost.html">Concrete Driveway Cost</a></li>
+          <li><a href="/patio-cost.html">Concrete Patio Cost</a></li>
+          <li><a href="/faq.html">Concrete Slab FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Reference</h4>
+        <ul>
+          <li><a href="/about.html">Pricing &amp; Methodology</a></li>
+          <li><a href="/about.html#sources">Sources</a></li>
+          <li><a href="/faq.html">FAQ</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span data-year>2026</span> PourCost. Prices last reviewed October 2026.</span>
+      <span>Estimates only — always get 3 local quotes.</span>
+    </div>
+    <p class="footer-disclaimer">This calculator provides estimates. Always consult a professional for structural requirements.</p>
+  </div>
+</footer>
+
+<script src="/assets/js/engine.js"></script>
+<script src="/assets/js/faq.js"></script>
+<script src="/assets/js/app.js"></script>
+<script src="/assets/js/calc-volume.js"></script>
+<script>
+(function () {
+  function build() {
+    var body = document.getElementById("table-bags");
+    if (!body || !window.PourCost) return;
+    var PC = window.PourCost;
+    var sizes = [
+      { l: 8, w: 8 }, { l: 10, w: 10 }, { l: 12, w: 12 }, { l: 10, w: 20 },
+      { l: 20, w: 20 }, { l: 20, w: 24 }, { l: 24, w: 24 }, { l: 30, w: 30 }
+    ];
+    body.innerHTML = sizes.map(function (s) {
+      var area = s.l * s.w;
+      var yd = area * (4 / 12) / 27;
+      var cf = area * (4 / 12);
+      return "<tr><td><strong>" + s.l + " × " + s.w + " ft</strong></td>" +
+        "<td class='num'>" + area + "</td>" +
+        "<td class='num'>" + yd.toFixed(2) + "</td>" +
+        "<td class='num'>" + PC.bagCount(cf, 40, 10) + "</td>" +
+        "<td class='num'>" + PC.bagCount(cf, 50, 10) + "</td>" +
+        "<td class='num'>" + PC.bagCount(cf, 60, 10) + "</td>" +
+        "<td class='num'>" + PC.bagCount(cf, 80, 10) + "</td></tr>";
+    }).join("");
+  }
+  if (document.readyState !== "loading") build();
+  else document.addEventListener("DOMContentLoaded", build);
+})();
+</script>
+</body>
+</html>

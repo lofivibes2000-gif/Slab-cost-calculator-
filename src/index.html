@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Concrete Slab Cost Calculator — Installed Price in 2026 | PourCost</title>
+<meta name="description" content="Free concrete slab cost calculator. Get cubic yards, bag counts, and a full installed price breakdown — concrete, base, rebar, labor, and finishing — in seconds. 2026 U.S. pricing.">
+<link rel="canonical" href="{{CANONICAL}}">
+<meta name="theme-color" content="#14181d">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="PourCost">
+<meta property="og:title" content="{{OG_TITLE}}">
+<meta property="og:description" content="{{OG_DESC}}">
+<meta property="og:url" content="{{OG_URL}}">
+<meta property="og:image" content="https://pourcost.com/assets/img/og-home.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{OG_TITLE}}">
+<meta name="twitter:description" content="{{OG_DESC}}">
+<meta name="twitter:image" content="https://pourcost.com/assets/img/og-home.png">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="/assets/css/site.css">
+<!--SCHEMA-->
+</head>
+<body data-page="index">
+{{HEADER}}
+
+<main>
+
+  <!-- ============ HERO (compressed — calculator reachable without scrolling) ============ -->
+  <section class="hero" style="padding-block:30px 20px">
+    <div class="wrap">
+      <span class="eyebrow">2026 Pricing · Free · No Signup</span>
+      <h1 style="font-size:clamp(2rem,1.35rem+2.4vw,2.9rem);margin-bottom:10px">Concrete Slab <em>Cost Calculator</em></h1>
+      <p class="lead" style="margin-bottom:14px">A full installed price for any concrete slab — not just the material. Enter your dimensions and PourCost breaks the estimate into concrete, delivery, base, forms, reinforcement, labor, control joints and finishing, then gives you a low / typical / high range you can plan around.</p>
+      <div class="trust-row">
+        <span class="trust-item"><svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M2 8l4 4 8-8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> 10-line cost breakdown</span>
+        <span class="trust-item"><svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M2 8l4 4 8-8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Regional pricing, 7 regions</span>
+        <span class="trust-item"><svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M2 8l4 4 8-8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Override with your own quote</span>
+        <a class="trust-link" href="/about.html">Pricing &amp; methodology →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CALCULATOR ============ -->
+  <section class="section section--tight" id="calculator" style="padding-top:8px">
+    <div class="wrap">
+      <div class="calc-layout">
+        <!-- INPUTS -->
+        <div class="calc-panel">
+          <div class="calc-panel__head">
+            <span class="calc-panel__title">Slab Inputs</span>
+            <div class="cluster">
+              <button class="btn btn--ghost btn--sm" type="button" id="btn-reset">Reset</button>
+            </div>
+          </div>
+          <div class="calc-panel__body">
+            <form id="calc-form" autocomplete="off">
+
+              <fieldset class="fieldset">
+                <legend>1 · Project type</legend>
+                <div class="chips">
+                  <button type="button" class="chip" data-preset="patio" aria-pressed="true">Patio</button>
+                  <button type="button" class="chip" data-preset="walkway" aria-pressed="false">Walkway</button>
+                  <button type="button" class="chip" data-preset="driveway" aria-pressed="false">Driveway</button>
+                  <button type="button" class="chip" data-preset="drivewayHvy" aria-pressed="false">Heavy driveway</button>
+                  <button type="button" class="chip" data-preset="garage" aria-pressed="false">Garage floor</button>
+                  <button type="button" class="chip" data-preset="shed" aria-pressed="false">Shed / AC pad</button>
+                  <button type="button" class="chip" data-preset="pool" aria-pressed="false">Pool deck</button>
+                  <button type="button" class="chip" data-preset="stamped" aria-pressed="false">Stamped / decorative</button>
+                  <button type="button" class="chip" data-preset="commercial" aria-pressed="false">Commercial</button>
+                </div>
+                <p class="field__hint" style="margin-top:10px">Picking a project type sets the thickness, PSI, reinforcement, finish, and base depth to code-standard values. You can change any of them below.</p>
+              </fieldset>
+
+              <fieldset class="fieldset">
+                <legend>2 · Shape &amp; dimensions</legend>
+                <div class="seg" style="margin-bottom:16px">
+                  <input type="radio" name="shape" id="shape-rect" value="rect" checked><label for="shape-rect">Rectangle</label>
+                  <input type="radio" name="shape" id="shape-lshape" value="lshape"><label for="shape-lshape">L-shape</label>
+                  <input type="radio" name="shape" id="shape-circle" value="circle"><label for="shape-circle">Round</label>
+                </div>
+
+                <div id="shape-rect-fields" class="field-grid">
+                  <div class="field">
+                    <label for="f-length">Length</label>
+                    <div class="input-wrap has-unit"><input type="number" id="f-length" value="20" min="0" step="0.5" inputmode="decimal"><span class="unit">ft</span></div>
+                  </div>
+                  <div class="field">
+                    <label for="f-width">Width</label>
+                    <div class="input-wrap has-unit"><input type="number" id="f-width" value="20" min="0" step="0.5" inputmode="decimal"><span class="unit">ft</span></div>
+                  </div>
+                </div>
+
+                <div id="shape-lshape-fields" class="field-grid" style="display:none">
+                  <div class="field">
+                    <label for="f-l-length">Full length</label>
+                    <div class="input-wrap has-unit"><input type="number" id="f-l-length" value="24" min="0" step="0.5" inputmode="decimal"><span class="unit">ft</span></div>
+                  </div>
+                  <div class="field">
+                    <label for="f-l-width">Full width</label>
+                    <div class="input-wrap has-unit"><input type="number" id="f-l-width" value="18" min="0" step="0.5" inputmode="decimal"><span class="unit">ft</span></div>
+                  </div>
+                  <div class="field">
+                    <label for="f-l-notch-l">Notch length</label>
+                    <div class="input-wrap has-unit"><input type="number" id="f-l-notch-l" value="10" min="0" step="0.5" inputmode="decimal"><span class="unit">ft</span></div>
+                  </div>
+                  <div class="field">
+                    <label for="f-l-notch-w">Notch width</label>
+                    <div class="input-wrap has-unit"><input type="number" id="f-l-notch-w" value="8" min="0" step="0.5" inputmode="decimal"><span class="unit">ft</span></div>
+                  </div>
+                  <p class="field__hint" style="grid-column:1/-1">The notch is cut from one corner of the full rectangle. Area = length × width − notch length × notch width.</p>
+                </div>
+
+                <div id="shape-circle-fields" class="field-grid" style="display:none">
+                  <div class="field">
+                    <label for="f-diameter">Diameter</label>
+                    <div class="input-wrap has-unit"><input type="number" id="f-diameter" value="12" min="0" step="0.5" inputmode="decimal"><span class="unit">ft</span></div>
+                  </div>
+                </div>
+
+                <div class="field-grid" style="margin-top:16px">
+                  <div class="field">
+                    <label for="f-thickness">Thickness</label>
+                    <div class="input-wrap has-unit"><input type="number" id="f-thickness" value="4" min="0" step="0.25" inputmode="decimal"><span class="unit">in</span></div>
+                    <span class="field__hint" id="thickness-hint">Patios, walkways, shed &amp; AC pads</span>
+                  </div>
+                  <div class="field">
+                    <label for="f-qty">Number of slabs</label>
+                    <div class="input-wrap has-unit"><input type="number" id="f-qty" value="1" min="1" step="1" inputmode="numeric"><span class="unit">ea</span></div>
+                    <span class="field__hint">Identical slabs priced together</span>
+                  </div>
+                </div>
+
+                <div class="chips" style="margin-top:12px">
+                  <button type="button" class="chip" data-thickness="3">3 in</button>
+                  <button type="button" class="chip" data-thickness="4">4 in</button>
+                  <button type="button" class="chip" data-thickness="5">5 in</button>
+                  <button type="button" class="chip" data-thickness="6">6 in</button>
+                  <button type="button" class="chip" data-thickness="8">8 in</button>
+                </div>
+              </fieldset>
+
+              <fieldset class="fieldset">
+                <legend>3 · Mix &amp; reinforcement</legend>
+                <div class="field-grid">
+                  <div class="field">
+                    <label for="f-psi">Concrete strength</label>
+                    <div class="input-wrap">
+                      <select id="f-psi">
+                        <option value="2500">2,500 PSI</option>
+                        <option value="3000" selected>3,000 PSI</option>
+                        <option value="3500">3,500 PSI</option>
+                        <option value="4000">4,000 PSI</option>
+                        <option value="4500">4,500 PSI</option>
+                        <option value="5000">5,000 PSI</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="field">
+                    <label for="f-reinf">Reinforcement</label>
+                    <div class="input-wrap">
+                      <select id="f-reinf">
+                        <option value="none">None</option>
+                        <option value="fiber">Fiber mesh (in mix)</option>
+                        <option value="wire" selected>Welded wire mesh</option>
+                        <option value="rebar">Rebar grid</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="field">
+                    <label for="f-finish">Finish</label>
+                    <div class="input-wrap">
+                      <select id="f-finish">
+                        <option value="broom" selected>Broom (standard)</option>
+                        <option value="trowel">Smooth trowel</option>
+                        <option value="stamped">Stamped / decorative</option>
+                        <option value="exposed">Exposed aggregate</option>
+                        <option value="polished">Polished / ground</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="field">
+                    <label for="f-waste">Waste allowance</label>
+                    <div class="input-wrap">
+                      <select id="f-waste">
+                        <option value="0">0% — exact volume</option>
+                        <option value="5">5% — precise forms</option>
+                        <option value="10" selected>10% — standard (recommended)</option>
+                        <option value="15">15% — irregular site</option>
+                      </select>
+                    </div>
+                    <span class="field__hint">NRMCA recommends 4–10%</span>
+                  </div>
+                </div>
+              </fieldset>
+
+              <fieldset class="fieldset">
+                <legend>4 · Location &amp; site</legend>
+                <div class="field-grid">
+                  <div class="field">
+                    <label for="f-region">Region</label>
+                    <div class="input-wrap">
+                      <select id="f-region">
+                        <option value="national" selected>National average</option>
+                        <option value="southeast">Southeast (FL, GA, AL)</option>
+                        <option value="midwest">Midwest (OH, IN, IL)</option>
+                        <option value="southwest">Southwest (TX, AZ, NM)</option>
+                        <option value="northeast">Northeast (NY, MA, PA)</option>
+                        <option value="west">West Coast (CA, WA, OR)</option>
+                        <option value="hawaii">Hawaii &amp; remote islands</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="field">
+                    <label for="f-basedepth">Gravel base depth</label>
+                    <div class="input-wrap has-unit"><input type="number" id="f-basedepth" value="4" min="0" step="0.5" inputmode="decimal"><span class="unit">in</span></div>
+                  </div>
+                </div>
+                <p class="field__hint" id="region-note" style="margin-top:10px"></p>
+
+                <div class="field-grid" style="margin-top:16px">
+                  <div class="switch-row"><label for="f-include-base">Include gravel sub-base</label><span class="switch"><input type="checkbox" id="f-include-base" checked><span></span></span></div>
+                  <div class="switch-row"><label for="f-include-prep">Include site prep &amp; excavation</label><span class="switch"><input type="checkbox" id="f-include-prep" checked><span></span></span></div>
+                  <div class="switch-row"><label for="f-include-seal">Include curing compound &amp; sealer</label><span class="switch"><input type="checkbox" id="f-include-seal" checked><span></span></span></div>
+                  <div class="switch-row"><label for="f-pump">Pump truck needed</label><span class="switch"><input type="checkbox" id="f-pump"><span></span></span></div>
+                </div>
+              </fieldset>
+
+              <details class="more">
+                <summary>Override prices with your own quotes</summary>
+                <div>
+                  <p class="field__hint" style="margin-bottom:14px">Call one ready-mix supplier and one contractor. Enter their numbers here and the estimate becomes genuinely local.</p>
+                  <div class="field-grid">
+                    <div class="field">
+                      <label for="f-rmprice">Ready-mix price</label>
+                      <div class="input-wrap input-wrap--dollar has-unit"><input type="number" id="f-rmprice" placeholder="155" min="0" step="1" inputmode="decimal"><span class="unit">/yd³</span></div>
+                    </div>
+                    <div class="field">
+                      <label for="f-bagprice">80 lb bag price</label>
+                      <div class="input-wrap input-wrap--dollar has-unit"><input type="number" id="f-bagprice" placeholder="6.50" min="0" step="0.25" inputmode="decimal"><span class="unit">/bag</span></div>
+                    </div>
+                    <div class="field">
+                      <label for="f-delivery">Delivery fee</label>
+                      <div class="input-wrap input-wrap--dollar has-unit"><input type="number" id="f-delivery" placeholder="120" min="0" step="5" inputmode="decimal"><span class="unit">/load</span></div>
+                    </div>
+                    <div class="field">
+                      <label for="f-shortload">Short-load fee</label>
+                      <div class="input-wrap input-wrap--dollar has-unit"><input type="number" id="f-shortload" placeholder="120" min="0" step="5" inputmode="decimal"><span class="unit">flat</span></div>
+                    </div>
+                    <div class="field">
+                      <label for="f-planmin">Plant minimum order</label>
+                      <div class="input-wrap has-unit"><input type="number" id="f-planmin" value="4" min="0" step="0.5" inputmode="decimal"><span class="unit">yd³</span></div>
+                      <span class="field__hint">Below this, a short-load fee applies</span>
+                    </div>
+                  </div>
+                </div>
+              </details>
+
+            </form>
+          </div>
+        </div>
+
+        <!-- RESULTS -->
+        <aside class="results" aria-live="polite">
+          <div class="results__head">
+            <span class="results__title">Your Estimate</span>
+            <span class="badge badge--green">Live</span>
+          </div>
+          <div class="results__body">
+            <div class="headline-cost">
+              <div class="headline-cost__label">Estimated installed cost</div>
+              <div class="headline-cost__value is-empty" id="headline-value">—</div>
+              <div class="headline-cost__sub" id="headline-sub">Enter dimensions to see your estimate</div>
+              <div class="range-band" id="range-band" style="display:none"></div>
+              <div class="range-legend" id="range-legend" style="display:none"></div>
+            </div>
+
+            <div class="stat-grid">
+              <div class="stat"><div class="stat__label">Slab area</div><div class="stat__value" id="stat-area">—</div></div>
+              <div class="stat"><div class="stat__label">Cost per sq ft</div><div class="stat__value" id="stat-sqft">—</div></div>
+              <div class="stat"><div class="stat__label">Concrete needed</div><div class="stat__value" id="stat-yards">—</div></div>
+              <div class="stat"><div class="stat__label">80 lb bags</div><div class="stat__value" id="stat-bags">—</div></div>
+              <div class="stat"><div class="stat__label">Coverage per yd³</div><div class="stat__value" id="stat-coverage">—</div></div>
+              <div class="stat"><div class="stat__label">Truck loads</div><div class="stat__value" id="stat-loads">—</div></div>
+              <div class="stat"><div class="stat__label">Concrete weight</div><div class="stat__value" id="stat-weight">—</div></div>
+              <div class="stat"><div class="stat__label">Control joints</div><div class="stat__value" id="stat-joints">—</div></div>
+            </div>
+
+            <div class="breakdown">
+              <div class="breakdown__title">Cost breakdown</div>
+              <div id="breakdown"><p class="small muted">Enter the slab dimensions to see a line-item cost breakdown.</p></div>
+            </div>
+
+            <div class="totals">
+              <div class="total-row"><span class="total-row__label">Low estimate</span><span class="total-row__value" id="total-low">—</span></div>
+              <div class="total-row"><span class="total-row__label">Typical estimate</span><span class="total-row__value" id="total-typ">—</span></div>
+              <div class="total-row"><span class="total-row__label">High estimate</span><span class="total-row__value" id="total-high">—</span></div>
+              <div class="total-row total-row--grand"><span class="total-row__label">Typical cost per sq ft</span><span class="total-row__value" id="total-sqft">—</span></div>
+            </div>
+
+            <div class="verdict" id="verdict">Enter dimensions to compare bagged concrete against a ready-mix truck.</div>
+          </div>
+          <div class="results__foot">
+            <button class="btn btn--light btn--sm" type="button" id="btn-copy">Copy estimate</button>
+            <button class="btn btn--ghost btn--sm" type="button" id="btn-print" style="color:#c3cad1;border-color:rgba(255,255,255,.25)">Print</button>
+          </div>
+        </aside>
+      </div>
+
+      <div class="notice-bar" style="margin-top:24px">
+        <div><b>This is a planning estimate, not a quote.</b> Rates are 2026 U.S. national averages. Local ready-mix, labor, access, and site conditions move the final number — always get three local quotes and compare the scope line by line.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ QUICK ANSWERS + WORKED EXAMPLE ============ -->
+  <section class="section section--white section--tight">
+    <div class="wrap">
+      <div class="grid grid-2" style="align-items:start;gap:40px">
+        <div>
+          <span class="eyebrow">Worked example</span>
+          <h2 style="font-size:1.6rem">Where the money goes on a 20 × 20 slab</h2>
+          <p class="small muted">4 inches thick, 4-inch gravel base, welded wire mesh, broom finish, 2026 national average pricing.</p>
+          <div class="table-wrap" style="margin-top:16px">
+            <table>
+              <tbody>
+                <tr><td>Ready-mix concrete (5.43 yd³)</td><td class="num">$842</td></tr>
+                <tr><td>Delivery</td><td class="num">$120</td></tr>
+                <tr><td>Site prep &amp; gravel base</td><td class="num">$840</td></tr>
+                <tr><td>Forms, mesh, vapor barrier</td><td class="num">$440</td></tr>
+                <tr><td>Placing &amp; finishing labor</td><td class="num">$1,800</td></tr>
+                <tr><td>Control joints &amp; curing compound</td><td class="num">$375</td></tr>
+                <tr><td style="font-weight:700;color:#14181d">Total (typical)</td><td class="num" style="font-weight:700">$4,417</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="table-note">$11.04 per sq ft — the full scope, including delivery, joints, curing and site prep. Concrete is only 19% of the bill; labor is 41%. Published figures as low as $6 per sq ft usually scope some of those items out.</p>
+        </div>
+        <div>
+          <span class="eyebrow">Quick answers</span>
+          <h2 style="font-size:1.6rem">The three questions everyone asks first</h2>
+          <div class="stack mt-4">
+            <div class="card card--flat card--accent">
+              <div class="card__title">How many bags of concrete do I need?</div>
+              <p class="small mb-0">Divide the pour's volume in cubic feet by the bag yield, then round up: 0.30 ft³ for a 40 lb bag, 0.375 ft³ for 50 lb, 0.45 ft³ for 60 lb, 0.60 ft³ for 80 lb. A <strong>10 × 10 ft slab at 4 inches</strong> is 1.23 yd³ — about <strong>62 bags of 80 lb</strong> with 10% waste.</p>
+            </div>
+            <div class="card card--flat card--accent">
+              <div class="card__title">How many yards of concrete do I need?</div>
+              <p class="small mb-0">Length × width × thickness (in feet) ÷ 27. Or use the shortcut: <strong>(square feet × thickness in inches) ÷ 324</strong>. A <strong>20 × 20 ft slab at 4 inches</strong> is (400 × 4) ÷ 324 = <strong>4.94 cubic yards</strong>. Order about 5.5 with waste.</p>
+            </div>
+            <div class="card card--flat card--accent">
+              <div class="card__title">How much does a concrete slab cost?</div>
+              <p class="small mb-0">A standard residential slab runs <strong>$6–$12 per square foot</strong> installed in 2026. Concrete material alone is about $2–$3.30 per sq ft — labor is usually the biggest line. A <strong>20 × 20 slab</strong> with base, forms, mesh, labor, joints and curing lands around <strong>$3,200–$4,400</strong> depending on scope.</p>
+            </div>
+          </div>
+          <p class="small muted mt-4">Need the volume or the bag count only? Use the <a href="/concrete-calculator.html">concrete calculator</a> — it covers slabs, footings, columns, walls and stairs, in metric or imperial.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BREAKDOWN EXPLAINER ============ -->
+  <section class="section section--white">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Where the money goes</span>
+        <h2>What a concrete slab cost actually includes</h2>
+        <p>Most online calculators hand you a material number and call it a cost. A real slab is an assembly of a dozen line items, and skipping any one of them is how a $3,000 quote becomes a $7,000 invoice. Here is the full list the calculator prices.</p>
+      </div>
+
+      <div class="grid grid-3">
+        <div class="card fcard" data-n="01">
+          <div class="card__title">Concrete material</div>
+          <p class="small">Ready-mix priced per cubic yard. One cubic yard covers 81 sq ft at 4 inches, and each 500 PSI step up adds $4–$10 per yard. Usually 20–30% of the total.</p>
+        </div>
+        <div class="card fcard" data-n="02">
+          <div class="card__title">Delivery &amp; fees</div>
+          <p class="small">$80–$180 per load, plus a $50–$200 short-load fee on orders under 4 to 5 yards, plus fuel and environmental surcharges. A single yard delivered runs $195–$295.</p>
+        </div>
+        <div class="card fcard" data-n="03">
+          <div class="card__title">Site prep &amp; excavation</div>
+          <p class="small">Grading, removing topsoil, establishing drainage slope, and compacting. Poor soil or significant excavation pushes this to $2.50 per sq ft. Usually 10–15% of the total.</p>
+        </div>
+        <div class="card fcard" data-n="04">
+          <div class="card__title">Gravel sub-base</div>
+          <p class="small">4 inches of compacted crushed stone under residential slabs, 6 inches under driveways. $0.75–$1.90 per sq ft. Skipping base is the number one cause of early cracking and heave.</p>
+        </div>
+        <div class="card fcard" data-n="05">
+          <div class="card__title">Forms &amp; edge setup</div>
+          <p class="small">$1.50–$3.00 per linear foot of perimeter, including lumber, stakes, squaring up, and setting the slope for drainage. Stepped or curved forms cost more.</p>
+        </div>
+        <div class="card fcard" data-n="06">
+          <div class="card__title">Reinforcement</div>
+          <p class="small">Fiber $0.10–$0.32, wire mesh $0.20–$0.90, rebar grid $0.70–$2.00 per sq ft. It must be supported at mid-depth — steel lying on the sub-base does nothing.</p>
+        </div>
+        <div class="card fcard" data-n="07">
+          <div class="card__title">Placing &amp; finishing labor</div>
+          <p class="small">$3–$8 per sq ft — the single biggest line, usually 45–55% of the total. A crew of 3–5 spends 40–70 labor hours on a 1,000 sq ft slab.</p>
+        </div>
+        <div class="card fcard" data-n="08">
+          <div class="card__title">Control joints</div>
+          <p class="small">Saw-cut every 2–3× the slab thickness in feet, capped at 15 ft. $1.60–$3.60 per linear foot, with a $150–$225 minimum. This is what stops random cracking.</p>
+        </div>
+        <div class="card fcard" data-n="09">
+          <div class="card__title">Curing &amp; sealing</div>
+          <p class="small">Curing compound applied as soon as the surface water is gone, plus an optional sealer. $0.25–$1.00 per sq ft. Concrete that dries out too early loses surface strength.</p>
+        </div>
+      </div>
+
+      <div class="callout callout--orange" style="margin-top:32px">
+        <p><strong>The single biggest takeaway:</strong> the concrete itself is only about a quarter of an installed slab. Labor is usually half. That is why a materials-only estimate of $2–$4.50 per sq ft is not a cheaper slab — it is a slab with no crew, no base, and no forms.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ DATA TABLES ============ -->
+  <section class="section">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Reference tables</span>
+        <h2>Concrete slab cost per square foot, by thickness and size</h2>
+        <p>Everything below is 2026 U.S. national average pricing. Use these as a quick check on any quote you receive.</p>
+      </div>
+
+      <div class="grid grid-2" style="align-items:start">
+        <div>
+          <h3>Cost of concrete alone, by thickness</h3>
+          <p class="small muted">Material only, delivered. Add labor, base, forms, and reinforcement to get an installed price.</p>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr><th>Thickness</th><th class="num">Coverage per yd³</th><th class="num">Per sq ft</th><th class="num">+ 10% waste</th></tr>
+              </thead>
+              <tbody id="table-concrete-only"></tbody>
+            </table>
+          </div>
+          <p class="table-note">At $155 per cubic yard, 3,000 PSI delivered.</p>
+        </div>
+
+        <div>
+          <h3>Installed cost by project size</h3>
+          <p class="small muted">4-inch slab, broom finish, mesh, 4-inch base. Drag the slider to match your own rate.</p>
+          <div class="field" style="margin-bottom:14px">
+            <label for="f-ratesqft">Installed rate per sq ft: <span id="ratesqft-out" class="text-mono" style="color:#d94f16;font-weight:600">$8</span></label>
+            <input type="range" id="f-ratesqft" min="4" max="22" step="0.5" value="8" style="width:100%">
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr><th>Size</th><th class="num">Sq ft</th><th class="num">Yd³</th><th class="num">80 lb bags</th><th class="num">Cost range</th></tr>
+              </thead>
+              <tbody id="table-sizes"></tbody>
+            </table>
+          </div>
+          <p class="table-note">Bag counts include 10% waste. Costs are at the selected installed rate per sq ft.</p>
+        </div>
+      </div>
+
+      <h3 class="mt-6" style="margin-bottom:14px">How thick should it be? Thickness and reinforcement by use</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Application</th><th>Thickness</th><th>PSI</th><th>Reinforcement</th><th>Base</th><th>Cost per sq ft</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Sidewalk / walkway</strong></td><td>4 in</td><td>3,000 PSI</td><td>Wire mesh or fiber</td><td>4 in gravel</td><td class="num">$4 – $8</td></tr>
+            <tr><td><strong>Patio</strong></td><td>4 in</td><td>3,000–3,500 PSI</td><td>Wire mesh</td><td>4 in gravel</td><td class="num">$6 – $10</td></tr>
+            <tr><td><strong>Shed / AC pad</strong></td><td>4 in</td><td>3,000 PSI</td><td>Wire mesh</td><td>4 in gravel</td><td class="num">$5 – $9</td></tr>
+            <tr><td><strong>Residential driveway</strong></td><td>5 in</td><td>4,000 PSI</td><td>#3 rebar @ 18 in o.c.</td><td>6 in gravel</td><td class="num">$7 – $12</td></tr>
+            <tr><td><strong>Garage floor</strong></td><td>5 in</td><td>4,000 PSI</td><td>#3 rebar @ 18 in o.c.</td><td>6 in gravel</td><td class="num">$7 – $13</td></tr>
+            <tr><td><strong>Heavy vehicle / RV pad</strong></td><td>6 in</td><td>4,000 PSI</td><td>#4 rebar @ 12 in o.c.</td><td>6 in gravel</td><td class="num">$9 – $14</td></tr>
+            <tr><td><strong>Stamped / decorative</strong></td><td>4 in</td><td>3,500 PSI</td><td>Wire mesh</td><td>4 in gravel</td><td class="num">$10 – $22</td></tr>
+            <tr><td><strong>Commercial / warehouse</strong></td><td>6 in</td><td>4,000–5,000 PSI</td><td>#4 rebar @ 12–18 in o.c.</td><td>6 in gravel</td><td class="num">$11 – $18</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="table-note">The IRC (R506.1) sets a 3.5-inch minimum for slab-on-grade floors in habitable space; most jurisdictions amend it to 4 inches. ACI 330R-08 states plainly that there is no benefit in building slabs less than 4 in. thick. Exterior driveways are governed by local codes, which run 4–7 inches.</p>
+
+      <h3 class="mt-6" style="margin-bottom:14px">Concrete slab cost by project type</h3>
+      <p class="small muted">Installed 2026 pricing for a 400 sq ft pour, with the typical spec for each project. Each project has its own page with a dedicated calculator.</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Project</th><th>Typical spec</th><th class="num">Cost per sq ft</th><th class="num">400 sq ft total</th><th class="num">Cubic yards</th></tr></thead>
+          <tbody>
+            <tr><td><a href="/patio-cost.html"><strong>Concrete patio</strong></a></td><td>4 in, mesh, 4 in base, broom</td><td class="num">$6 – $10</td><td class="num">$2,400 – $4,400</td><td class="num">4.94</td></tr>
+            <tr><td><a href="/driveway-cost.html"><strong>Concrete driveway</strong></a></td><td>5 in, #3 rebar, 6 in base</td><td class="num">$7 – $12</td><td class="num">$2,800 – $4,800</td><td class="num">6.17</td></tr>
+            <tr><td><a href="/driveway-cost.html"><strong>Two-car garage floor</strong></a></td><td>5 in, #3 rebar, 6 in base</td><td class="num">$7 – $13</td><td class="num">$2,800 – $5,200</td><td class="num">6.17</td></tr>
+            <tr><td><strong>Sidewalk / walkway</strong></td><td>4 in, mesh, 4 in base</td><td class="num">$4 – $8</td><td class="num">$1,600 – $3,200</td><td class="num">4.94</td></tr>
+            <tr><td><strong>Shed / AC pad</strong></td><td>4 in, mesh, 4 in base</td><td class="num">$5 – $9</td><td class="num">$2,000 – $3,600</td><td class="num">4.94</td></tr>
+            <tr><td><strong>Pool deck</strong></td><td>4 in, rebar, 4 in base</td><td class="num">$8 – $14</td><td class="num">$3,200 – $5,600</td><td class="num">4.94</td></tr>
+            <tr><td><a href="/patio-cost.html"><strong>Stamped / decorative</strong></a></td><td>4 in, mesh, 4 in base</td><td class="num">$10 – $22</td><td class="num">$4,000 – $8,800</td><td class="num">4.94</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="table-note">Cubic yards for a 400 sq ft slab at the stated thickness, before the 10% waste allowance. Decorative finishes and thicker pours raise the cubic yard count — check the <a href="/concrete-calculator.html">concrete calculator</a> for your exact dimensions.</p>
+    </div>
+  </section>
+
+  <!-- ============ COST SAVINGS ============ -->
+  <section class="section section--white">
+    <div class="wrap">
+      <div class="grid grid-2" style="align-items:start;gap:56px">
+        <div>
+          <span class="eyebrow">Where to save</span>
+          <h2>Cut the cost without cutting corners</h2>
+          <p>There is a meaningful gap between a well-scoped slab and an over-specified one. These are the moves that reduce the bill without risking the result:</p>
+          <ul>
+            <li><strong>Get the base right, not bigger.</strong> A 4-inch compacted base is the residential standard. Going to 6 inches adds $0.60–$0.90 per sq ft and buys almost nothing on decent soil. What matters is that the base is compacted and uniform — not its depth.</li>
+            <li><strong>Match reinforcement to the load.</strong> Wire mesh on a patio is enough; a driveway needs #3 rebar at 18 inches on center. Putting #4 at 12 inches on a walkway is paying for capacity you will never use.</li>
+            <li><strong>Keep the pour accessible.</strong> If the truck can reach the forms, you avoid a $450–$900 pump truck. Moving the access point or using a wider gate is free by comparison.</li>
+            <li><strong>Pour bigger pads, not more pads.</strong> Each additional pour means another truck minimum, another crew mobilization, and another set of forms. Two 10 × 10 pads cost more than one 10 × 20 pad.</li>
+            <li><strong>Order one truckload.</strong> A 10-yard truck costs $1,450–$1,950 delivered. Two 5-yard loads cost more, because the trip fee is charged twice.</li>
+            <li><strong>Finish during the pour.</strong> Adding a decorative finish later costs more than specifying a broom or trowel finish on the original pour.</li>
+          </ul>
+        </div>
+        <div>
+          <span class="eyebrow">Where not to save</span>
+          <h2>The three places to never cut corners</h2>
+          <p>These are the items where a cheap quote turns into a failure — and where the repair costs far more than the original saving.</p>
+          <div class="stack">
+            <div class="card card--flat card--accent">
+              <div class="card__title">1. Site preparation and compaction</div>
+              <p class="small mb-0">A slab is only as good as what is under it. Skipping the base or pouring over uncompacted fill is the number one cause of early cracking and heave. A 4-inch compacted base runs $0.75–$1.90 per sq ft, and it is the cheapest insurance in the whole project. On poor soil, engineering fill can push this to $2.50 per sq ft — and skipping it costs more later.</p>
+            </div>
+            <div class="card card--flat card--accent">
+              <div class="card__title">2. Concrete strength and air entrainment</div>
+              <p class="small mb-0">In any freeze-thaw climate, specify 4,000 PSI with 5–7% air entrainment per ACI 332. At 3,000 PSI without air, exterior slabs scale and spall — sometimes within 5 to 10 years. Each 500 PSI step up costs only $4–$10 per cubic yard. It is the cheapest upgrade on the page.</p>
+            </div>
+            <div class="card card--flat card--accent">
+              <div class="card__title">3. Control joints and curing</div>
+              <p class="small mb-0">Concrete cracks. Control joints decide <em>where</em> it cracks, in a straight line, instead of in a random diagonal across your patio. Joints cost $1.60–$3.60 per linear foot with a $150 minimum, and curing compound adds $0.25–$1.00 per sq ft. Together they are well under 10% of the budget and they are what keeps a slab looking intentional for 30 years.</p>
+            </div>
+          </div>
+          <div class="callout callout--orange mt-4">
+            <p><strong>A quote under $4 per square foot is missing something.</strong> On a residential flatwork scope, $4 per sq ft cannot cover concrete, a crew, forms, base, reinforcement, joints, and curing. Find out what was left out before you sign it.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ HOW TO USE / QUOTE CHECK ============ -->
+  <section class="section section--white">
+    <div class="wrap">
+      <div class="grid grid-2" style="align-items:start;gap:56px">
+        <div>
+          <span class="eyebrow">How to use this</span>
+          <h2>Get an accurate number in four steps</h2>
+          <ol class="steps">
+            <li><strong>Measure the pour</strong>Length and width of the finished slab. If it is not a rectangle, split it into rectangles and use the L-shape mode.</li>
+            <li><strong>Pick the thickness by load</strong>4 inches for foot traffic, 5 inches for a car, 6 inches for a truck or RV, 8 inches for heavy equipment.</li>
+            <li><strong>Set the region and finish</strong>Regional pricing shifts ready-mix by 25% or more across the country, and a stamped finish adds $3–$10 per sq ft.</li>
+            <li><strong>Override with real quotes</strong>Call one ready-mix plant and one concrete contractor. Enter their numbers in the price override section and your estimate is now local.</li>
+          </ol>
+          <div class="callout">
+            <p><strong>Ask for the ready-mix plant's price at your yardage.</strong> A single yard delivered runs $195–$295 because of trip and short-load fees. Six yards runs $870–$1,170. The per-yard rate you see advertised usually assumes a full truck.</p>
+          </div>
+        </div>
+        <div>
+          <span class="eyebrow">Spotting a bad quote</span>
+          <h2>Nine things a real quote must include</h2>
+          <p>Compare bids line by line, not just on the total. A complete concrete slab quote itemizes:</p>
+          <ol>
+            <li>Excavation to depth and grading</li>
+            <li>Compacted gravel base — thickness and material</li>
+            <li>Forms, set and removed</li>
+            <li>Reinforcement — bar size, spacing, and how it is supported</li>
+            <li>Mix PSI rating and whether air entrainment is included</li>
+            <li>Delivery, short-load fees, and whether a pump is needed</li>
+            <li>Placing and finishing labor, and which finish is specified</li>
+            <li>Control joints — sawn or tooled, and at what spacing</li>
+            <li>Curing compound or sealer, plus cleanup and haul-off</li>
+          </ol>
+          <div class="callout callout--warn">
+            <p><strong>Three red flags.</strong> No base line item. A per-square-foot price too low to include labor. One flat price for every size. A quote under $4 per sq ft is missing something significant — usually site prep, base, or joints.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ RELATED TOOLS ============ -->
+  <section class="section">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">More calculators</span>
+        <h2>Related concrete tools</h2>
+        <p>Each one uses the same pricing model, so the numbers stay consistent across the site.</p>
+      </div>
+      <div class="grid grid-3">
+        <a class="card" href="/concrete-calculator.html" style="text-decoration:none">
+          <div class="card__eyebrow">Volume &amp; materials</div>
+          <div class="card__title">Concrete Calculator</div>
+          <p class="small">Cubic yards, cubic feet, and 40/60/80 lb bag counts for rectangles, L-shapes, and round pads.</p>
+        </a>
+        <a class="card" href="/cost-per-square-foot.html" style="text-decoration:none">
+          <div class="card__eyebrow">Pricing</div>
+          <div class="card__title">Cost Per Square Foot</div>
+          <p class="small">The full 2026 breakdown of what makes up a concrete slab price, by thickness and by component.</p>
+        </a>
+        <a class="card" href="/ready-mix-vs-bags.html" style="text-decoration:none">
+          <div class="card__eyebrow">Decision tool</div>
+          <div class="card__title">Ready-Mix vs Bags</div>
+          <p class="small">Find the breakeven point between a ready-mix truck and buying bags, with total cost side by side.</p>
+        </a>
+        <a class="card" href="/driveway-cost.html" style="text-decoration:none">
+          <div class="card__eyebrow">Project guide</div>
+          <div class="card__title">Driveway Cost</div>
+          <p class="small">2026 driveway pricing per square foot, total by size, and what pushes a quote to the high end.</p>
+        </a>
+        <a class="card" href="/patio-cost.html" style="text-decoration:none">
+          <div class="card__eyebrow">Project guide</div>
+          <div class="card__title">Patio Cost</div>
+          <p class="small">Patio pricing per square foot, total cost by size, and a line-item breakdown for a 20 × 20.</p>
+        </a>
+        <a class="card" href="/rebar-calculator.html" style="text-decoration:none">
+          <div class="card__eyebrow">Structural</div>
+          <div class="card__title">Rebar Calculator</div>
+          <p class="small">Linear feet, bar count, and material cost by bar size and spacing, plus mesh vs rebar.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="section section--white" id="faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">FAQ</span>
+        <h2>Concrete slab cost questions, answered</h2>
+        <p><span id="faq-count"><!--FAQ_COUNT--></span> questions homeowners and contractors search for most, with real 2026 numbers rather than vague ranges.</p>
+      </div>
+      <div class="faq-nav">
+<!--FAQ_NAV-->
+      </div>
+      <div class="faq" id="faq-list">
+<!--FAQ_LIST-->
+      </div>
+      <p class="small muted mt-5">Pricing last reviewed October 2026 using published ready-mix supplier price lists, national cost guides, and industry benchmark ranges. See <a href="/about.html">our methodology and sources</a>.</p>
+    </div>
+  </section>
+
+  <!-- ============ CTA ============ -->
+  <section class="section">
+    <div class="wrap">
+      <div class="cta-band">
+        <div>
+          <h2>Turn the estimate into a real quote</h2>
+          <p>Use the numbers here to check the quotes you collect. If they line up, you know your budget is right. If they do not, you know exactly which line item to ask about.</p>
+        </div>
+        <div class="cluster">
+          <a class="btn btn--primary" href="#calculator">Open the calculator</a>
+          <a class="btn btn--light" href="/faq.html">All FAQs</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+{{FOOTER}}
+
+<script src="/assets/js/engine.js"></script>
+<script src="/assets/js/faq.js"></script>
+<script src="/assets/js/app.js"></script>
+<script src="/assets/js/calc-main.js"></script>
+</body>
+</html>

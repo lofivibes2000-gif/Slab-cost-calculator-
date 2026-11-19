@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" font-family="Inter, Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#14181d"/>
+      <stop offset="1" stop-color="#232a33"/>
+    </linearGradient>
+    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M30 0H0V30" fill="none" stroke="#ffffff" stroke-opacity="0.045" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+
+  <rect x="0" y="0" width="1200" height="7" fill="#d94f16"/>
+
+  <!-- Brand mark -->
+  <g transform="translate(72,64)">
+    <rect width="54" height="54" rx="9" fill="#d94f16"/>
+    <g fill="none" stroke="#fff" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round" transform="translate(13,13)">
+      <path d="M0 8h28v20H0z"/>
+      <path d="M0 8l4-7h20l4 7"/>
+      <path d="M9 17h10"/>
+    </g>
+    <text x="70" y="39" fill="#fff" font-size="31" font-weight="700" letter-spacing="-0.5">Pour<tspan fill="#8b949d" font-weight="400">Cost</tspan></text>
+  </g>
+
+  <!-- Headline -->
+  <text x="72" y="238" fill="#ffffff" font-size="66" font-weight="700" letter-spacing="-2.2">Concrete Slab</text>
+  <text x="72" y="312" fill="#d94f16" font-size="66" font-weight="700" letter-spacing="-2.2">Cost Calculator</text>
+
+  <text x="72" y="372" fill="#a8b1b9" font-size="25">Cubic yards, bag counts, and a full installed price</text>
+  <text x="72" y="408" fill="#a8b1b9" font-size="25">breakdown — 2026 U.S. pricing.</text>
+
+  <!-- Stat chips -->
+  <g transform="translate(72,462)">
+    <rect width="250" height="92" rx="10" fill="#ffffff" fill-opacity="0.055" stroke="#ffffff" stroke-opacity="0.12"/>
+    <text x="22" y="42" fill="#ffffff" font-size="30" font-weight="700" font-family="IBM Plex Mono, monospace">$6–$12</text>
+    <text x="22" y="70" fill="#8b949d" font-size="16" letter-spacing="1.2">PER SQ FT INSTALLED</text>
+  </g>
+  <g transform="translate(342,462)">
+    <rect width="250" height="92" rx="10" fill="#ffffff" fill-opacity="0.055" stroke="#ffffff" stroke-opacity="0.12"/>
+    <text x="22" y="42" fill="#ffffff" font-size="30" font-weight="700" font-family="IBM Plex Mono, monospace">10 lines</text>
+    <text x="22" y="70" fill="#8b949d" font-size="16" letter-spacing="1.2">ITEMIZED COST</text>
+  </g>
+  <g transform="translate(612,462)">
+    <rect width="250" height="92" rx="10" fill="#ffffff" fill-opacity="0.055" stroke="#ffffff" stroke-opacity="0.12"/>
+    <text x="22" y="42" fill="#ffffff" font-size="30" font-weight="700" font-family="IBM Plex Mono, monospace">50 states</text>
+    <text x="22" y="70" fill="#8b949d" font-size="16" letter-spacing="1.2">REGIONAL PRICING</text>
+  </g>
+
+  <!-- Slab glyph -->
+  <g transform="translate(930,120)" fill="none" stroke="#d94f16" stroke-opacity="0.5" stroke-width="3">
+    <path d="M0 40h170v100H0z"/>
+    <path d="M0 40l22-34h126l22 34"/>
+    <path d="M40 80h90"/>
+    <path d="M40 110h90"/>
+    <path d="M0 40v100M170 40v100"/>
+  </g>
+</svg>

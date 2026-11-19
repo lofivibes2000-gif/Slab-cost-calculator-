@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ready-Mix vs Bags of Concrete — Which Is Cheaper? | PourCost</title>
+<meta name="description" content="Compare ready-mix truck cost against bags of concrete for your pour. See the breakeven point, delivery and short-load fees, and total cost side by side.">
+<link rel="canonical" href="{{CANONICAL}}">
+<meta name="theme-color" content="#14181d">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="PourCost">
+<meta property="og:title" content="{{OG_TITLE}}">
+<meta property="og:description" content="{{OG_DESC}}">
+<meta property="og:url" content="{{OG_URL}}">
+<meta property="og:image" content="https://pourcost.com/assets/img/og-home.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="/assets/css/site.css">
+<!--SCHEMA-->
+</head>
+<body data-page="ready-mix-vs-bags">
+{{HEADER}}
+
+<main>
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">Ready-Mix vs Bags</span>
+        <h1>Ready-mix or <em>bags of concrete</em>?</h1>
+        <p class="hero-lede">The breakeven sits at about <strong>1 cubic yard</strong> — 45 bags of 80 lb mix. Below that, bags cost less. Above it, ready-mix wins on both money and time. This calculator prices your specific pour both ways so you can see which one it is.</p>
+        <div class="hero-stats">
+          <div class="hero-stat"><b>$130–$180</b><span>per yd³ ready-mix</span></div>
+          <div class="hero-stat"><b>$5.50–$7.75</b><span>per 80 lb bag</span></div>
+          <div class="hero-stat"><b>~1 yd³</b><span>breakeven point</span></div>
+        </div>
+      </div>
+      <div class="card card--accent">
+        <div class="card__eyebrow">The rule of thumb</div>
+        <div class="card__title">Where each one wins</div>
+        <ul style="margin-top:10px;margin-bottom:0">
+          <li><strong>Under 1 yd³</strong> — bags. A 10 x 10 patio at 4 inches. No delivery fee, no short-load fee, no minimum order.</li>
+          <li><strong>1 to 2 yd³</strong> — either. Compare the delivered quote against bags plus a mixer rental.</li>
+          <li><strong>Over 2 yd³</strong> — ready-mix, with a pump if the truck cannot reach the forms.</li>
+        </ul>
+        <p class="table-note" style="margin-top:12px">Past 1 yd³, hand-mixing also risks cold joints between batches.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tight" id="calculator">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Comparison Calculator</span>
+        <h2>Price your pour both ways</h2>
+        <p>Enter the dimensions once and compare a delivered ready-mix load against buying bags. Adjust any price to match your local hardware store and plant.</p>
+      </div>
+
+      <div class="calc-layout">
+        <div class="calc-panel">
+          <div class="calc-panel__head"><span class="calc-panel__title">Pour &amp; Prices</span></div>
+          <div class="calc-panel__body">
+            <form id="cmp-form" autocomplete="off">
+              <fieldset class="fieldset">
+                <legend>Your pour</legend>
+                <div class="field-grid">
+                  <div class="field">
+                    <label for="c-length">Length</label>
+                    <div class="input-wrap has-unit"><input type="number" id="c-length" value="12" min="0" step="0.5" inputmode="decimal"><span class="unit">ft</span></div>
+                  </div>
+                  <div class="field">
+                    <label for="c-width">Width</label>
+                    <div class="input-wrap has-unit"><input type="number" id="c-width" value="12" min="0" step="0.5" inputmode="decimal"><span class="unit">ft</span></div>
+                  </div>
+                  <div class="field">
+                    <label for="c-thickness">Thickness</label>
+                    <div class="input-wrap has-unit"><input type="number" id="c-thickness" value="4" min="0" step="0.25" inputmode="decimal"><span class="unit">in</span></div>
+                  </div>
+                  <div class="field">
+                    <label for="c-waste">Waste allowance</label>
+                    <div class="input-wrap">
+                      <select id="c-waste">
+                        <option value="0">0%</option>
+                        <option value="5">5%</option>
+                        <option value="10" selected>10% — standard</option>
+                        <option value="15">15%</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+
+              <fieldset class="fieldset">
+                <legend>Ready-mix prices</legend>
+                <div class="field-grid">
+                  <div class="field">
+                    <label for="c-rmprice">Ready-mix</label>
+                    <div class="input-wrap input-wrap--dollar has-unit"><input type="number" id="c-rmprice" value="155" min="0" step="1" inputmode="decimal"><span class="unit">/yd³</span></div>
+                  </div>
+                  <div class="field">
+                    <label for="c-delivery">Delivery fee</label>
+                    <div class="input-wrap input-wrap--dollar has-unit"><input type="number" id="c-delivery" value="120" min="0" step="5" inputmode="decimal"><span class="unit">/load</span></div>
+                  </div>
+                  <div class="field">
+                    <label for="c-shortload">Short-load fee</label>
+                    <div class="input-wrap input-wrap--dollar has-unit"><input type="number" id="c-shortload" value="120" min="0" step="5" inputmode="decimal"><span class="unit">flat</span></div>
+                  </div>
+                  <div class="field">
+                    <label for="c-planmin">Plant minimum</label>
+                    <div class="input-wrap has-unit"><input type="number" id="c-planmin" value="4" min="0" step="0.5" inputmode="decimal"><span class="unit">yd³</span></div>
+                    <span class="field__hint">Below this, the short-load fee applies</span>
+                  </div>
+                </div>
+              </fieldset>
+
+              <fieldset class="fieldset">
+                <legend>Bagged prices</legend>
+                <div class="field-grid">
+                  <div class="field">
+                    <label for="c-bagsize">Bag size</label>
+                    <div class="input-wrap">
+                      <select id="c-bagsize">
+                        <option value="80" selected>80 lb — 0.60 ft³</option>
+                        <option value="60">60 lb — 0.45 ft³</option>
+                        <option value="40">40 lb — 0.30 ft³</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="field">
+                    <label for="c-bagprice">Price per bag</label>
+                    <div class="input-wrap input-wrap--dollar has-unit"><input type="number" id="c-bagprice" value="6.50" min="0" step="0.25" inputmode="decimal"><span class="unit">/bag</span></div>
+                  </div>
+                  <div class="field">
+                    <label for="c-mixer">Mixer rental</label>
+                    <div class="input-wrap input-wrap--dollar has-unit"><input type="number" id="c-mixer" value="0" min="0" step="5" inputmode="decimal"><span class="unit">one day</span></div>
+                    <span class="field__hint">$50–$90 typical for a drum mixer</span>
+                  </div>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+
+        <aside class="results" aria-live="polite">
+          <div class="results__head"><span class="results__title">Side by Side</span><span class="badge badge--green">Live</span></div>
+          <div class="results__body">
+            <div class="headline-cost">
+              <div class="headline-cost__label">Cheaper option</div>
+              <div class="headline-cost__value" id="cmp-savings">—</div>
+              <div class="headline-cost__sub">by <span id="cmp-savings-val">—</span> on this pour</div>
+            </div>
+            <div class="stat-grid">
+              <div class="stat"><div class="stat__label">Volume</div><div class="stat__value" id="cmp-volume">—</div></div>
+              <div class="stat"><div class="stat__label">Order qty</div><div class="stat__value" id="cmp-order">—</div></div>
+              <div class="stat"><div class="stat__label">Bags needed</div><div class="stat__value" id="cmp-bags">—</div></div>
+              <div class="stat"><div class="stat__label">Truck loads</div><div class="stat__value" id="cmp-loads">—</div></div>
+            </div>
+
+            <div class="breakdown">
+              <div class="breakdown__title">Cost breakdown</div>
+              <div id="cmp-rm-col" style="border-left:3px solid rgba(255,255,255,.12);padding-left:12px;margin-bottom:18px">
+                <div class="bd-row"><div class="bd-row__head"><span class="bd-row__label">Ready-mix concrete</span><span class="bd-row__val" id="cmp-rm-concrete">—</span></div></div>
+                <div class="bd-row"><div class="bd-row__head"><span class="bd-row__label">Delivery</span><span class="bd-row__val" id="cmp-rm-delivery">—</span></div></div>
+                <div class="bd-row"><div class="bd-row__head"><span class="bd-row__label">Short-load fee</span><span class="bd-row__val" id="cmp-rm-short">—</span></div></div>
+                <div class="bd-row"><div class="bd-row__head"><span class="bd-row__label"><strong>Total</strong></span><span class="bd-row__val" id="cmp-rm-total">—</span></div></div>
+                <div class="bd-row__head" style="margin-top:8px"><span class="bd-row__label small">Effective rate</span><span class="bd-row__val" id="cmp-rm-peryd">—</span></div>
+              </div>
+
+              <div id="cmp-bag-col" style="border-left:3px solid rgba(255,255,255,.12);padding-left:12px">
+                <div class="bd-row"><div class="bd-row__head"><span class="bd-row__label">Bagged concrete</span><span class="bd-row__val" id="cmp-bag-material">—</span></div></div>
+                <div class="bd-row"><div class="bd-row__head"><span class="bd-row__label">Mixer rental</span><span class="bd-row__val" id="cmp-bag-mixer">—</span></div></div>
+                <div class="bd-row"><div class="bd-row__head"><span class="bd-row__label"><strong>Total</strong></span><span class="bd-row__val" id="cmp-bag-total">—</span></div></div>
+                <div class="bd-row__head" style="margin-top:8px"><span class="bd-row__label small">Effective rate</span><span class="bd-row__val" id="cmp-bag-peryd">—</span></div>
+              </div>
+            </div>
+
+            <div class="totals">
+              <div class="total-row total-row--grand"><span class="total-row__label">Difference</span><span class="total-row__value" id="cmp-diff">—</span></div>
+            </div>
+            <div class="verdict" id="cmp-verdict">Enter your pour dimensions to compare.</div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--white">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Reference</span>
+        <h2>What a yard of concrete costs either way</h2>
+      </div>
+      <div class="grid grid-2" style="align-items:start">
+        <div>
+          <h3>Ready-mix, delivered</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Order size</th><th class="num">Concrete</th><th class="num">Short-load</th><th class="num">Delivered total</th><th class="num">Effective /yd³</th></tr></thead>
+              <tbody>
+                <tr><td>1 yd³</td><td class="num">$145–$195</td><td class="num">$50–$100</td><td class="num"><strong>$195–$295</strong></td><td class="num">$195–$295</td></tr>
+                <tr><td>2 yd³</td><td class="num">$290–$390</td><td class="num">$50–$100</td><td class="num"><strong>$340–$490</strong></td><td class="num">$170–$245</td></tr>
+                <tr><td>4 yd³</td><td class="num">$580–$780</td><td class="num">usually none</td><td class="num"><strong>$580–$780</strong></td><td class="num">$145–$195</td></tr>
+                <tr><td>6 yd³</td><td class="num">$870–$1,170</td><td class="num">none</td><td class="num"><strong>$870–$1,170</strong></td><td class="num">$145–$195</td></tr>
+                <tr><td>10 yd³</td><td class="num">$1,450–$1,950</td><td class="num">none</td><td class="num"><strong>$1,450–$1,950</strong></td><td class="num">$145–$195</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="table-note">Delivered ready-mix runs $145–$195 per cubic yard in 2026. A truck holds about 10 cubic yards. Near a full load, many plants discount $5–$15 per yard.</p>
+        </div>
+        <div>
+          <h3>Bagged, self-mixed</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Bag size</th><th class="num">Yield</th><th class="num">Bags / yd³</th><th class="num">Price / yd³</th></tr></thead>
+              <tbody>
+                <tr><td><strong>80 lb</strong></td><td class="num">0.60 ft³</td><td class="num">45</td><td class="num">$248–$349</td></tr>
+                <tr><td><strong>60 lb</strong></td><td class="num">0.45 ft³</td><td class="num">60</td><td class="num">$255–$375</td></tr>
+                <tr><td><strong>40 lb</strong></td><td class="num">0.30 ft³</td><td class="num">90</td><td class="num">$293–$441</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="table-note">At $5.50–$7.75 per 80 lb bag. Add a mixer rental of $50–$90 per day, plus the labor to mix, haul, and pour 3,600 lb.</p>
+
+          <div class="callout callout--orange" style="margin-top:20px">
+            <p><strong>Why the totals look so close:</strong> bagged mix at $5.50–$7.75 per bag works out to $248–$349 per cubic yard, versus $145–$195 delivered. The bagged rate looks worse on paper — but it avoids the delivery trip fee and the short-load surcharge that make a small ready-mix order expensive.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">FAQ</span>
+        <h2>Ready-mix vs bags questions, answered</h2>
+        <p class="small muted"><span id="faq-count"><!--FAQ_COUNT--></span> questions, each with a real 2026 number.</p>
+      </div>
+      <div class="faq-nav">
+<!--FAQ_NAV-->
+      </div>
+      <div class="faq" id="faq-list">
+<!--FAQ_LIST-->
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tight">
+    <div class="wrap">
+      <div class="cta-band">
+        <div>
+          <h2>Compare it against a full install</h2>
+          <p>Material is only a quarter of the bill. The slab cost calculator adds base, forms, rebar, labor, joints, and finishing to either option.</p>
+        </div>
+        <div class="cluster">
+          <a class="btn btn--primary" href="/">Concrete slab cost calculator</a>
+          <a class="btn btn--light" href="/concrete-calculator.html">Volume &amp; bags</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+{{FOOTER}}
+
+<script src="/assets/js/engine.js"></script>
+<script src="/assets/js/faq.js"></script>
+<script src="/assets/js/app.js"></script>
+<script src="/assets/js/calc-compare.js"></script>
+</body>
+</html>

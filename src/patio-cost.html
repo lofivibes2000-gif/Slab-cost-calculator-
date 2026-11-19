@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Concrete Patio Cost in 2026 — Per Square Foot &amp; Total | PourCost</title>
+<meta name="description" content="How much does a concrete patio cost? 2026 pricing per square foot, total cost by patio size, and a line-item breakdown of what you are paying for.">
+<link rel="canonical" href="{{CANONICAL}}">
+<meta name="theme-color" content="#14181d">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="PourCost">
+<meta property="og:title" content="{{OG_TITLE}}">
+<meta property="og:description" content="{{OG_DESC}}">
+<meta property="og:url" content="{{OG_URL}}">
+<meta property="og:image" content="https://pourcost.com/assets/img/og-home.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="/assets/css/site.css">
+<!--SCHEMA-->
+</head>
+<body data-page="patio-cost">
+{{HEADER}}
+
+<main>
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">Concrete Patio Cost</span>
+        <h1>How much does a <em>concrete patio</em> cost?</h1>
+        <p class="hero-lede">A concrete patio runs <strong>$6 to $10 per square foot</strong> installed in 2026, and most projects land between $7 and $9. A patio is the cheapest of the flatwork pours — thin, lightly reinforced, and easy to access.</p>
+        <div class="cluster mt-4">
+          <a class="btn btn--primary" href="#calculator">Price my patio</a>
+          <a class="btn btn--ghost" href="#faq">Patio FAQ</a>
+        </div>
+      </div>
+      <div class="card card--accent">
+        <div class="card__eyebrow">2026 installed pricing</div>
+        <div class="card__title">By patio size</div>
+        <table style="margin-top:8px">
+          <thead><tr><th>Size</th><th class="num">Sq ft</th><th class="num">Cost</th></tr></thead>
+          <tbody>
+            <tr><td>10 × 10</td><td class="num">100</td><td class="num">$600–$1,000</td></tr>
+            <tr><td>12 × 12</td><td class="num">144</td><td class="num">$864–$1,440</td></tr>
+            <tr><td>16 × 20</td><td class="num">320</td><td class="num">$1,900–$3,200</td></tr>
+            <tr><td>20 × 20</td><td class="num">400</td><td class="num">$2,400–$4,000</td></tr>
+          </tbody>
+        </table>
+        <p class="table-note">4-inch slab, wire mesh, 4-inch base, broom finish.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tight" id="calculator">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Patio Cost Calculator</span>
+        <h2>Price your patio</h2>
+        <p>Defaults: 4-inch slab, 3,500 PSI concrete, welded wire mesh, 4 inches of compacted base, broom finish. Adjust anything.</p>
+      </div>
+
+      <div class="calc-layout">
+        <div class="calc-panel">
+          <div class="calc-panel__head"><span class="calc-panel__title">Patio Inputs</span></div>
+          <div class="calc-panel__body">
+            <form id="patio-form" autocomplete="off">
+              <fieldset class="fieldset">
+                <legend>Dimensions</legend>
+                <div class="field-grid">
+                  <div class="field">
+                    <label for="p-length">Length</label>
+                    <div class="input-wrap has-unit"><input type="number" id="p-length" value="20" min="0" step="0.5" inputmode="decimal"><span class="unit">ft</span></div>
+                  </div>
+                  <div class="field">
+                    <label for="p-width">Width</label>
+                    <div class="input-wrap has-unit"><input type="number" id="p-width" value="20" min="0" step="0.5" inputmode="decimal"><span class="unit">ft</span></div>
+                  </div>
+                  <div class="field">
+                    <label for="p-thickness">Thickness</label>
+                    <div class="input-wrap has-unit"><input type="number" id="p-thickness" value="4" min="0" step="0.25" inputmode="decimal"><span class="unit">in</span></div>
+                    <span class="field__hint">4 in standard; 6 in under a hot tub</span>
+                  </div>
+                </div>
+              </fieldset>
+
+              <fieldset class="fieldset">
+                <legend>Options</legend>
+                <div class="field-grid">
+                  <div class="field">
+                    <label for="p-region">Region</label>
+                    <div class="input-wrap">
+                      <select id="p-region">
+                        <option value="national" selected>National average</option>
+                        <option value="southeast">Southeast</option>
+                        <option value="midwest">Midwest</option>
+                        <option value="southwest">Southwest</option>
+                        <option value="northeast">Northeast</option>
+                        <option value="west">West Coast</option>
+                        <option value="hawaii">Hawaii &amp; remote</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="field">
+                    <label for="p-reinf">Reinforcement</label>
+                    <div class="input-wrap">
+                      <select id="p-reinf">
+                        <option value="none">None</option>
+                        <option value="fiber">Fiber mesh</option>
+                        <option value="wire" selected>Welded wire mesh</option>
+                        <option value="rebar">Rebar grid</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="field">
+                    <label for="p-finish">Finish</label>
+                    <div class="input-wrap">
+                      <select id="p-finish">
+                        <option value="broom" selected>Broom (standard)</option>
+                        <option value="trowel">Smooth trowel</option>
+                        <option value="stamped">Stamped / decorative</option>
+                        <option value="exposed">Exposed aggregate</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="field">
+                    <label for="p-waste">Waste allowance</label>
+                    <div class="input-wrap">
+                      <select id="p-waste">
+                        <option value="0">0%</option>
+                        <option value="5">5%</option>
+                        <option value="10" selected>10%</option>
+                        <option value="15">15%</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+
+        <aside class="results" aria-live="polite">
+          <div class="results__head"><span class="results__title">Patio Estimate</span><span class="badge badge--green">Live</span></div>
+          <div class="results__body">
+            <div class="headline-cost">
+              <div class="headline-cost__label">Estimated installed cost</div>
+              <div class="headline-cost__value" id="p-total-typ">—</div>
+              <div class="headline-cost__sub"><span id="p-total-low">—</span> to <span id="p-total-high">—</span></div>
+            </div>
+            <div class="stat-grid">
+              <div class="stat"><div class="stat__label">Area</div><div class="stat__value" id="p-area">—</div></div>
+              <div class="stat"><div class="stat__label">Cost per sq ft</div><div class="stat__value" id="p-sqft-typ">—</div></div>
+              <div class="stat"><div class="stat__label">Concrete needed</div><div class="stat__value" id="p-yards">—</div></div>
+              <div class="stat"><div class="stat__label">80 lb bags</div><div class="stat__value" id="p-bags">—</div></div>
+              <div class="stat"><div class="stat__label">Truck loads</div><div class="stat__value" id="p-loads">—</div></div>
+            </div>
+            <div class="breakdown">
+              <div class="breakdown__title">Cost breakdown</div>
+              <div id="p-breakdown"></div>
+            </div>
+            <div class="totals">
+              <div class="total-row"><span class="total-row__label">Low</span><span class="total-row__value" id="p-total-low2">—</span></div>
+              <div class="total-row"><span class="total-row__label">Typical</span><span class="total-row__value" id="p-total-typ2">—</span></div>
+              <div class="total-row"><span class="total-row__label">High</span><span class="total-row__value" id="p-total-high2">—</span></div>
+            </div>
+            <div class="verdict verdict--info" id="p-verdict">Enter your patio dimensions.</div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--white">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Patio specs</span>
+        <h2>How to spec a patio that performs</h2>
+      </div>
+      <div class="grid grid-2" style="align-items:start;gap:48px">
+        <div>
+          <h3>The standard patio specification</h3>
+          <ul>
+            <li><strong>4 inches</strong> of concrete — the standard residential minimum, and enough for foot traffic, furniture, and a grill</li>
+            <li><strong>3,000–3,500 PSI</strong> concrete; 4,000 PSI with 5–7% air entrainment in freeze-thaw climates</li>
+            <li><strong>4 inches</strong> of compacted crushed stone base</li>
+            <li><strong>Welded wire mesh</strong> or fiber reinforcement, at mid-depth</li>
+            <li><strong>Control joints</strong> every 8–10 feet, sawn within a few hours of finishing</li>
+            <li><strong>Curing compound</strong> applied as soon as the surface water is gone</li>
+          </ul>
+          <p class="small muted mt-3">The IRC does not regulate exterior patios. ACI 330R-08 states there is no benefit in building slabs less than 4 inches thick.</p>
+
+          <h3 class="mt-5" style="margin-bottom:12px">Where to go thicker</h3>
+          <ul>
+            <li><strong>Hot tubs and outdoor kitchens</strong> — thicken to 6 inches under the concentrated load area with #4 rebar at 12 in on center</li>
+            <li><strong>Heavy planters</strong> — 6 inches with #4 rebar</li>
+            <li><strong>Freeze-thaw climates</strong> — stay at 4 inches but upgrade to 4,000 PSI with air entrainment; air matters more than thickness</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Where the money goes on a 20 × 20 patio</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Line item</th><th class="num">Cost</th><th class="num">Share</th></tr></thead>
+              <tbody>
+                <tr><td>Ready-mix concrete (4.94 yd³ + 10% waste)</td><td class="num">$845–$930</td><td class="num">~26%</td></tr>
+                <tr><td>Delivery + short-load fee</td><td class="num">$180–$320</td><td class="num">~7%</td></tr>
+                <tr><td>4 in compacted gravel base</td><td class="num">$300–$760</td><td class="num">~15%</td></tr>
+                <tr><td>Forms (80 linear ft)</td><td class="num">$180–$360</td><td class="num">~7%</td></tr>
+                <tr><td>Welded wire mesh</td><td class="num">$80–$360</td><td class="num">~6%</td></tr>
+                <tr><td>Placing &amp; finishing labor</td><td class="num">$1,200–$3,200</td><td class="num">~50%</td></tr>
+                <tr><td>Control joints &amp; curing compound</td><td class="num">$180–$460</td><td class="num">~9%</td></tr>
+                <tr><td style="font-weight:700;color:#14181d">Total (typical)</td><td class="num" style="font-weight:700">$3,200</td><td class="num">100%</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="table-note">400 sq ft at 4 inches. $8.00 per sq ft, typical.</p>
+        </div>
+      </div>
+
+      <h3 class="mt-6" style="margin-bottom:14px">Cost by patio size</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Patio</th><th class="num">Area</th><th class="num">Cubic yards</th><th class="num">80 lb bags</th><th class="num">Cost range</th></tr></thead>
+          <tbody id="table-patios"></tbody>
+        </table>
+      </div>
+      <p class="table-note">4-inch slab, wire mesh, 4-inch base, broom finish, at $6–$10 per sq ft installed. Bag counts include 10% waste.</p>
+    </div>
+  </section>
+
+  <section class="section" id="faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">FAQ</span>
+        <h2>Concrete patio cost questions, answered</h2>
+        <p class="small muted"><span id="faq-count"><!--FAQ_COUNT--></span> questions, each with a real 2026 number.</p>
+      </div>
+      <div class="faq-nav">
+<!--FAQ_NAV-->
+      </div>
+      <div class="faq" id="faq-list">
+<!--FAQ_LIST-->
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tight">
+    <div class="wrap">
+      <div class="cta-band">
+        <div>
+          <h2>Price a patio, driveway, or pad</h2>
+          <p>The main calculator handles any shape, any thickness, and any finish, with every line item broken out.</p>
+        </div>
+        <div class="cluster">
+          <a class="btn btn--primary" href="/">Slab cost calculator</a>
+          <a class="btn btn--light" href="/cost-per-square-foot.html">Cost per sq ft</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+{{FOOTER}}
+
+<script src="/assets/js/engine.js"></script>
+<script src="/assets/js/faq.js"></script>
+<script src="/assets/js/app.js"></script>
+<script src="/assets/js/calc-patio.js"></script>
+<script>
+(function () {
+  function build() {
+    var body = document.getElementById("table-patios");
+    if (!body || !window.PourCost) return;
+    var PC = window.PourCost;
+    var sizes = [
+      { l: 10, w: 10 }, { l: 12, w: 12 }, { l: 10, w: 20 },
+      { l: 16, w: 20 }, { l: 20, w: 20 }, { l: 24, w: 24 }, { l: 30, w: 30 }
+    ];
+    body.innerHTML = sizes.map(function (s) {
+      var area = s.l * s.w;
+      var yd = area * (4 / 12) / 27;
+      var cf = area * (4 / 12);
+      return "<tr><td><strong>" + s.l + " × " + s.w + " ft</strong></td>" +
+        "<td class='num'>" + area + "</td>" +
+        "<td class='num'>" + yd.toFixed(2) + "</td>" +
+        "<td class='num'>" + PC.bagCount(cf, 80, 10) + "</td>" +
+        "<td class='num'>$" + Math.round(area * 6).toLocaleString() + " – $" + Math.round(area * 10).toLocaleString() + "</td></tr>";
+    }).join("");
+  }
+  if (document.readyState !== "loading") build();
+  else document.addEventListener("DOMContentLoaded", build);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rebar Calculator — Linear Feet, Pieces &amp; Cost for a Slab | PourCost</title>
+<meta name="description" content="Free rebar calculator. Get linear feet, bar count, and material cost for a concrete slab by bar size and spacing, plus the mesh vs rebar comparison.">
+<link rel="canonical" href="{{CANONICAL}}">
+<meta name="theme-color" content="#14181d">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="PourCost">
+<meta property="og:title" content="{{OG_TITLE}}">
+<meta property="og:description" content="{{OG_DESC}}">
+<meta property="og:url" content="{{OG_URL}}">
+<meta property="og:image" content="https://pourcost.com/assets/img/og-home.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="/assets/css/site.css">
+<!--SCHEMA-->
+</head>
+<body data-page="rebar-calculator">
+{{HEADER}}
+
+<main>
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">Rebar Calculator</span>
+        <h1>How much <em>rebar</em> do I need?</h1>
+        <p class="hero-lede">Get the linear feet, bar count, chairs, and tie wire for a concrete slab by bar size and spacing — and see what it costs. Reinforcement is not required by the IRC for a residential slab, but it is what separates a slab that lasts 30 years from one that cracks in three.</p>
+        <div class="cluster mt-4">
+          <a class="btn btn--primary" href="#calculator">Calculate rebar</a>
+          <a class="btn btn--ghost" href="#faq">Rebar FAQ</a>
+        </div>
+      </div>
+      <div class="card card--accent">
+        <div class="card__eyebrow">The most important detail</div>
+        <div class="card__title">Support it at mid-depth</div>
+        <p class="small">Rebar must sit about <strong>2 inches off the bottom of a 4-inch slab</strong>, on wire chairs or concrete blocks (dobies).</p>
+        <p class="small mb-0"><strong>Rebar resting flat on the sub-base adds almost nothing.</strong> It has to be inside the concrete matrix, in the upper third, where the tension actually develops. This is the single most common mistake on residential pours — and it is invisible once the concrete is down.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tight" id="calculator">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Rebar Calculator</span>
+        <h2>Calculate rebar for a slab</h2>
+        <p>Enter the slab size, bar size, and spacing. The calculator works out the bars in each direction, adds embedment at the forms, and applies a waste allowance.</p>
+      </div>
+
+      <div class="calc-layout">
+        <div class="calc-panel">
+          <div class="calc-panel__head"><span class="calc-panel__title">Slab &amp; Steel</span></div>
+          <div class="calc-panel__body">
+            <form id="rebar-form" autocomplete="off">
+              <fieldset class="fieldset">
+                <legend>Slab</legend>
+                <div class="field-grid">
+                  <div class="field">
+                    <label for="r-length">Length</label>
+                    <div class="input-wrap has-unit"><input type="number" id="r-length" value="20" min="0" step="0.5" inputmode="decimal"><span class="unit">ft</span></div>
+                  </div>
+                  <div class="field">
+                    <label for="r-width">Width</label>
+                    <div class="input-wrap has-unit"><input type="number" id="r-width" value="20" min="0" step="0.5" inputmode="decimal"><span class="unit">ft</span></div>
+                  </div>
+                </div>
+              </fieldset>
+
+              <fieldset class="fieldset">
+                <legend>Reinforcement</legend>
+                <div class="field-grid">
+                  <div class="field">
+                    <label for="r-barsize">Bar size</label>
+                    <div class="input-wrap">
+                      <select id="r-barsize">
+                        <option value="3">#3 (3/8 in)</option>
+                        <option value="4" selected>#4 (1/2 in)</option>
+                        <option value="5">#5 (5/8 in)</option>
+                        <option value="6">#6 (3/4 in)</option>
+                        <option value="8">#8 (1 in)</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="field">
+                    <label for="r-spacing">Spacing</label>
+                    <div class="input-wrap has-unit"><input type="number" id="r-spacing" value="18" min="4" step="2" inputmode="decimal"><span class="unit">in o.c.</span></div>
+                    <span class="field__hint" id="r-spacing-note">every 18 in on center</span>
+                  </div>
+                  <div class="field">
+                    <label for="r-embed">Embedment each end</label>
+                    <div class="input-wrap has-unit"><input type="number" id="r-embed" value="6" min="0" step="1" inputmode="decimal"><span class="unit">in</span></div>
+                    <span class="field__hint">Bar length past the form</span>
+                  </div>
+                  <div class="field">
+                    <label for="r-waste">Waste allowance</label>
+                    <div class="input-wrap">
+                      <select id="r-waste">
+                        <option value="0">0%</option>
+                        <option value="5" selected>5% — standard</option>
+                        <option value="10">10%</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="switch-row" style="margin-top:12px">
+                  <label for="r-bothways">Reinforce in both directions</label>
+                  <span class="switch"><input type="checkbox" id="r-bothways" checked><span></span></span>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+
+        <aside class="results" aria-live="polite">
+          <div class="results__head"><span class="results__title">Rebar Estimate</span><span class="badge badge--green">Live</span></div>
+          <div class="results__body">
+            <div class="headline-cost">
+              <div class="headline-cost__label">Linear feet of rebar</div>
+              <div class="headline-cost__value" id="r-ft">—</div>
+              <div class="headline-cost__sub"><span id="r-pieces">—</span> · <span id="r-weight">—</span></div>
+            </div>
+            <div class="stat-grid">
+              <div class="stat"><div class="stat__label">Slab area</div><div class="stat__value" id="r-area">—</div></div>
+              <div class="stat"><div class="stat__label">One way only</div><div class="stat__value" id="r-ft-oneway">—</div></div>
+              <div class="stat"><div class="stat__label">Rebar material</div><div class="stat__value" id="r-material">—</div></div>
+              <div class="stat"><div class="stat__label">Chairs (dobies)</div><div class="stat__value" id="r-chairs">—</div></div>
+              <div class="stat"><div class="stat__label">Tie wire</div><div class="stat__value" id="r-ties">—</div></div>
+              <div class="stat"><div class="stat__label">Total material</div><div class="stat__value" id="r-total">—</div></div>
+              <div class="stat"><div class="stat__label">Material per sq ft</div><div class="stat__value" id="r-per-sqft">—</div></div>
+              <div class="stat"><div class="stat__label">Installed per sq ft</div><div class="stat__value" id="r-installed">—</div></div>
+            </div>
+            <div class="verdict verdict--info" id="r-verdict">Enter your slab dimensions to see the rebar take-off.</div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--white">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Reference</span>
+        <h2>Which reinforcement do you need?</h2>
+      </div>
+      <div class="grid grid-2" style="align-items:start;gap:48px">
+        <div>
+          <h3>Rebar vs wire mesh vs fiber</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Option</th><th class="num">Cost / sq ft</th><th>Best for</th></tr></thead>
+              <tbody>
+                <tr><td><strong>Fiber mesh</strong></td><td class="num">$0.10 – $0.32</td><td>Shrinkage cracking control in the mix. Not a structural substitute for steel.</td></tr>
+                <tr><td><strong>Wire mesh (6x6 W1.4)</strong></td><td class="num">$0.20 – $0.90</td><td>Patios, walkways, shed pads, light duty.</td></tr>
+                <tr><td><strong>#3 rebar @ 18 in o.c.</strong></td><td class="num">$0.70 – $1.40</td><td>Residential driveways and garage floors. The standard residential spec.</td></tr>
+                <tr><td><strong>#4 rebar @ 12 in o.c.</strong></td><td class="num">$1.00 – $2.00</td><td>Heavy vehicles, RV and boat pads, structural slabs.</td></tr>
+                <tr><td><strong>Mesh + rebar combined</strong></td><td class="num">~$1.50</td><td>Truly structural slabs where cracking must be controlled on both axes.</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="table-note">Installed cost, 2026 U.S. national averages.</p>
+        </div>
+        <div>
+          <h3>Spacing by slab use</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Application</th><th>Thickness</th><th>Reinforcement</th></tr></thead>
+              <tbody>
+                <tr><td>Sidewalk / path</td><td>4 in</td><td>Wire mesh or fiber</td></tr>
+                <tr><td>Patio</td><td>4 in</td><td>6x6 W1.4 mesh</td></tr>
+                <tr><td>Shed / AC pad</td><td>4 in</td><td>Wire mesh</td></tr>
+                <tr><td>Residential driveway</td><td>5 in</td><td>#3 rebar @ 18 in o.c.</td></tr>
+                <tr><td>Garage floor</td><td>5 in</td><td>#3 rebar @ 18 in o.c.</td></tr>
+                <tr><td>Heavy vehicle pad</td><td>6 in</td><td>#4 rebar @ 12 in o.c.</td></tr>
+                <tr><td>Commercial slab</td><td>6 in</td><td>#4 rebar @ 12–18 in o.c.</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3 class="mt-5" style="margin-bottom:12px">Bar sizes and weight</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Bar</th><th class="num">Diameter</th><th class="num">Weight / ft</th><th class="num">Bends</th></tr></thead>
+              <tbody>
+                <tr><td><strong>#3</strong></td><td class="num">3/8 in</td><td class="num">0.667 lb</td><td class="num">$0.85 / ft</td></tr>
+                <tr><td><strong>#4</strong></td><td class="num">1/2 in</td><td class="num">0.850 lb</td><td class="num">$1.05 / ft</td></tr>
+                <tr><td><strong>#5</strong></td><td class="num">5/8 in</td><td class="num">1.043 lb</td><td class="num">$1.28 / ft</td></tr>
+                <tr><td><strong>#6</strong></td><td class="num">3/4 in</td><td class="num">1.248 lb</td><td class="num">$1.55 / ft</td></tr>
+                <tr><td><strong>#8</strong></td><td class="num">1 in</td><td class="num">1.670 lb</td><td class="num">$2.35 / ft</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">FAQ</span>
+        <h2>Rebar questions, answered</h2>
+        <p class="small muted"><span id="faq-count"><!--FAQ_COUNT--></span> questions, each with a real 2026 number.</p>
+      </div>
+      <div class="faq-nav">
+<!--FAQ_NAV-->
+      </div>
+      <div class="faq" id="faq-list">
+<!--FAQ_LIST-->
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tight">
+    <div class="wrap">
+      <div class="cta-band">
+        <div>
+          <h2>Price the whole slab</h2>
+          <p>The slab cost calculator includes reinforcement in the line-item breakdown, so you can see exactly what the steel adds to the total.</p>
+        </div>
+        <div class="cluster">
+          <a class="btn btn--primary" href="/">Slab cost calculator</a>
+          <a class="btn btn--light" href="/concrete-calculator.html">Volume &amp; bags</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+{{FOOTER}}
+
+<script src="/assets/js/engine.js"></script>
+<script src="/assets/js/faq.js"></script>
+<script src="/assets/js/app.js"></script>
+<script src="/assets/js/calc-rebar.js"></script>
+</body>
+</html>

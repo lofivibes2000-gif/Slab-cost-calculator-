@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rebar Calculator — Linear Feet, Pieces &amp; Cost for a Slab | PourCost</title>
+<meta name="description" content="Free rebar calculator. Get linear feet, bar count, and material cost for a concrete slab by bar size and spacing, plus the mesh vs rebar comparison.">
+<link rel="canonical" href="https://pourcost.com/rebar-calculator.html">
+<meta name="theme-color" content="#14181d">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="PourCost">
+<meta property="og:title" content="Rebar Calculator — Linear Feet, Pieces & Cost for a Slab">
+<meta property="og:description" content="Free rebar calculator. Get linear feet, bar count, and material cost for a concrete slab by bar size and spacing, plus the mesh vs rebar comparison.">
+<meta property="og:url" content="https://pourcost.com/rebar-calculator.html">
+<meta property="og:image" content="https://pourcost.com/assets/img/og-home.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="/assets/css/site.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "url": "https://pourcost.com/rebar-calculator",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any",
+  "browserRequirements": "Requires JavaScript",
+  "description": "Free rebar calculator. Get linear feet, bar count, and material cost for a concrete slab by bar size and spacing, plus the mesh vs rebar comparison.",
+  "isAccessibleForFree": true,
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "PourCost",
+    "url": "https://pourcost.com"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://pourcost.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Rebar Calculator",
+      "item": "https://pourcost.com/rebar-calculator.html"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much does a concrete slab cost per square foot?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A standard residential concrete slab runs $6 to $12 per square foot installed in 2026, with most projects landing near $8 per square foot. That figure includes ready-mix concrete, delivery, a compacted gravel base, forms, reinforcement, placing and finishing labor, control joints, and curing compound — but not major excavation, permits, or decorative finishes.\n\nThe cost per square foot breaks down roughly like this:\n\nConcrete material: $2–$3.30 per sq ft\nLabor (pour and finish): $3–$8 per sq ft — usually the single biggest line\nSite prep and forms: $1–$2.50 per sq ft\nReinforcement: $0.20–$2.00 per sq ft\nCuring and sealer: $0.25–$1.00 per sq ft\n\nSmall slabs cost more per square foot than large ones because the truck delivery, crew minimum, and forms are fixed costs spread over less area. A 10 x 10 pad typically runs $8.50–$15.00 per sq ft, while a 40 x 60 driveway lands closer to $6.50–$12.50 per sq ft. Decorative work — stamped, colored, or exposed aggregate — adds $3 to $10 per sq ft on top.\n\nOne important caveat about scope. Published per-square-foot figures disagree by nearly 40%, and the reason is that they measure different things. A quote at $6 per sq ft is often scoped to exclude delivery fees, control joints, curing compound, and site prep — real costs that a complete project pays. Price the same scope before comparing two bids; a lower number is not a better deal if it is missing items."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does it cost to pour a concrete slab?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pouring a concrete slab costs $4 to $14 per square foot installed, depending on thickness, reinforcement, finish, and how much site work the ground needs. A plain broom-finished 4-inch slab on a flat, accessible site sits at the low end; a thick, reinforced slab on ground that needs grading and fill sits at the high end.\n\nRealistic totals for common sizes at $6–$12 per sq ft:\n\n10 x 10 pad (100 sq ft): $600–$1,200\n12 x 12 pad (144 sq ft): $864–$1,730\n20 x 20 slab (400 sq ft): $2,400–$4,800\n24 x 24 garage pad (576 sq ft): $3,500–$9,000\n30 x 30 slab (900 sq ft): $3,600–$7,200\n\nA useful shortcut: the concrete itself is only about 25% of an installed slab. Labor is usually 45–55%. That is why a slab quoted at $4 per square foot for materials alone is not out of line — it simply excludes the crew."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many bags of concrete do I need?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Divide the pour's volume in cubic feet by the finished yield of one bag, then round up. Standard yields are 0.30 ft³ for a 40 lb bag, 0.45 ft³ for a 60 lb bag, and 0.60 ft³ for an 80 lb bag.\n\nBags = ceil( volume in ft³ x (1 + waste%) / yield per bag )\n\nOne cubic yard of concrete equals about 90 bags of 40 lb, 60 bags of 60 lb, or 45 bags of 80 lb mix.\n\nWorked example — a 10 x 10 ft slab at 4 inches thick:\nVolume = 10 x 10 x (4 ÷ 12) = 33.3 ft³ = 1.23 yd³\nWith 10% waste: 36.7 ft³\n80 lb bags: ceil(36.7 ÷ 0.60) = 62 bags\n60 lb bags: ceil(36.7 ÷ 0.45) = 82 bags\n\nBagged mix stops making sense above roughly 1 cubic yard. Past about 45 bags of 80 lb mix, hauling, mixing, and pouring by hand costs more in time and labor than a ready-mix truck — and cold joints between batches are far more likely."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many yards of concrete do I need?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Multiply length by width by thickness in feet, then divide by 27. There are 27 cubic feet in a cubic yard.\n\nCubic yards = (Length ft x Width ft x Thickness in ÷ 12) ÷ 27\nShortcut: Cubic yards = (sq ft x thickness in) ÷ 324\n\nFor a 20 x 20 ft slab at 4 inches: (400 x 4) ÷ 324 = 4.94 cubic yards. Add 5–10% for waste and order about 5.5 yards.\n\nAs a rule of thumb, one cubic yard covers about 81 sq ft at 4 inches, 65 sq ft at 5 inches, 54 sq ft at 6 inches, and 41 sq ft at 8 inches. A standard ready-mix truck carries about 10 cubic yards."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How thick should a concrete slab be?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Spec it by load, not by rule of thumb:\n\n3.5–4 in — walkways, garden paths, patios, shed and AC pads (foot traffic only)\n4 in — the standard residential minimum; patios and light floors\n5 in — residential driveways and garage floors carrying passenger cars or half-ton pickups\n6 in — driveways taking trucks and RVs, heavy equipment pads, and commercial slabs\n8 in — post-tensioned, heavily loaded, or industrial slabs\n\nFor code: the International Residential Code (R506.1) sets a 3.5-inch minimum for slab-on-grade floors in habitable space, and most jurisdictions amend that to 4 inches. The IRC does not regulate exterior patios and walkways, though local codes often do govern driveways — published driveway standards run from 4 to 7 inches depending on the municipality.\n\nACI 330R-08 puts it plainly: \"As a practical matter, there is no benefit in building slabs less than 4 in. (100 mm) thick.\" Thickness is the cheapest structural upgrade available — bending capacity scales with the square of thickness, so 4 in to 6 in is 50% more concrete but roughly 2.25x the bending resistance."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What PSI concrete do I need for a slab?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Match the strength to the exposure and the load:\n\n3,000 PSI — interior slabs, basement floors, and shop floors that never see salt or freezing\n3,500 PSI — standard patios, sidewalks, and exterior residential work\n4,000 PSI — driveways, garage floors, and any exterior slab in a freeze-thaw climate, specified with 5–7% air entrainment\n4,500–5,000 PSI — heavy vehicle pads, warehouse slabs, and structural work per ACI 318\n\nACI 332 requires 4,000 PSI with air entrainment for exterior residential slabs in freeze-thaw zones. Each 500 PSI step up adds roughly $4–$10 per cubic yard, which is cheap insurance against scaling and spalling. In freeze-thaw climates, air entrainment matters more than an extra inch of thickness — 3,000 PSI slabs without air can scale badly within 5 to 10 years."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much rebar does a concrete slab need?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Calculate rebar as linear feet in each direction, based on the spacing, then add the overlaps and the extra length each bar needs to tie into the forms.\n\nBars in one direction = ceil(slab length ÷ spacing) + 1\nLinear feet = bars x slab width (or length)\n\nFor a 20 x 20 ft slab with #3 rebar at 18 inches on center:\n\nBars running one way: ceil(20 ÷ 1.5) + 1 = 15 bars\nEach bar spans the 20 ft width, plus 6 inches of embedment on each side = 21 ft\n15 x 21 = 315 linear feet\nBoth directions: 630 linear feet\n\nOn a 20 x 20 slab, #3 rebar at 18 in on center runs about $220–$440 installed, or $1.10 per square foot at the typical rate. #4 rebar at 12 in on center roughly doubles that."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What spacing do I use for rebar in a residential slab?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Spacing follows the load:\n\nWire mesh (6x6 W1.4) — patios, walkways, shed pads. Light duty.\n#3 rebar at 18 in on center — residential driveways and garage floors carrying passenger cars and half-ton pickups. The standard residential spec.\n#4 rebar at 12 in on center — heavy vehicle driveways, RV and boat pads, and structural slabs.\n#4 rebar at 12–18 in on center — commercial and warehouse slabs.\n\nACI 332 calls for reinforcement in residential slabs that support vehicles. It is not required by the IRC for a residential slab, but rebar at 18 in on center adds $0.50–$1.00 per square foot and dramatically reduces cracking from thermal expansion and soil movement.\n\nBar size matters less than placement. Support the rebar at mid-depth — roughly 2 inches off the bottom in a 4-inch slab — using wire chairs or concrete blocks. Rebar lying flat on the sub-base is decorative, not structural."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I use rebar or welded wire mesh?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Rebar is stronger and better for anything carrying a vehicle. Mesh is cheaper and adequate for pedestrian loads.\n\nWelded wire mesh: $0.20–$0.90 per sq ft. Good for patios, sidewalks, and shed pads. It resists shrinkage cracking well.\n#3 rebar at 18 in o.c.: $0.70–$1.40 per sq ft. The right choice for driveways and garage floors.\n#4 rebar at 12 in o.c.: $1.00–$2.00 per sq ft. Heavy loads and structural work.\nBoth: roughly $1.50 per sq ft. Used where a slab is truly structural.\n\nA practical point: mesh is hard to position accurately. It is flexible, and if it is not lifted on chairs and tied in the right grid, it ends up bunched at one edge. Rebar is stiffer, holds its position better, and is far easier to inspect before the pour — you can walk the grid and see the spacing.\n\nFiber mesh added to the mix is a third option at $0.10–$0.32 per sq ft. It controls shrinkage cracking but does not replace steel for structural capacity."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need rebar in a concrete slab?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Reinforcement is not required by the IRC for a residential slab, but it is strongly recommended and it is what separates a slab that lasts 30 years from one that cracks in three.\n\nFiber mesh — $0.10–$0.32 per sq ft. Controls shrinkage cracking in the mix. Not a structural substitute for steel.\nWelded wire mesh (6x6 W1.4) — $0.20–$0.90 per sq ft. Fine for patios, walks, and shed pads.\n#3 rebar at 18 in on center — $0.70–$1.40 per sq ft. The standard residential spec for driveways and garage floors.\n#4 rebar at 12 in on center — $1.00–$2.00 per sq ft. For heavy vehicle loads and structural slabs.\n\nOne detail that matters more than the steel itself: support the rebar at mid-depth, roughly 2 inches off the bottom of a 4-inch slab, using wire chairs or concrete blocks. Rebar resting flat on the sub-base adds almost no value — it needs to sit inside the concrete matrix, in the upper third, where the tension actually develops.\n\nA 4-inch slab on a consistent, well-compacted base will outperform a 6-inch slab over soft spots, because the soft spot is exactly where the slab has to span and bend."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much rebar do I need for a concrete slab?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Total linear feet = the area of the slab divided by the spacing, in both directions, then added together.\n\nOne direction = (length ÷ spacing) × width\nBoth directions = (length ÷ spacing) × width + (width ÷ spacing) × length\n\nFor a 20 x 20 ft slab with #4 rebar at 18 inches on center, both ways:\n\nAcross: 20 ft ÷ 1.5 ft = 14 bars × 20 ft = 280 linear ft\n\nBoth ways: 280 + 280 = 662 linear ft, or 30 bars of 20 ft stock\n\nOne direction only — which is adequate for many patios and pads on stable ground — comes to 331 linear feet, about 17 bars.\n\nRebar is sold in 20 ft sticks, so 662 linear feet is 34 sticks with the lap splices; 30 bars is the number of pieces after you cut and lap them. The rebar calculator on this page does the arithmetic for any size and spacing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between #3, #4, #5 and #6 rebar?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The number is the bar's diameter in eighths of an inch.\n\n#3 — 3/8 in diameter, 0.11 sq in area — light residential work, patios, shed pads\n\n#4 — 1/2 in diameter, 0.20 sq in area — the standard for residential driveways and garage floors\n\n#5 — 5/8 in diameter, 0.31 sq in area — heavy loads, 6 inch slabs, RV pads\n\n#6 — 3/4 in diameter, 0.44 sq in area — commercial and post-tensioned work\n\nBigger is not automatically better. What matters is the amount of steel in a given area, which is what spacing controls. A #4 at 18 inches on center provides about 0.0011 sq in of steel per sq in of slab; a #3 at 12 inches provides nearly the same.\n\nThe practical reason to step up a size rather than tighten the spacing is handling. #3 is light enough to cut and tie by hand comfortably. #5 and #6 are noticeably heavier and need a real bender and cutter.\n\nUse #4 unless your engineer, your local code, or the load tells you otherwise."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What rebar spacing do I need for a 4 inch concrete slab?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For a 4 inch residential slab, the standard is #3 rebar at 24 inches on center for light loads, or #4 rebar at 18 inches on center for a slab that carries vehicles or spans a gap.\n\nA typical 4 inch garage floor or driveway section uses #4 at 18 inches both ways. A 4 inch patio or shed pad on stable ground uses #3 at 24 inches, or 6 x 6 welded wire mesh.\n\nThe 18 inch spacing for #4 is not arbitrary — it is the detail that produces about 0.0011 sq in of steel per sq in of slab, which is the ratio most residential slab designs settle on.\n\nThe spacing must land so the bars are evenly distributed and clear of the edges. In a 4 inch slab the bar sits roughly 1 inch above the base, with at least 1.5 inches of cover from any edge.\n\nOne caution: spacing is measured center to center, and a common error is to start the first bar at the edge and then space from there, which pushes the last bar off the slab or leaves a gap at the far end. Lay the bars out from the centre outward instead."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What rebar spacing do I need for a 6 inch concrete slab?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For a 6 inch slab, use #4 rebar at 12 inches on center as the baseline, and step up to #5 at 12 inches for heavy vehicle loads, RV pads and anything over fill.\n\nA 6 inch slab is a different structure from a 4 inch one. It is typically post-tensioned, pre-stressed, or heavily reinforced with a structural engineer's design, and the reinforcement is part of a load path rather than crack control alone.\n\nFor a post-tensioned slab, the tendons are placed in sheathed ducts at a specific depth and tensioned after the concrete reaches about 75% of its design strength. That is not a DIY detail — it needs an engineer and a specialist crew.\n\nFor a conventionally reinforced 6 inch slab, #4 at 12 inches both ways gives roughly the same steel ratio as #4 at 18 inches in a 4 inch slab.\n\nWhichever route you take, get the design confirmed by an engineer before pouring a 6 inch slab. The cost of doing it right is a small fraction of the cost of a slab that fails."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much rebar overlap do I need?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Lap each bar over the next by 40 times the bar diameter.\n\n#3 — 12 in overlap\n\n#4 — 16 in overlap\n\n#5 — 20 in overlap\n\n#6 — 24 in overlap\n\nThis is the ACI detail for Class B splices in a lapped splice, and it is what allows two pieces of bar to act as one continuous length of steel. The overlap is measured from the end of one bar to the far end of the bar it crosses, so add the bar diameter to the splice length when you cut.\n\nTie the bars at the overlap with wire ties, two per overlap — one near each end. A loose lap will shift while the concrete is being placed and the whole grid moves.\n\nFor the standard 20 ft stock, a 16 in overlap on #4 means each bar covers about 18.3 ft of the run, so a 20 ft slab needs 2 bars per line with a small splice, or 3 if you want the lap centred."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How far should rebar be from the edge of a concrete slab?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Rebar should sit at least 1.5 inches from the edge in residential slabs, and 2 inches is the better target where the slab is exposed or the climate is freeze-thaw.\n\nThis distance is called cover, and it does two jobs. It keeps the steel from corroding — the outer inch of a slab is the part that gets wet first and dries last, and rusting steel expands and spalls the concrete off the surface. It also protects the bar during placement, where a kicked or walked-on bar ends up too close.\n\nIn a 4 inch slab, the rebar sits about 1 inch above the base, which puts it in the bottom third of the slab — the tension zone, where flexing cracks open. Bars placed at mid-depth are markedly less effective.\n\nUse plastic rebar chairs or bolsters rather than setting the grid on rocks or on the base itself. Chairs hold the bar at a consistent height and keep it from shifting while the concrete is placed. Rocks are the traditional method and they work, but they are hard to check."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does rebar cost for a concrete slab?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Reinforcement runs about $0.70 to $2.00 per square foot of slab installed, and for a 20 x 20 ft slab that is roughly $280 to $1,600.\n\nMaterial rates in 2026 put #4 rebar around $0.85 to $1.30 per linear foot. On the reference 20 x 20 slab with #4 at 18 inches both ways, you need 662 linear feet, which is about $560 to $860 of steel before the tie wire and chairs.\n\nThe wide range is mostly about the price of steel, which moves, and about how much labor the job takes. Hand-tying a grid for a small slab is quick; a large grid is a lot of tying.\n\nWelded wire mesh is the budget option at roughly $0.30 to $0.60 per square foot and is the right call for patios and shed pads. It is supplied in 5 x 7 ft sheets, so a 400 sq ft slab needs about 12 sheets with a one-mesh lap.\n\nThe rebar calculator on this page returns both the linear footage and the estimated material cost."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should rebar be drilled into the existing slab or overlapped?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "When you are adding new concrete next to an existing slab — a patio extension, an addition to a driveway — drill into the old slab and tie the new rebar into it. When you are pouring a new slab that replaces the old one, lap the new bars; there is nothing to tie into.\n\nFor a drilled tie: drill 3/4 inch holes about 6 inches deep, spaced 18 to 24 inches apart along a line at the location of the new rebar, clean each hole with a brush and compressed air, and grout it with a non-shrink structural grout. Set the bar into the grouted hole and let it cure before pouring.\n\nDo not simply drill a hole and drive the rebar into it. That gives a bar with no mechanical bond and no corrosion protection, and it will not tie the two slabs together.\n\nIf the existing slab is sound, you can also drill and dowel the new rebar to the edge of the old slab for the same effect. If the old slab is cracked or settled, the better answer is to remove it and start over."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where do I put the rebar in a concrete slab?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The rebar goes in the bottom third of the slab, on chairs, above the vapor barrier and above the compacted base.\n\nThe sequence from the ground up is:\n\nCompacted gravel base\n\nVapor barrier or vapor retarder\n\nRebar grid, on chairs, at the bottom third\n\nConcrete\n\nIn a 4 inch slab the bar sits about 1 inch above the base. In a 6 inch slab, roughly 2 inches. The grid is wired together at every crossing with tie wire — a single zip tie or a short piece of annealed wire both work, and the intersections are what hold the grid in a flat plane while the concrete is placed.\n\nThree common mistakes. Setting the grid directly on the base with no chairs, so it ends up too low. Pouring the concrete before the grid is fully tied, so it moves under the weight. And walking on the grid during the pour — you will push it down and it will not come back up on its own.\n\nPour in layers, keeping the concrete ahead of the grid and never dumping concrete directly onto the bars."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body data-page="rebar-calculator">
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="/">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 8h18v11H3z"/><path d="M3 8l3-4h12l3 4"/><path d="M8 12h8"/>
+        </svg>
+      </span>
+      <span class="brand-name">Pour<span>Cost</span></span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="main-nav">
+      <span></span>
+    </button>
+    <nav class="main-nav" id="main-nav" aria-label="Main">
+      <ul>
+        <li><a href="/">Slab Cost Calculator</a></li>
+        <li><a href="/concrete-calculator.html">Concrete Calculator</a></li>
+        <li><a href="/cost-per-square-foot.html">Cost Per Sq Ft</a></li>
+        <li><a href="/ready-mix-vs-bags.html">Ready-Mix vs Bags</a></li>
+        <li><a href="/driveway-cost.html">Driveway Cost</a></li>
+        <li><a href="/patio-cost.html">Patio Cost</a></li>
+        <li><a href="/rebar-calculator.html">Rebar Calculator</a></li>
+        <li><a href="/faq.html">FAQ</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">Rebar Calculator</span>
+        <h1>How much <em>rebar</em> do I need?</h1>
+        <p class="hero-lede">Get the linear feet, bar count, chairs, and tie wire for a concrete slab by bar size and spacing — and see what it costs. Reinforcement is not required by the IRC for a residential slab, but it is what separates a slab that lasts 30 years from one that cracks in three.</p>
+        <div class="cluster mt-4">
+          <a class="btn btn--primary" href="#calculator">Calculate rebar</a>
+          <a class="btn btn--ghost" href="#faq">Rebar FAQ</a>
+        </div>
+      </div>
+      <div class="card card--accent">
+        <div class="card__eyebrow">The most important detail</div>
+        <div class="card__title">Support it at mid-depth</div>
+        <p class="small">Rebar must sit about <strong>2 inches off the bottom of a 4-inch slab</strong>, on wire chairs or concrete blocks (dobies).</p>
+        <p class="small mb-0"><strong>Rebar resting flat on the sub-base adds almost nothing.</strong> It has to be inside the concrete matrix, in the upper third, where the tension actually develops. This is the single most common mistake on residential pours — and it is invisible once the concrete is down.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tight" id="calculator">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Rebar Calculator</span>
+        <h2>Calculate rebar for a slab</h2>
+        <p>Enter the slab size, bar size, and spacing. The calculator works out the bars in each direction, adds embedment at the forms, and applies a waste allowance.</p>
+      </div>
+
+      <div class="calc-layout">
+        <div class="calc-panel">
+          <div class="calc-panel__head"><span class="calc-panel__title">Slab &amp; Steel</span></div>
+          <div class="calc-panel__body">
+            <form id="rebar-form" autocomplete="off">
+              <fieldset class="fieldset">
+                <legend>Slab</legend>
+                <div class="field-grid">
+                  <div class="field">
+                    <label for="r-length">Length</label>
+                    <div class="input-wrap has-unit"><input type="number" id="r-length" value="20" min="0" step="0.5" inputmode="decimal"><span class="unit">ft</span></div>
+                  </div>
+                  <div class="field">
+                    <label for="r-width">Width</label>
+                    <div class="input-wrap has-unit"><input type="number" id="r-width" value="20" min="0" step="0.5" inputmode="decimal"><span class="unit">ft</span></div>
+                  </div>
+                </div>
+              </fieldset>
+
+              <fieldset class="fieldset">
+                <legend>Reinforcement</legend>
+                <div class="field-grid">
+                  <div class="field">
+                    <label for="r-barsize">Bar size</label>
+                    <div class="input-wrap">
+                      <select id="r-barsize">
+                        <option value="3">#3 (3/8 in)</option>
+                        <option value="4" selected>#4 (1/2 in)</option>
+                        <option value="5">#5 (5/8 in)</option>
+                        <option value="6">#6 (3/4 in)</option>
+                        <option value="8">#8 (1 in)</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="field">
+                    <label for="r-spacing">Spacing</label>
+                    <div class="input-wrap has-unit"><input type="number" id="r-spacing" value="18" min="4" step="2" inputmode="decimal"><span class="unit">in o.c.</span></div>
+                    <span class="field__hint" id="r-spacing-note">every 18 in on center</span>
+                  </div>
+                  <div class="field">
+                    <label for="r-embed">Embedment each end</label>
+                    <div class="input-wrap has-unit"><input type="number" id="r-embed" value="6" min="0" step="1" inputmode="decimal"><span class="unit">in</span></div>
+                    <span class="field__hint">Bar length past the form</span>
+                  </div>
+                  <div class="field">
+                    <label for="r-waste">Waste allowance</label>
+                    <div class="input-wrap">
+                      <select id="r-waste">
+                        <option value="0">0%</option>
+                        <option value="5" selected>5% — standard</option>
+                        <option value="10">10%</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="switch-row" style="margin-top:12px">
+                  <label for="r-bothways">Reinforce in both directions</label>
+                  <span class="switch"><input type="checkbox" id="r-bothways" checked><span></span></span>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+
+        <aside class="results" aria-live="polite">
+          <div class="results__head"><span class="results__title">Rebar Estimate</span><span class="badge badge--green">Live</span></div>
+          <div class="results__body">
+            <div class="headline-cost">
+              <div class="headline-cost__label">Linear feet of rebar</div>
+              <div class="headline-cost__value" id="r-ft">—</div>
+              <div class="headline-cost__sub"><span id="r-pieces">—</span> · <span id="r-weight">—</span></div>
+            </div>
+            <div class="stat-grid">
+              <div class="stat"><div class="stat__label">Slab area</div><div class="stat__value" id="r-area">—</div></div>
+              <div class="stat"><div class="stat__label">One way only</div><div class="stat__value" id="r-ft-oneway">—</div></div>
+              <div class="stat"><div class="stat__label">Rebar material</div><div class="stat__value" id="r-material">—</div></div>
+              <div class="stat"><div class="stat__label">Chairs (dobies)</div><div class="stat__value" id="r-chairs">—</div></div>
+              <div class="stat"><div class="stat__label">Tie wire</div><div class="stat__value" id="r-ties">—</div></div>
+              <div class="stat"><div class="stat__label">Total material</div><div class="stat__value" id="r-total">—</div></div>
+              <div class="stat"><div class="stat__label">Material per sq ft</div><div class="stat__value" id="r-per-sqft">—</div></div>
+              <div class="stat"><div class="stat__label">Installed per sq ft</div><div class="stat__value" id="r-installed">—</div></div>
+            </div>
+            <div class="verdict verdict--info" id="r-verdict">Enter your slab dimensions to see the rebar take-off.</div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--white">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Reference</span>
+        <h2>Which reinforcement do you need?</h2>
+      </div>
+      <div class="grid grid-2" style="align-items:start;gap:48px">
+        <div>
+          <h3>Rebar vs wire mesh vs fiber</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Option</th><th class="num">Cost / sq ft</th><th>Best for</th></tr></thead>
+              <tbody>
+                <tr><td><strong>Fiber mesh</strong></td><td class="num">$0.10 – $0.32</td><td>Shrinkage cracking control in the mix. Not a structural substitute for steel.</td></tr>
+                <tr><td><strong>Wire mesh (6x6 W1.4)</strong></td><td class="num">$0.20 – $0.90</td><td>Patios, walkways, shed pads, light duty.</td></tr>
+                <tr><td><strong>#3 rebar @ 18 in o.c.</strong></td><td class="num">$0.70 – $1.40</td><td>Residential driveways and garage floors. The standard residential spec.</td></tr>
+                <tr><td><strong>#4 rebar @ 12 in o.c.</strong></td><td class="num">$1.00 – $2.00</td><td>Heavy vehicles, RV and boat pads, structural slabs.</td></tr>
+                <tr><td><strong>Mesh + rebar combined</strong></td><td class="num">~$1.50</td><td>Truly structural slabs where cracking must be controlled on both axes.</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="table-note">Installed cost, 2026 U.S. national averages.</p>
+        </div>
+        <div>
+          <h3>Spacing by slab use</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Application</th><th>Thickness</th><th>Reinforcement</th></tr></thead>
+              <tbody>
+                <tr><td>Sidewalk / path</td><td>4 in</td><td>Wire mesh or fiber</td></tr>
+                <tr><td>Patio</td><td>4 in</td><td>6x6 W1.4 mesh</td></tr>
+                <tr><td>Shed / AC pad</td><td>4 in</td><td>Wire mesh</td></tr>
+                <tr><td>Residential driveway</td><td>5 in</td><td>#3 rebar @ 18 in o.c.</td></tr>
+                <tr><td>Garage floor</td><td>5 in</td><td>#3 rebar @ 18 in o.c.</td></tr>
+                <tr><td>Heavy vehicle pad</td><td>6 in</td><td>#4 rebar @ 12 in o.c.</td></tr>
+                <tr><td>Commercial slab</td><td>6 in</td><td>#4 rebar @ 12–18 in o.c.</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3 class="mt-5" style="margin-bottom:12px">Bar sizes and weight</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Bar</th><th class="num">Diameter</th><th class="num">Weight / ft</th><th class="num">Bends</th></tr></thead>
+              <tbody>
+                <tr><td><strong>#3</strong></td><td class="num">3/8 in</td><td class="num">0.667 lb</td><td class="num">$0.85 / ft</td></tr>
+                <tr><td><strong>#4</strong></td><td class="num">1/2 in</td><td class="num">0.850 lb</td><td class="num">$1.05 / ft</td></tr>
+                <tr><td><strong>#5</strong></td><td class="num">5/8 in</td><td class="num">1.043 lb</td><td class="num">$1.28 / ft</td></tr>
+                <tr><td><strong>#6</strong></td><td class="num">3/4 in</td><td class="num">1.248 lb</td><td class="num">$1.55 / ft</td></tr>
+                <tr><td><strong>#8</strong></td><td class="num">1 in</td><td class="num">1.670 lb</td><td class="num">$2.35 / ft</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">FAQ</span>
+        <h2>Rebar questions, answered</h2>
+        <p class="small muted"><span id="faq-count">19</span> questions, each with a real 2026 number.</p>
+      </div>
+      <div class="faq-nav">
+        <a href="#faq-cost-per-sq-ft">How much does a concrete slab cost per squ…</a>
+        <a href="#faq-pour-cost">How much does it cost to pour a concrete s…</a>
+        <a href="#faq-bags-needed">How many bags of concrete do I need?</a>
+        <a href="#faq-yards-needed">How many yards of concrete do I need?</a>
+        <a href="#faq-thickness">How thick should a concrete slab be?</a>
+        <a href="#faq-psi">What PSI concrete do I need for a slab?</a>
+        <a href="#faq-rebar-how">How much rebar does a concrete slab need?</a>
+        <a href="#faq-rebar-spacing">What spacing do I use for rebar in a resid…</a>
+        <a href="#faq-rebar-vs-mesh">Should I use rebar or welded wire mesh?</a>
+        <a href="#faq-rebar">Do I need rebar in a concrete slab?</a>
+        <a href="#faq-rebar-amount">How much rebar do I need for a concrete sl…</a>
+        <a href="#faq-rebar-sizes">What is the difference between #3, #4, #5…</a>
+        <a href="#faq-rebar-4inch">What rebar spacing do I need for a 4 inch…</a>
+        <a href="#faq-rebar-6inch">What rebar spacing do I need for a 6 inch…</a>
+        <a href="#faq-rebar-overlap">How much rebar overlap do I need?</a>
+        <a href="#faq-rebar-cover">How far should rebar be from the edge of a…</a>
+        <a href="#faq-rebar-cost">How much does rebar cost for a concrete sl…</a>
+        <a href="#faq-rebar-drill">Should rebar be drilled into the existing…</a>
+        <a href="#faq-rebar-placement">Where do I put the rebar in a concrete sla…</a>
+      </div>
+      <div class="faq" id="faq-list">
+        <details class="faq-item" id="faq-cost-per-sq-ft">
+          <summary class="faq-q">How much does a concrete slab cost per square foot?</summary>
+          <div class="faq-a"><p>A standard residential concrete slab runs <strong>$6 to $12 per square foot</strong> installed in 2026, with most projects landing near <strong>$8 per square foot</strong>. That figure includes ready-mix concrete, delivery, a compacted gravel base, forms, reinforcement, placing and finishing labor, control joints, and curing compound — but not major excavation, permits, or decorative finishes.</p>
+            <p>The cost per square foot breaks down roughly like this:</p>
+            <p><ul><li><strong>Concrete material:</strong> $2–$3.30 per sq ft</li><li><strong>Labor (pour and finish):</strong> $3–$8 per sq ft — usually the single biggest line</li><li><strong>Site prep and forms:</strong> $1–$2.50 per sq ft</li><li><strong>Reinforcement:</strong> $0.20–$2.00 per sq ft</li><li><strong>Curing and sealer:</strong> $0.25–$1.00 per sq ft</li></ul></p>
+            <p>Small slabs cost more per square foot than large ones because the truck delivery, crew minimum, and forms are fixed costs spread over less area. A 10 x 10 pad typically runs $8.50–$15.00 per sq ft, while a 40 x 60 driveway lands closer to $6.50–$12.50 per sq ft. Decorative work — stamped, colored, or exposed aggregate — adds $3 to $10 per sq ft on top.</p>
+            <p><strong>One important caveat about scope.</strong> Published per-square-foot figures disagree by nearly 40%, and the reason is that they measure different things. A quote at $6 per sq ft is often scoped to exclude delivery fees, control joints, curing compound, and site prep — real costs that a complete project pays. Price the same scope before comparing two bids; a lower number is not a better deal if it is missing items.</p></div>
+        </details>
+        <details class="faq-item" id="faq-pour-cost">
+          <summary class="faq-q">How much does it cost to pour a concrete slab?</summary>
+          <div class="faq-a"><p>Pouring a concrete slab costs <strong>$4 to $14 per square foot</strong> installed, depending on thickness, reinforcement, finish, and how much site work the ground needs. A plain broom-finished 4-inch slab on a flat, accessible site sits at the low end; a thick, reinforced slab on ground that needs grading and fill sits at the high end.</p>
+            <p>Realistic totals for common sizes at $6–$12 per sq ft:</p>
+            <p><ul><li>10 x 10 pad (100 sq ft): $600–$1,200</li><li>12 x 12 pad (144 sq ft): $864–$1,730</li><li>20 x 20 slab (400 sq ft): $2,400–$4,800</li><li>24 x 24 garage pad (576 sq ft): $3,500–$9,000</li><li>30 x 30 slab (900 sq ft): $3,600–$7,200</li></ul></p>
+            <p>A useful shortcut: the concrete itself is only about 25% of an installed slab. Labor is usually 45–55%. That is why a slab quoted at $4 per square foot for materials alone is not out of line — it simply excludes the crew.</p></div>
+        </details>
+        <details class="faq-item" id="faq-bags-needed">
+          <summary class="faq-q">How many bags of concrete do I need?</summary>
+          <div class="faq-a"><p>Divide the pour's volume in cubic feet by the finished yield of one bag, then round up. Standard yields are <strong>0.30 ft³ for a 40 lb bag, 0.45 ft³ for a 60 lb bag, and 0.60 ft³ for an 80 lb bag</strong>.</p>
+            <p><span class="formula">Bags = ceil( volume in ft³ x (1 + waste%) / yield per bag )</span></p>
+            <p>One cubic yard of concrete equals about <strong>90 bags of 40 lb, 60 bags of 60 lb, or 45 bags of 80 lb</strong> mix.</p>
+            <p>Worked example — a 10 x 10 ft slab at 4 inches thick:
+<ul><li>Volume = 10 x 10 x (4 ÷ 12) = 33.3 ft³ = 1.23 yd³</li><li>With 10% waste: 36.7 ft³</li><li>80 lb bags: ceil(36.7 ÷ 0.60) = <strong>62 bags</strong></li><li>60 lb bags: ceil(36.7 ÷ 0.45) = <strong>82 bags</strong></li></ul></p>
+            <p>Bagged mix stops making sense above roughly 1 cubic yard. Past about 45 bags of 80 lb mix, hauling, mixing, and pouring by hand costs more in time and labor than a ready-mix truck — and cold joints between batches are far more likely.</p></div>
+        </details>
+        <details class="faq-item" id="faq-yards-needed">
+          <summary class="faq-q">How many yards of concrete do I need?</summary>
+          <div class="faq-a"><p>Multiply length by width by thickness in feet, then divide by 27. There are 27 cubic feet in a cubic yard.</p>
+            <p><span class="formula">Cubic yards = (Length ft x Width ft x Thickness in ÷ 12) ÷ 27<br>Shortcut: Cubic yards = (sq ft x thickness in) ÷ 324</span></p>
+            <p>For a 20 x 20 ft slab at 4 inches: (400 x 4) ÷ 324 = 4.94 cubic yards. Add 5–10% for waste and order about 5.5 yards.</p>
+            <p>As a rule of thumb, one cubic yard covers about <strong>81 sq ft at 4 inches</strong>, 65 sq ft at 5 inches, 54 sq ft at 6 inches, and 41 sq ft at 8 inches. A standard ready-mix truck carries about 10 cubic yards.</p></div>
+        </details>
+        <details class="faq-item" id="faq-thickness">
+          <summary class="faq-q">How thick should a concrete slab be?</summary>
+          <div class="faq-a"><p>Spec it by load, not by rule of thumb:</p>
+            <p><ul><li><strong>3.5–4 in</strong> — walkways, garden paths, patios, shed and AC pads (foot traffic only)</li><li><strong>4 in</strong> — the standard residential minimum; patios and light floors</li><li><strong>5 in</strong> — residential driveways and garage floors carrying passenger cars or half-ton pickups</li><li><strong>6 in</strong> — driveways taking trucks and RVs, heavy equipment pads, and commercial slabs</li><li><strong>8 in</strong> — post-tensioned, heavily loaded, or industrial slabs</li></ul></p>
+            <p>For code: the International Residential Code (R506.1) sets a <strong>3.5-inch minimum</strong> for slab-on-grade floors in habitable space, and most jurisdictions amend that to 4 inches. The IRC does not regulate exterior patios and walkways, though local codes often do govern driveways — published driveway standards run from 4 to 7 inches depending on the municipality.</p>
+            <p>ACI 330R-08 puts it plainly: <em>"As a practical matter, there is no benefit in building slabs less than 4 in. (100 mm) thick."</em> Thickness is the cheapest structural upgrade available — bending capacity scales with the square of thickness, so 4 in to 6 in is 50% more concrete but roughly 2.25x the bending resistance.</p></div>
+        </details>
+        <details class="faq-item" id="faq-psi">
+          <summary class="faq-q">What PSI concrete do I need for a slab?</summary>
+          <div class="faq-a"><p>Match the strength to the exposure and the load:</p>
+            <p><ul><li><strong>3,000 PSI</strong> — interior slabs, basement floors, and shop floors that never see salt or freezing</li><li><strong>3,500 PSI</strong> — standard patios, sidewalks, and exterior residential work</li><li><strong>4,000 PSI</strong> — driveways, garage floors, and any exterior slab in a freeze-thaw climate, specified with 5–7% air entrainment</li><li><strong>4,500–5,000 PSI</strong> — heavy vehicle pads, warehouse slabs, and structural work per ACI 318</li></ul></p>
+            <p>ACI 332 requires 4,000 PSI with air entrainment for exterior residential slabs in freeze-thaw zones. Each 500 PSI step up adds roughly $4–$10 per cubic yard, which is cheap insurance against scaling and spalling. In freeze-thaw climates, air entrainment matters more than an extra inch of thickness — 3,000 PSI slabs without air can scale badly within 5 to 10 years.</p></div>
+        </details>
+        <details class="faq-item" id="faq-rebar-how">
+          <summary class="faq-q">How much rebar does a concrete slab need?</summary>
+          <div class="faq-a"><p>Calculate rebar as linear feet in each direction, based on the spacing, then add the overlaps and the extra length each bar needs to tie into the forms.</p>
+            <p><span class="formula">Bars in one direction = ceil(slab length ÷ spacing) + 1<br>Linear feet = bars x slab width (or length)</span></p>
+            <p>For a 20 x 20 ft slab with #3 rebar at 18 inches on center:</p>
+            <p><ul><li>Bars running one way: ceil(20 ÷ 1.5) + 1 = 15 bars</li><li>Each bar spans the 20 ft width, plus 6 inches of embedment on each side = 21 ft</li><li>15 x 21 = 315 linear feet</li><li>Both directions: <strong>630 linear feet</strong></li></ul></p>
+            <p>On a 20 x 20 slab, #3 rebar at 18 in on center runs about $220–$440 installed, or $1.10 per square foot at the typical rate. #4 rebar at 12 in on center roughly doubles that.</p></div>
+        </details>
+        <details class="faq-item" id="faq-rebar-spacing">
+          <summary class="faq-q">What spacing do I use for rebar in a residential slab?</summary>
+          <div class="faq-a"><p>Spacing follows the load:</p>
+            <p><ul><li><strong>Wire mesh (6x6 W1.4)</strong> — patios, walkways, shed pads. Light duty.</li><li><strong>#3 rebar at 18 in on center</strong> — residential driveways and garage floors carrying passenger cars and half-ton pickups. The standard residential spec.</li><li><strong>#4 rebar at 12 in on center</strong> — heavy vehicle driveways, RV and boat pads, and structural slabs.</li><li><strong>#4 rebar at 12–18 in on center</strong> — commercial and warehouse slabs.</li></ul></p>
+            <p>ACI 332 calls for reinforcement in residential slabs that support vehicles. It is not required by the IRC for a residential slab, but rebar at 18 in on center adds $0.50–$1.00 per square foot and dramatically reduces cracking from thermal expansion and soil movement.</p>
+            <p>Bar size matters less than placement. <strong>Support the rebar at mid-depth</strong> — roughly 2 inches off the bottom in a 4-inch slab — using wire chairs or concrete blocks. Rebar lying flat on the sub-base is decorative, not structural.</p></div>
+        </details>
+        <details class="faq-item" id="faq-rebar-vs-mesh">
+          <summary class="faq-q">Should I use rebar or welded wire mesh?</summary>
+          <div class="faq-a"><p>Rebar is stronger and better for anything carrying a vehicle. Mesh is cheaper and adequate for pedestrian loads.</p>
+            <p><ul><li><strong>Welded wire mesh:</strong> $0.20–$0.90 per sq ft. Good for patios, sidewalks, and shed pads. It resists shrinkage cracking well.</li><li><strong>#3 rebar at 18 in o.c.:</strong> $0.70–$1.40 per sq ft. The right choice for driveways and garage floors.</li><li><strong>#4 rebar at 12 in o.c.:</strong> $1.00–$2.00 per sq ft. Heavy loads and structural work.</li><li><strong>Both:</strong> roughly $1.50 per sq ft. Used where a slab is truly structural.</li></ul></p>
+            <p>A practical point: mesh is hard to position accurately. It is flexible, and if it is not lifted on chairs and tied in the right grid, it ends up bunched at one edge. Rebar is stiffer, holds its position better, and is far easier to inspect before the pour — you can walk the grid and see the spacing.</p>
+            <p>Fiber mesh added to the mix is a third option at $0.10–$0.32 per sq ft. It controls shrinkage cracking but does not replace steel for structural capacity.</p></div>
+        </details>
+        <details class="faq-item" id="faq-rebar">
+          <summary class="faq-q">Do I need rebar in a concrete slab?</summary>
+          <div class="faq-a"><p>Reinforcement is not required by the IRC for a residential slab, but it is strongly recommended and it is what separates a slab that lasts 30 years from one that cracks in three.</p>
+            <p><ul><li><strong>Fiber mesh</strong> — $0.10–$0.32 per sq ft. Controls shrinkage cracking in the mix. Not a structural substitute for steel.</li><li><strong>Welded wire mesh (6x6 W1.4)</strong> — $0.20–$0.90 per sq ft. Fine for patios, walks, and shed pads.</li><li><strong>#3 rebar at 18 in on center</strong> — $0.70–$1.40 per sq ft. The standard residential spec for driveways and garage floors.</li><li><strong>#4 rebar at 12 in on center</strong> — $1.00–$2.00 per sq ft. For heavy vehicle loads and structural slabs.</li></ul></p>
+            <p>One detail that matters more than the steel itself: <strong>support the rebar at mid-depth</strong>, roughly 2 inches off the bottom of a 4-inch slab, using wire chairs or concrete blocks. Rebar resting flat on the sub-base adds almost no value — it needs to sit inside the concrete matrix, in the upper third, where the tension actually develops.</p>
+            <p>A 4-inch slab on a consistent, well-compacted base will outperform a 6-inch slab over soft spots, because the soft spot is exactly where the slab has to span and bend.</p></div>
+        </details>
+        <details class="faq-item" id="faq-rebar-amount">
+          <summary class="faq-q">How much rebar do I need for a concrete slab?</summary>
+          <div class="faq-a"><p>Total linear feet = the area of the slab divided by the spacing, in both directions, then added together.</p>
+            <p><span class="formula">One direction = (length ÷ spacing) × width<br>Both directions = (length ÷ spacing) × width + (width ÷ spacing) × length</span></p>
+            <p>For a 20 x 20 ft slab with #4 rebar at 18 inches on center, both ways:</p>
+            <p><ul>
+<li>Across: 20 ft ÷ 1.5 ft = 14 bars × 20 ft = <strong>280 linear ft</strong></li>
+<li>Both ways: 280 + 280 = <strong>662 linear ft</strong>, or <strong>30 bars</strong> of 20 ft stock</li>
+</ul></p>
+            <p>One direction only — which is adequate for many patios and pads on stable ground — comes to <strong>331 linear feet</strong>, about 17 bars.</p>
+            <p>Rebar is sold in 20 ft sticks, so 662 linear feet is 34 sticks with the lap splices; 30 bars is the number of pieces after you cut and lap them. The rebar calculator on this page does the arithmetic for any size and spacing.</p></div>
+        </details>
+        <details class="faq-item" id="faq-rebar-sizes">
+          <summary class="faq-q">What is the difference between #3, #4, #5 and #6 rebar?</summary>
+          <div class="faq-a"><p>The number is the bar's diameter in eighths of an inch.</p>
+            <p><ul>
+<li><strong>#3</strong> — 3/8 in diameter, 0.11 sq in area — light residential work, patios, shed pads</li>
+<li><strong>#4</strong> — 1/2 in diameter, 0.20 sq in area — the standard for residential driveways and garage floors</li>
+<li><strong>#5</strong> — 5/8 in diameter, 0.31 sq in area — heavy loads, 6 inch slabs, RV pads</li>
+<li><strong>#6</strong> — 3/4 in diameter, 0.44 sq in area — commercial and post-tensioned work</li>
+</ul></p>
+            <p>Bigger is not automatically better. What matters is the <strong>amount of steel</strong> in a given area, which is what spacing controls. A #4 at 18 inches on center provides about <strong>0.0011 sq in of steel per sq in of slab</strong>; a #3 at 12 inches provides nearly the same.</p>
+            <p>The practical reason to step up a size rather than tighten the spacing is <strong>handling</strong>. #3 is light enough to cut and tie by hand comfortably. #5 and #6 are noticeably heavier and need a real bender and cutter.</p>
+            <p>Use #4 unless your engineer, your local code, or the load tells you otherwise.</p></div>
+        </details>
+        <details class="faq-item" id="faq-rebar-4inch">
+          <summary class="faq-q">What rebar spacing do I need for a 4 inch concrete slab?</summary>
+          <div class="faq-a"><p>For a 4 inch residential slab, the standard is <strong>#3 rebar at 24 inches on center</strong> for light loads, or <strong>#4 rebar at 18 inches on center</strong> for a slab that carries vehicles or spans a gap.</p>
+            <p>A typical 4 inch garage floor or driveway section uses #4 at 18 inches both ways. A 4 inch patio or shed pad on stable ground uses #3 at 24 inches, or 6 x 6 welded wire mesh.</p>
+            <p>The 18 inch spacing for #4 is not arbitrary — it is the detail that produces about <strong>0.0011 sq in of steel per sq in of slab</strong>, which is the ratio most residential slab designs settle on.</p>
+            <p>The spacing must land so the bars are evenly distributed and clear of the edges. In a <strong>4 inch slab the bar sits roughly 1 inch above the base</strong>, with at least 1.5 inches of cover from any edge.</p>
+            <p>One caution: <strong>spacing is measured center to center</strong>, and a common error is to start the first bar at the edge and then space from there, which pushes the last bar off the slab or leaves a gap at the far end. Lay the bars out from the centre outward instead.</p></div>
+        </details>
+        <details class="faq-item" id="faq-rebar-6inch">
+          <summary class="faq-q">What rebar spacing do I need for a 6 inch concrete slab?</summary>
+          <div class="faq-a"><p>For a 6 inch slab, use <strong>#4 rebar at 12 inches on center</strong> as the baseline, and step up to <strong>#5 at 12 inches</strong> for heavy vehicle loads, RV pads and anything over fill.</p>
+            <p>A 6 inch slab is a different structure from a 4 inch one. It is typically post-tensioned, pre-stressed, or heavily reinforced with a structural engineer's design, and the reinforcement is part of a load path rather than crack control alone.</p>
+            <p>For a <strong>post-tensioned</strong> slab, the tendons are placed in sheathed ducts at a specific depth and tensioned after the concrete reaches about 75% of its design strength. That is not a DIY detail — it needs an engineer and a specialist crew.</p>
+            <p>For a <strong>conventionally reinforced</strong> 6 inch slab, #4 at 12 inches both ways gives roughly the same steel ratio as #4 at 18 inches in a 4 inch slab.</p>
+            <p>Whichever route you take, <strong>get the design confirmed by an engineer</strong> before pouring a 6 inch slab. The cost of doing it right is a small fraction of the cost of a slab that fails.</p></div>
+        </details>
+        <details class="faq-item" id="faq-rebar-overlap">
+          <summary class="faq-q">How much rebar overlap do I need?</summary>
+          <div class="faq-a"><p>Lap each bar over the next by <strong>40 times the bar diameter</strong>.</p>
+            <p><ul>
+<li><strong>#3</strong> — 12 in overlap</li>
+<li><strong>#4</strong> — 16 in overlap</li>
+<li><strong>#5</strong> — 20 in overlap</li>
+<li><strong>#6</strong> — 24 in overlap</li>
+</ul></p>
+            <p>This is the ACI detail for Class B splices in a lapped splice, and it is what allows two pieces of bar to act as one continuous length of steel. The overlap is measured <strong>from the end of one bar to the far end of the bar it crosses</strong>, so add the bar diameter to the splice length when you cut.</p>
+            <p>Tie the bars at the overlap with wire ties, two per overlap — one near each end. A loose lap will shift while the concrete is being placed and the whole grid moves.</p>
+            <p>For the standard 20 ft stock, a 16 in overlap on #4 means each bar covers about 18.3 ft of the run, so a 20 ft slab needs 2 bars per line with a small splice, or 3 if you want the lap centred.</p></div>
+        </details>
+        <details class="faq-item" id="faq-rebar-cover">
+          <summary class="faq-q">How far should rebar be from the edge of a concrete slab?</summary>
+          <div class="faq-a"><p>Rebar should sit at least <strong>1.5 inches</strong> from the edge in residential slabs, and <strong>2 inches</strong> is the better target where the slab is exposed or the climate is freeze-thaw.</p>
+            <p>This distance is called <strong>cover</strong>, and it does two jobs. It keeps the steel from corroding — the outer inch of a slab is the part that gets wet first and dries last, and rusting steel expands and spalls the concrete off the surface. It also protects the bar during placement, where a kicked or walked-on bar ends up too close.</p>
+            <p>In a <strong>4 inch slab</strong>, the rebar sits about <strong>1 inch above the base</strong>, which puts it in the bottom third of the slab — the tension zone, where flexing cracks open. Bars placed at mid-depth are markedly less effective.</p>
+            <p>Use <strong>plastic rebar chairs or bolsters</strong> rather than setting the grid on rocks or on the base itself. Chairs hold the bar at a consistent height and keep it from shifting while the concrete is placed. Rocks are the traditional method and they work, but they are hard to check.</p></div>
+        </details>
+        <details class="faq-item" id="faq-rebar-cost">
+          <summary class="faq-q">How much does rebar cost for a concrete slab?</summary>
+          <div class="faq-a"><p>Reinforcement runs about <strong>$0.70 to $2.00 per square foot</strong> of slab installed, and for a 20 x 20 ft slab that is roughly <strong>$280 to $1,600</strong>.</p>
+            <p>Material rates in 2026 put #4 rebar around <strong>$0.85 to $1.30 per linear foot</strong>. On the reference 20 x 20 slab with #4 at 18 inches both ways, you need <strong>662 linear feet</strong>, which is about <strong>$560 to $860</strong> of steel before the tie wire and chairs.</p>
+            <p>The wide range is mostly about the price of steel, which moves, and about how much labor the job takes. Hand-tying a grid for a small slab is quick; a large grid is a lot of tying.</p>
+            <p>Welded wire mesh is the budget option at roughly <strong>$0.30 to $0.60 per square foot</strong> and is the right call for patios and shed pads. It is supplied in 5 x 7 ft sheets, so a 400 sq ft slab needs about <strong>12 sheets</strong> with a one-mesh lap.</p>
+            <p>The rebar calculator on this page returns both the linear footage and the estimated material cost.</p></div>
+        </details>
+        <details class="faq-item" id="faq-rebar-drill">
+          <summary class="faq-q">Should rebar be drilled into the existing slab or overlapped?</summary>
+          <div class="faq-a"><p>When you are <strong>adding new concrete next to an existing slab</strong> — a patio extension, an addition to a driveway — drill into the old slab and tie the new rebar into it. When you are <strong>pouring a new slab that replaces the old one</strong>, lap the new bars; there is nothing to tie into.</p>
+            <p>For a drilled tie: drill <strong>3/4 inch holes</strong> about <strong>6 inches deep</strong>, spaced 18 to 24 inches apart along a line at the location of the new rebar, clean each hole with a brush and compressed air, and grout it with a non-shrink structural grout. Set the bar into the grouted hole and let it cure before pouring.</p>
+            <p>Do not simply drill a hole and drive the rebar into it. That gives a bar with no mechanical bond and no corrosion protection, and it will not tie the two slabs together.</p>
+            <p>If the existing slab is sound, you can also <strong>drill and dowel</strong> the new rebar to the edge of the old slab for the same effect. If the old slab is cracked or settled, the better answer is to remove it and start over.</p></div>
+        </details>
+        <details class="faq-item" id="faq-rebar-placement">
+          <summary class="faq-q">Where do I put the rebar in a concrete slab?</summary>
+          <div class="faq-a"><p>The rebar goes in the <strong>bottom third of the slab</strong>, on chairs, above the vapor barrier and above the compacted base.</p>
+            <p>The sequence from the ground up is:</p>
+            <p><ul>
+<li>Compacted gravel base</li>
+<li>Vapor barrier or vapor retarder</li>
+<li>Rebar grid, on chairs, at the bottom third</li>
+<li>Concrete</li>
+</ul></p>
+            <p>In a 4 inch slab the bar sits about <strong>1 inch above the base</strong>. In a 6 inch slab, roughly 2 inches. The grid is wired together at every crossing with tie wire — a single zip tie or a short piece of annealed wire both work, and the intersections are what hold the grid in a flat plane while the concrete is placed.</p>
+            <p>Three common mistakes. Setting the grid directly on the base with no chairs, so it ends up too low. Pouring the concrete before the grid is fully tied, so it moves under the weight. And walking on the grid during the pour — you will push it down and it will not come back up on its own.</p>
+            <p>Pour in <strong>layers</strong>, keeping the concrete ahead of the grid and never dumping concrete directly onto the bars.</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tight">
+    <div class="wrap">
+      <div class="cta-band">
+        <div>
+          <h2>Price the whole slab</h2>
+          <p>The slab cost calculator includes reinforcement in the line-item breakdown, so you can see exactly what the steel adds to the total.</p>
+        </div>
+        <div class="cluster">
+          <a class="btn btn--primary" href="/">Slab cost calculator</a>
+          <a class="btn btn--light" href="/concrete-calculator.html">Volume &amp; bags</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="/">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 8h18v11H3z"/><path d="M3 8l3-4h12l3 4"/><path d="M8 12h8"/>
+            </svg>
+          </span>
+          <span class="brand-name">Pour<span>Cost</span></span>
+        </a>
+        <p>Free concrete slab cost calculator and estimating tools. 2026 U.S. pricing benchmarks you can override with your own local quotes.</p>
+        <p class="small" style="color:#6b7280">Planning estimates only. Not a quote, contract, structural design, or code determination.</p>
+      </div>
+      <div>
+        <h4>Calculators</h4>
+        <ul>
+          <li><a href="/">Concrete Slab Cost Calculator</a></li>
+          <li><a href="/concrete-calculator.html">Concrete Volume &amp; Bags</a></li>
+          <li><a href="/ready-mix-vs-bags.html">Ready-Mix vs Bags</a></li>
+          <li><a href="/rebar-calculator.html">Rebar Calculator</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Cost Guides</h4>
+        <ul>
+          <li><a href="/cost-per-square-foot.html">Cost Per Square Foot</a></li>
+          <li><a href="/driveway-cost.html">Concrete Driveway Cost</a></li>
+          <li><a href="/patio-cost.html">Concrete Patio Cost</a></li>
+          <li><a href="/faq.html">Concrete Slab FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Reference</h4>
+        <ul>
+          <li><a href="/about.html">Pricing &amp; Methodology</a></li>
+          <li><a href="/about.html#sources">Sources</a></li>
+          <li><a href="/faq.html">FAQ</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span data-year>2026</span> PourCost. Prices last reviewed October 2026.</span>
+      <span>Estimates only — always get 3 local quotes.</span>
+    </div>
+    <p class="footer-disclaimer">This calculator provides estimates. Always consult a professional for structural requirements.</p>
+  </div>
+</footer>
+
+<script src="/assets/js/engine.js"></script>
+<script src="/assets/js/faq.js"></script>
+<script src="/assets/js/app.js"></script>
+<script src="/assets/js/calc-rebar.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+# Dependencies (there are none for the build, but keep this honest)
+node_modules/
+
+# Deploy keys — never commit these
+.deploy-keys/
+*.pem
+*.key
+id_rsa
+id_ed25519
+*.pub
+
+# Local env
+.env
+.env.*
+
+# Not part of the published site
+KEYWORD-RESEARCH.md
+COMPETITIVE-ANALYSIS.md
+*.research.md
+
+# Editor / OS noise
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+
+# Test + tooling output
+test-results/
+playwright-report/
+shots/
+*.log

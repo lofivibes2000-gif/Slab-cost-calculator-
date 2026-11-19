@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Concrete Calculator — Cubic Yards, Bags & Volume (2026) | PourCost</title>
+<meta name="description" content="Free concrete calculator for slabs, footings, columns, walls and stairs. Cubic yards, cubic feet, and 40/50/60/80 lb bag counts with a waste allowance. Metric and imperial.">
+<link rel="canonical" href="{{CANONICAL}}">
+<meta name="theme-color" content="#14181d">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="PourCost">
+<meta property="og:title" content="{{OG_TITLE}}">
+<meta property="og:description" content="{{OG_DESC}}">
+<meta property="og:url" content="{{OG_URL}}">
+<meta property="og:image" content="https://pourcost.com/assets/img/og-home.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="/assets/css/site.css">
+<!--SCHEMA-->
+</head>
+<body data-page="concrete-calculator">
+{{HEADER}}
+
+<main>
+  <!-- ============ HERO (compressed: calculator reachable fast) ============ -->
+  <section class="hero" style="padding-block:28px 22px">
+    <div class="wrap">
+      <span class="eyebrow">Free Concrete Calculator · Metric &amp; Imperial</span>
+      <h1 style="font-size:clamp(1.9rem,1.3rem+2.2vw,2.75rem);margin-bottom:10px">Concrete Calculator — <em>cubic yards, bags &amp; volume</em></h1>
+      <p class="lead" style="margin-bottom:14px">Enter your pour's dimensions and get cubic yards, cubic feet, and the exact number of 40, 50, 60, or 80 lb bags to buy — with a waste allowance, so you order enough the first time.</p>
+      <div class="trust-row">
+        <span class="trust-item"><svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M2 8l4 4 8-8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> 7 pour shapes</span>
+        <span class="trust-item"><svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M2 8l4 4 8-8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Metric or imperial</span>
+        <span class="trust-item"><svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M2 8l4 4 8-8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Bag count + cost</span>
+        <a class="trust-link" href="/about.html">Pricing &amp; methodology →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CALCULATOR ============ -->
+  <section class="section section--tight" id="calculator" style="padding-top:10px">
+    <div class="wrap">
+      <div class="calc-layout">
+        <div class="calc-panel">
+          <div class="calc-panel__head">
+            <span class="calc-panel__title">Pour Dimensions</span>
+            <div class="seg" style="padding:3px">
+              <input type="radio" name="vsystem" id="vsys-imperial" value="imperial" checked><label for="vsys-imperial">Imperial</label>
+              <input type="radio" name="vsystem" id="vsys-metric" value="metric"><label for="vsys-metric">Metric</label>
+            </div>
+          </div>
+          <div class="calc-panel__body">
+            <form id="volume-form" autocomplete="off">
+              <fieldset class="fieldset">
+                <legend>1 · What are you pouring?</legend>
+                <div class="chips">
+                  <button type="button" class="chip" data-vshape="rect" aria-pressed="true">Slab</button>
+                  <button type="button" class="chip" data-vshape="lshape" aria-pressed="false">L-shape</button>
+                  <button type="button" class="chip" data-vshape="circle" aria-pressed="false">Round pad</button>
+                  <button type="button" class="chip" data-vshape="footing" aria-pressed="false">Footing</button>
+                  <button type="button" class="chip" data-vshape="column" aria-pressed="false">Column</button>
+                  <button type="button" class="chip" data-vshape="wall" aria-pressed="false">Wall</button>
+                  <button type="button" class="chip" data-vshape="stairs" aria-pressed="false">Stairs</button>
+                  <button type="button" class="chip" data-vshape="triangle" aria-pressed="false">Triangle</button>
+                  <button type="button" class="chip" data-vshape="custom" aria-pressed="false">Custom</button>
+                </div>
+                <input type="radio" class="visually-hidden" tabindex="-1" aria-hidden="true" name="vshape" id="vshape-rect" value="rect" checked>
+                <input type="radio" class="visually-hidden" tabindex="-1" aria-hidden="true" name="vshape" id="vshape-lshape" value="lshape">
+                <input type="radio" class="visually-hidden" tabindex="-1" aria-hidden="true" name="vshape" id="vshape-circle" value="circle">
+                <input type="radio" class="visually-hidden" tabindex="-1" aria-hidden="true" name="vshape" id="vshape-footing" value="footing">
+                <input type="radio" class="visually-hidden" tabindex="-1" aria-hidden="true" name="vshape" id="vshape-column" value="column">
+                <input type="radio" class="visually-hidden" tabindex="-1" aria-hidden="true" name="vshape" id="vshape-wall" value="wall">
+                <input type="radio" class="visually-hidden" tabindex="-1" aria-hidden="true" name="vshape" id="vshape-stairs" value="stairs">
+                <input type="radio" class="visually-hidden" tabindex="-1" aria-hidden="true" name="vshape" id="vshape-triangle" value="triangle">
+                <input type="radio" class="visually-hidden" tabindex="-1" aria-hidden="true" name="vshape" id="vshape-custom" value="custom">
+                <p class="field__hint" style="margin-top:10px" id="v-shape-desc">Patios, driveways, garage floors, shed and equipment pads</p>
+              </fieldset>
+
+              <fieldset class="fieldset">
+                <legend>2 · Dimensions</legend>
+
+                <!-- RECT / FOOTING share length + width + thickness -->
+                <div class="field-grid" id="vg-rect">
+                  <div class="field">
+                    <label for="v-length">Length</label>
+                    <div class="input-wrap has-unit"><input type="number" id="v-length" data-dim="len" value="20" min="0" step="0.5" inputmode="decimal"><span class="unit" data-unit="len">ft</span></div>
+                  </div>
+                  <div class="field">
+                    <label for="v-width">Width</label>
+                    <div class="input-wrap has-unit"><input type="number" id="v-width" data-dim="len" value="20" min="0" step="0.5" inputmode="decimal"><span class="unit" data-unit="len">ft</span></div>
+                  </div>
+                  <div class="field">
+                    <label for="v-thickness">Thickness</label>
+                    <div class="input-wrap has-unit"><input type="number" id="v-thickness" data-dim="thick" value="4" min="0" step="0.25" inputmode="decimal"><span class="unit" data-unit="thick">in</span></div>
+                  </div>
+                </div>
+
+                <!-- L-SHAPE -->
+                <div class="field-grid" id="vg-lshape" style="display:none">
+                  <div class="field">
+                    <label for="v-l-length">Full length</label>
+                    <div class="input-wrap has-unit"><input type="number" id="v-l-length" data-dim="len" value="24" min="0" step="0.5" inputmode="decimal"><span class="unit" data-unit="len">ft</span></div>
+                  </div>
+                  <div class="field">
+                    <label for="v-l-width">Full width</label>
+                    <div class="input-wrap has-unit"><input type="number" id="v-l-width" data-dim="len" value="18" min="0" step="0.5" inputmode="decimal"><span class="unit" data-unit="len">ft</span></div>
+                  </div>
+                  <div class="field">
+                    <label for="v-l-notch-l">Notch length</label>
+                    <div class="input-wrap has-unit"><input type="number" id="v-l-notch-l" data-dim="len" value="10" min="0" step="0.5" inputmode="decimal"><span class="unit" data-unit="len">ft</span></div>
+                  </div>
+                  <div class="field">
+                    <label for="v-l-notch-w">Notch width</label>
+                    <div class="input-wrap has-unit"><input type="number" id="v-l-notch-w" data-dim="len" value="8" min="0" step="0.5" inputmode="decimal"><span class="unit" data-unit="len">ft</span></div>
+                  </div>
+                  <div class="field">
+                    <label for="v-thickness-ls">Thickness</label>
+                    <div class="input-wrap has-unit"><input type="number" id="v-thickness-ls" data-dim="thick" value="4" min="0" step="0.25" inputmode="decimal"><span class="unit" data-unit="thick">in</span></div>
+                  </div>
+                </div>
+
+                <!-- CIRCLE -->
+                <div class="field-grid" id="vg-circle" style="display:none">
+                  <div class="field">
+                    <label for="v-diameter">Diameter</label>
+                    <div class="input-wrap has-unit"><input type="number" id="v-diameter" data-dim="len" value="12" min="0" step="0.5" inputmode="decimal"><span class="unit" data-unit="len">ft</span></div>
+                  </div>
+                  <div class="field">
+                    <label for="v-thickness-c">Thickness</label>
+                    <div class="input-wrap has-unit"><input type="number" id="v-thickness-c" data-dim="thick" value="4" min="0" step="0.25" inputmode="decimal"><span class="unit" data-unit="thick">in</span></div>
+                  </div>
+                </div>
+
+                <!-- FOOTING -->
+                <div class="field-grid" id="vg-footing" style="display:none">
+                  <div class="field">
+                    <label for="v-f-length">Length</label>
+                    <div class="input-wrap has-unit"><input type="number" id="v-f-length" data-dim="len" value="10" min="0" step="0.5" inputmode="decimal"><span class="unit" data-unit="len">ft</span></div>
+                  </div>
+                  <div class="field">
+                    <label for="v-f-width">Width</label>
+                    <div class="input-wrap has-unit"><input type="number" id="v-f-width" data-dim="len" value="2" min="0" step="0.25" inputmode="decimal"><span class="unit" data-unit="len">ft</span></div>
+                  </div>
+                  <div class="field">
+                    <label for="v-f-depth">Depth</label>
+                    <div class="input-wrap has-unit"><input type="number" id="v-f-depth" data-dim="thick" value="12" min="0" step="0.25" inputmode="decimal"><span class="unit" data-unit="thick">in</span></div>
+                  </div>
+                  <p class="field__hint" style="grid-column:1/-1">A strip footing is width × depth. For a spread footing, enter length and width as the footing plan size and depth as the thickness.</p>
+                </div>
+
+                <!-- COLUMN -->
+                <div class="field-grid" id="vg-column" style="display:none">
+                  <div class="field">
+                    <label for="v-col-dia">Diameter</label>
+                    <div class="input-wrap has-unit"><input type="number" id="v-col-dia" data-dim="thick" value="12" min="0" step="0.5" inputmode="decimal"><span class="unit" data-unit="thick">in</span></div>
+                  </div>
+                  <div class="field">
+                    <label for="v-height">Height</label>
+                    <div class="input-wrap has-unit"><input type="number" id="v-height" data-dim="thick" value="48" min="0" step="1" inputmode="decimal"><span class="unit" data-unit="thick">in</span></div>
+                  </div>
+                  <p class="field__hint" style="grid-column:1/-1">Round column or sonotube. Add half an inch per side for the form boards if you are setting the tube in place.</p>
+                </div>
+
+                <!-- WALL -->
+                <div class="field-grid" id="vg-wall" style="display:none">
+                  <div class="field">
+                    <label for="v-w-length">Length</label>
+                    <div class="input-wrap has-unit"><input type="number" id="v-w-length" data-dim="len" value="20" min="0" step="0.5" inputmode="decimal"><span class="unit" data-unit="len">ft</span></div>
+                  </div>
+                  <div class="field">
+                    <label for="v-w-thick">Wall thickness</label>
+                    <div class="input-wrap has-unit"><input type="number" id="v-w-thick" data-dim="thick" value="8" min="0" step="0.5" inputmode="decimal"><span class="unit" data-unit="thick">in</span></div>
+                  </div>
+                  <div class="field">
+                    <label for="v-w-height">Wall height</label>
+                    <div class="input-wrap has-unit"><input type="number" id="v-w-height" data-dim="len" value="4" min="0" step="0.5" inputmode="decimal"><span class="unit" data-unit="len">ft</span></div>
+                  </div>
+                  <p class="field__hint" style="grid-column:1/-1">Volume = length × thickness × height. This is the concrete only — it does not include block, mortar, or the void inside a hollow block wall.</p>
+                </div>
+
+                <!-- STAIRS -->
+                <div class="field-grid" id="vg-stairs" style="display:none">
+                  <div class="field">
+                    <label for="v-run">Total run</label>
+                    <div class="input-wrap has-unit"><input type="number" id="v-run" data-dim="len" value="12" min="0" step="0.5" inputmode="decimal"><span class="unit" data-unit="len">ft</span></div>
+                  </div>
+                  <div class="field">
+                    <label for="v-rise">Total rise</label>
+                    <div class="input-wrap has-unit"><input type="number" id="v-rise" data-dim="len" value="6" min="0" step="0.25" inputmode="decimal"><span class="unit" data-unit="len">ft</span></div>
+                  </div>
+                  <div class="field">
+                    <label for="v-st-width">Width</label>
+                    <div class="input-wrap has-unit"><input type="number" id="v-st-width" data-dim="len" value="4" min="0" step="0.5" inputmode="decimal"><span class="unit" data-unit="len">ft</span></div>
+                  </div>
+                  <div class="field">
+                    <label for="v-platform">Landing depth</label>
+                    <div class="input-wrap has-unit"><input type="number" id="v-platform" data-dim="len" value="4" min="0" step="0.5" inputmode="decimal"><span class="unit" data-unit="len">ft</span></div>
+                  </div>
+                  <div class="field">
+                    <label for="v-platformt">Landing thickness</label>
+                    <div class="input-wrap has-unit"><input type="number" id="v-platformt" data-dim="thick" value="4" min="0" step="0.25" inputmode="decimal"><span class="unit" data-unit="thick">in</span></div>
+                  </div>
+                  <div class="field">
+                    <label for="v-risers">Number of risers</label>
+                    <div class="input-wrap has-unit"><input type="number" id="v-risers" value="6" min="1" step="1" inputmode="numeric"><span class="unit">ea</span></div>
+                  </div>
+                  <p class="field__hint" style="grid-column:1/-1">The flight is modelled as a solid stepped mass (run ÷ 2 × rise × width) plus a landing block. That is the exact volume of solid concrete steps, not the hollow sloping underside.</p>
+                </div>
+
+                <!-- TRIANGLE -->
+                <div class="field-grid" id="vg-triangle" style="display:none">
+                  <div class="field">
+                    <label for="v-tri-base">Base</label>
+                    <div class="input-wrap has-unit"><input type="number" id="v-tri-base" data-dim="len" value="20" min="0" step="0.5" inputmode="decimal"><span class="unit" data-unit="len">ft</span></div>
+                  </div>
+                  <div class="field">
+                    <label for="v-tri-height">Height</label>
+                    <div class="input-wrap has-unit"><input type="number" id="v-tri-height" data-dim="len" value="12" min="0" step="0.5" inputmode="decimal"><span class="unit" data-unit="len">ft</span></div>
+                  </div>
+                  <div class="field">
+                    <label for="v-tri-type">Triangle type</label>
+                    <div class="input-wrap">
+                      <select id="v-tri-type">
+                        <option value="iso" selected>Symmetric (apex centred)</option>
+                        <option value="right">Right angle at one corner</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="field">
+                    <label for="v-tri-thickness">Thickness</label>
+                    <div class="input-wrap has-unit"><input type="number" id="v-tri-thickness" data-dim="thick" value="4" min="0" step="0.25" inputmode="decimal"><span class="unit" data-unit="thick">in</span></div>
+                  </div>
+                  <p class="field__hint" style="grid-column:1/-1">Area = base × height ÷ 2. A 20 ft base with a 12 ft height gives 120 sq ft of plan area. Use <strong>Custom</strong> to combine a triangle with a rectangle in one pour.</p>
+                </div>
+
+                <!-- CUSTOM (multiple simple shapes) -->
+                <div class="field-grid" id="vg-custom" style="display:none">
+                  <div style="grid-column:1/-1">
+                    <label class="label" for="v-custom-list">Pour components</label>
+                    <p class="field__hint" style="margin:2px 0 10px">Add each separate area you are pouring. Volumes, areas and edge lengths are added together. Shared edges between components are counted twice because each one still needs its own form.</p>
+                    <div id="v-custom-list" class="custom-list"></div>
+                    <button type="button" class="btn btn--ghost btn--sm" id="v-custom-add" style="margin-top:10px">+ Add a shape</button>
+                  </div>
+                  <div class="field">
+                    <label for="v-custom-thickness">Thickness (all components)</label>
+                    <div class="input-wrap has-unit"><input type="number" id="v-custom-thickness" data-dim="thick" value="4" min="0" step="0.25" inputmode="decimal"><span class="unit" data-unit="thick">in</span></div>
+                  </div>
+                </div>
+              </fieldset>
+
+              <fieldset class="fieldset">
+                <legend>3 · Order options</legend>
+                <div class="field-grid">
+                  <div class="field">
+                    <label for="v-waste">Waste allowance</label>
+                    <div class="input-wrap">
+                      <select id="v-waste">
+                        <option value="0">0% — exact</option>
+                        <option value="5">5%</option>
+                        <option value="10" selected>10% — standard</option>
+                        <option value="15">15%</option>
+                        <option value="20">20% — irregular work</option>
+                      </select>
+                    </div>
+                    <span class="field__hint">NRMCA recommends 4–10%</span>
+                  </div>
+                  <div class="field">
+                    <label for="v-qty">Number of pours</label>
+                    <div class="input-wrap has-unit"><input type="number" id="v-qty" value="1" min="1" step="1" inputmode="numeric"><span class="unit">ea</span></div>
+                  </div>
+                  <div class="field">
+                    <label for="v-base-depth">Gravel base depth</label>
+                    <div class="input-wrap has-unit"><input type="number" id="v-base-depth" data-dim="thick" value="4" min="0" step="0.5" inputmode="decimal"><span class="unit" data-unit="thick">in</span></div>
+                    <span class="field__hint">Compacted crushed stone under the slab</span>
+                  </div>
+                </div>
+                <div class="switch-row" style="margin-top:12px">
+                  <label for="v-showcost">Show material cost comparison</label>
+                  <span class="switch"><input type="checkbox" id="v-showcost" checked><span></span></span>
+                </div>
+                <div class="field-grid" id="v-cost-panel" style="margin-top:14px">
+                  <div class="field">
+                    <label for="v-rmprice">Ready-mix price</label>
+                    <div class="input-wrap input-wrap--dollar has-unit"><input type="number" id="v-rmprice" value="155" min="0" step="1" inputmode="decimal"><span class="unit">/yd³</span></div>
+                  </div>
+                  <div class="field">
+                    <label for="v-bagprice">80 lb bag price</label>
+                    <div class="input-wrap input-wrap--dollar has-unit"><input type="number" id="v-bagprice" value="6.50" min="0" step="0.25" inputmode="decimal"><span class="unit">/bag</span></div>
+                  </div>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+
+        <aside class="results" aria-live="polite">
+          <div class="results__head"><span class="results__title">Your Results</span><span class="badge badge--green">Live</span></div>
+          <div class="results__body">
+            <div class="headline-cost">
+              <div class="headline-cost__label">Cubic yards needed</div>
+              <div class="headline-cost__value" id="v-cuyd">—</div>
+              <div class="headline-cost__sub" id="v-order">—</div>
+            </div>
+            <div class="stat-grid">
+              <div class="stat"><div class="stat__label">Area / footprint</div><div class="stat__value" id="v-area">—</div></div>
+              <div class="stat"><div class="stat__label">Cubic feet</div><div class="stat__value" id="v-cuft">—</div></div>
+              <div class="stat"><div class="stat__label">Cubic metres</div><div class="stat__value" id="v-cum">—</div></div>
+              <div class="stat"><div class="stat__label">Gravel base</div><div class="stat__value" id="v-gravel">—</div></div>
+              <div class="stat"><div class="stat__label">80 lb bags</div><div class="stat__value" id="v-bags80">—</div></div>
+              <div class="stat"><div class="stat__label">60 lb bags</div><div class="stat__value" id="v-bags60">—</div></div>
+              <div class="stat"><div class="stat__label">50 lb bags</div><div class="stat__value" id="v-bags50">—</div></div>
+              <div class="stat"><div class="stat__label">40 lb bags</div><div class="stat__value" id="v-bags40">—</div></div>
+              <div class="stat"><div class="stat__label">Coverage per yd³</div><div class="stat__value" id="v-coverage">—</div></div>
+              <div class="stat"><div class="stat__label">Concrete weight</div><div class="stat__value" id="v-weight">—</div></div>
+            </div>
+            <div class="totals" id="v-cost-panel2" style="display:none">
+              <div class="total-row"><span class="total-row__label">Ready-mix concrete</span><span class="total-row__value" id="v-rmcost">—</span></div>
+              <div class="total-row"><span class="total-row__label">+ Delivery</span><span class="total-row__value" id="v-rmtotal">—</span></div>
+              <div class="total-row"><span class="total-row__label">Bags (80 lb) equivalent</span><span class="total-row__value" id="v-bagcost">—</span></div>
+              <div class="total-row total-row--grand"><span class="total-row__label">Truck loads</span><span class="total-row__value" id="v-trucks">—</span></div>
+            </div>
+            <div class="verdict" id="v-verdict">Enter dimensions to see the comparison.</div>
+            <div id="v-summary" class="results__summary"></div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ REBAR RECOMMENDATION ============ -->
+  <section class="section section--tight" style="padding-top:30px">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Reinforcement guide</span>
+        <h2>What size rebar, and how far apart?</h2>
+        <p>Reinforcement is what stops a slab from cracking along its length as the ground moves and the concrete shrinks. Pick the row that matches your slab thickness and what the slab will carry.</p>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Slab thickness</th>
+              <th>Typical use</th>
+              <th>Bar size</th>
+              <th>Spacing (on center)</th>
+              <th>Lap / overlap</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>3–4 in</td>
+              <td>Patio, shed pad, AC pad, walkway</td>
+              <td><strong>#3</strong> (3/8 in)</td>
+              <td><strong>24 in</strong> on center</td>
+              <td>12 in</td>
+            </tr>
+            <tr class="is-highlight">
+              <td><strong>4 in</strong></td>
+              <td><strong>Residential floor, garage floor</strong></td>
+              <td><strong>#4</strong> (1/2 in)</td>
+              <td><strong>18 in</strong> on center</td>
+              <td>16 in</td>
+            </tr>
+            <tr>
+              <td>5–6 in</td>
+              <td>Driveway, heavy vehicle, RV pad</td>
+              <td><strong>#4–#5</strong></td>
+              <td><strong>12 in</strong> on center</td>
+              <td>16–20 in</td>
+            </tr>
+            <tr>
+              <td>8 in+</td>
+              <td>Commercial, post-tensioned, heavy loads</td>
+              <td><strong>#5–#6</strong></td>
+              <td><strong>6–12 in</strong> on center</td>
+              <td>20–24 in</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="table-note">Lap splice = 40 × bar diameter, so 12 in for #3, 16 in for #4 and 20 in for #5. Reinforcement goes in the <strong>bottom third</strong> of the slab with at least <strong>2 in of cover</strong> measured from the slab edge — 1.5 in is the IRC minimum for #5 and smaller in residential slabs. Where the ground is stable and the load is light, welded wire mesh at 6 in by 6 in is a cheaper alternative, but it is easier to walk out of place than rebar.</p>
+      <p class="small muted mt-3">Rebar is <em>not</em> required for a slab on well-compacted, stable soil with light loads — many patios and shed pads go unreinforced with a fiber mesh or a thickened edge. It is required where the slab spans, carries vehicles, or sits on fill. Check the local code before you skip it.</p>
+    </div>
+  </section>
+
+  <!-- ============ MAGIC NUMBER ============ -->
+  <section class="section section--tight" style="padding-top:26px">
+    <div class="wrap">
+      <div class="magic">
+        <div class="magic__lead">
+          <div class="card__eyebrow">The magic number</div>
+          <div class="magic__num">81</div>
+          <p class="magic__cap">One cubic yard of concrete covers <strong>81 square feet</strong> at 4 inches thick. Take your square footage, divide by 81, and you have your cubic yards — no formula needed.</p>
+        </div>
+        <div class="magic__table">
+          <table>
+            <thead><tr><th>Slab thickness</th><th class="num">Coverage per yd³</th><th class="num">Yd³ per 100 sq ft</th></tr></thead>
+            <tbody>
+              <tr><td>3 in</td><td class="num">108 sq ft</td><td class="num">0.93</td></tr>
+              <tr class="is-highlight"><td><strong>4 in</strong></td><td class="num"><strong>81 sq ft</strong></td><td class="num"><strong>1.23</strong></td></tr>
+              <tr><td>5 in</td><td class="num">65 sq ft</td><td class="num">1.54</td></tr>
+              <tr><td>6 in</td><td class="num">54 sq ft</td><td class="num">1.85</td></tr>
+              <tr><td>8 in</td><td class="num">41 sq ft</td><td class="num">2.47</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ QUICK ANSWERS ============ -->
+  <section class="section section--white section--tight">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Quick answers</span>
+        <h2>The three questions everyone asks first</h2>
+      </div>
+      <div class="grid grid-3">
+        <div class="card card--accent">
+          <div class="card__title">How many bags of concrete do I need?</div>
+          <p class="small">Divide the pour's volume in cubic feet by the bag yield, then round up: 0.30 ft³ for a 40 lb bag, 0.375 ft³ for 50 lb, 0.45 ft³ for 60 lb, 0.60 ft³ for 80 lb.</p>
+          <p class="small mb-0"><strong>A 10 × 10 ft slab at 4 inches</strong> takes 1.23 yd³ — which is <strong>62 bags of 80 lb</strong>, or 82 of 60 lb, once you add 10% for waste.</p>
+        </div>
+        <div class="card card--accent">
+          <div class="card__title">How many yards of concrete do I need?</div>
+          <p class="small">Length × width × thickness (in feet) ÷ 27. Or use the shortcut: (square feet × thickness in inches) ÷ 324.</p>
+          <p class="small mb-0"><strong>A 20 × 20 ft slab at 4 inches</strong> is (400 × 4) ÷ 324 = <strong>4.94 cubic yards</strong>. Order about 5.5 with waste.</p>
+        </div>
+        <div class="card card--accent">
+          <div class="card__title">How much does a concrete slab cost?</div>
+          <p class="small">A standard residential slab runs <strong>$6–$12 per square foot</strong> installed in 2026. Concrete material alone is only about $2–$3.30 per sq ft — labor is usually the biggest line.</p>
+          <p class="small mb-0"><strong>A 20 × 20 slab</strong> with base, forms, mesh, labor, joints, and curing lands around <strong>$3,200–$4,400</strong> depending on scope.</p>
+        </div>
+      </div>
+      <p class="small muted mt-4">Want the full installed price with every line item? <a href="/">Open the concrete slab cost calculator →</a></p>
+    </div>
+  </section>
+
+  <!-- ============ REFERENCE ============ -->
+  <section class="section">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Reference</span>
+        <h2>Bag counts and coverage by size</h2>
+        <p>Bag counts below include a 10% waste allowance.</p>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Slab size</th><th class="num">Area</th><th class="num">Yd³ (4 in)</th><th class="num">40 lb</th><th class="num">50 lb</th><th class="num">60 lb</th><th class="num">80 lb</th></tr></thead>
+          <tbody id="table-bags"></tbody>
+        </table>
+      </div>
+      <p class="table-note">Coverage per cubic yard = 324 ÷ thickness in inches. At 4 inches one yard covers 81 sq ft; at 6 inches, 54 sq ft.</p>
+
+      <h3 class="mt-6" style="margin-bottom:14px">How to calculate each shape</h3>
+      <div class="grid grid-3">
+        <div class="card fcard" data-n="01">
+          <div class="card__title">Slabs &amp; footings</div>
+          <p class="small">Volume = length × width × thickness. Divide by 27 for cubic yards, or use the 324 shortcut with thickness in inches.</p>
+        </div>
+        <div class="card fcard" data-n="02">
+          <div class="card__title">Columns &amp; round pads</div>
+          <p class="small">Volume = π × radius² × height. Add half an inch per side for the form boards on a column pour.</p>
+        </div>
+        <div class="card fcard" data-n="03">
+          <div class="card__title">Walls &amp; stairs</div>
+          <p class="small">Wall = length × thickness × height. Stairs = width × (run ÷ 2 × rise) plus the landing block.</p>
+        </div>
+      </div>
+
+      <h3 class="mt-6" style="margin-bottom:14px">Metric equivalents</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Imperial</th><th class="num">Metric</th><th>Note</th></tr></thead>
+          <tbody>
+            <tr><td>1 cubic yard</td><td class="num">0.765 m³</td><td>27 cubic feet</td></tr>
+            <tr><td>4 in thickness</td><td class="num">10 cm</td><td>The standard residential slab</td></tr>
+            <tr><td>6 in thickness</td><td class="num">15 cm</td><td>Driveways and heavy vehicle pads</td></tr>
+            <tr><td>1 sq ft</td><td class="num">0.093 m²</td><td>Multiply sq ft by 0.093 for sq m</td></tr>
+            <tr><td>1 cu yd per sq ft at 4 in</td><td class="num">0.0152 m³/m²</td><td>Same ratio, metric</td></tr>
+            <tr><td>81 sq ft per yd³</td><td class="num">7.53 m² per m³</td><td>The magic number, metric</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--white" id="faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">FAQ</span>
+        <h2>Concrete calculation questions, answered</h2>
+        <p class="small muted"><span id="faq-count"><!--FAQ_COUNT--></span> questions, each with a real 2026 number.</p>
+      </div>
+      <div class="faq-nav">
+<!--FAQ_NAV-->
+      </div>
+      <div class="faq" id="faq-list">
+<!--FAQ_LIST-->
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tight">
+    <div class="wrap">
+      <div class="cta-band">
+        <div>
+          <h2>Now price it</h2>
+          <p>Volume is half the answer. The concrete slab cost calculator turns the same dimensions into a full installed price with every line item broken out.</p>
+        </div>
+        <div class="cluster">
+          <a class="btn btn--primary" href="/">Open the slab cost calculator</a>
+          <a class="btn btn--light" href="/ready-mix-vs-bags.html">Ready-mix vs bags</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+{{FOOTER}}
+
+<script src="/assets/js/engine.js"></script>
+<script src="/assets/js/faq.js"></script>
+<script src="/assets/js/app.js"></script>
+<script src="/assets/js/calc-volume.js"></script>
+<script>
+(function () {
+  function build() {
+    var body = document.getElementById("table-bags");
+    if (!body || !window.PourCost) return;
+    var PC = window.PourCost;
+    var sizes = [
+      { l: 8, w: 8 }, { l: 10, w: 10 }, { l: 12, w: 12 }, { l: 10, w: 20 },
+      { l: 20, w: 20 }, { l: 20, w: 24 }, { l: 24, w: 24 }, { l: 30, w: 30 }
+    ];
+    body.innerHTML = sizes.map(function (s) {
+      var area = s.l * s.w;
+      var yd = area * (4 / 12) / 27;
+      var cf = area * (4 / 12);
+      return "<tr><td><strong>" + s.l + " × " + s.w + " ft</strong></td>" +
+        "<td class='num'>" + area + "</td>" +
+        "<td class='num'>" + yd.toFixed(2) + "</td>" +
+        "<td class='num'>" + PC.bagCount(cf, 40, 10) + "</td>" +
+        "<td class='num'>" + PC.bagCount(cf, 50, 10) + "</td>" +
+        "<td class='num'>" + PC.bagCount(cf, 60, 10) + "</td>" +
+        "<td class='num'>" + PC.bagCount(cf, 80, 10) + "</td></tr>";
+    }).join("");
+  }
+  if (document.readyState !== "loading") build();
+  else document.addEventListener("DOMContentLoaded", build);
+})();
+</script>
+</body>
+</html>

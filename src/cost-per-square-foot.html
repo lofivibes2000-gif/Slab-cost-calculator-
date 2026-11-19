@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Concrete Cost Per Square Foot in 2026 — Full Breakdown | PourCost</title>
+<meta name="description" content="What does concrete cost per square foot? 2026 installed pricing broken into concrete, labor, base, forms, rebar and finishing — with per-thickness and per-size tables.">
+<link rel="canonical" href="{{CANONICAL}}">
+<meta name="theme-color" content="#14181d">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="PourCost">
+<meta property="og:title" content="{{OG_TITLE}}">
+<meta property="og:description" content="{{OG_DESC}}">
+<meta property="og:url" content="{{OG_URL}}">
+<meta property="og:image" content="https://pourcost.com/assets/img/og-home.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="/assets/css/site.css">
+<!--SCHEMA-->
+</head>
+<body data-page="cost-per-square-foot">
+{{HEADER}}
+
+<main>
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">2026 Pricing</span>
+        <h1>Concrete cost <em>per square foot</em></h1>
+        <p class="hero-lede">A standard residential concrete slab costs <strong>$6 to $12 per square foot</strong> installed in 2026, with most projects landing near $8. Here is exactly what makes up that number — every line, every rate, and what pushes a project to the high end.</p>
+        <div class="cluster mt-4">
+          <a class="btn btn--primary" href="#explorer">Break down the cost</a>
+          <a class="btn btn--ghost" href="/">Open the slab calculator</a>
+        </div>
+      </div>
+      <div class="card card--accent">
+        <div class="card__eyebrow">Quick answer</div>
+        <div class="card__title">The short version</div>
+        <table style="margin-top:8px">
+          <tbody>
+            <tr><td>Concrete material only</td><td class="num">$1.60 – $3.30</td></tr>
+            <tr><td>DIY materials (all-in, no crew)</td><td class="num">$2.50 – $4.50</td></tr>
+            <tr><td>Basic slab, professionally installed</td><td class="num">$6 – $10</td></tr>
+            <tr><td>Reinforced with base &amp; finishing</td><td class="num">$8 – $14</td></tr>
+            <tr><td>Stamped / decorative</td><td class="num">$10 – $22+</td></tr>
+          </tbody>
+        </table>
+        <p class="table-note">Installed cost per square foot, 2026 U.S. national average.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tight" id="explorer">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Cost Explorer</span>
+        <h2>Build up a per-square-foot price</h2>
+        <p>Set your slab's specifics and see the per-square-foot cost of every component, then total it. This is the same pricing model the main calculator uses.</p>
+      </div>
+
+      <div class="calc-layout">
+        <div class="calc-panel">
+          <div class="calc-panel__head"><span class="calc-panel__title">Your Slab</span></div>
+          <div class="calc-panel__body">
+            <form id="sqft-form" autocomplete="off">
+              <fieldset class="fieldset">
+                <legend>Slab parameters</legend>
+                <div class="field-grid">
+                  <div class="field">
+                    <label for="s-thickness">Thickness</label>
+                    <div class="input-wrap has-unit"><input type="number" id="s-thickness" value="4" min="0" step="0.25" inputmode="decimal"><span class="unit">in</span></div>
+                  </div>
+                  <div class="field">
+                    <label for="s-area">Area</label>
+                    <div class="input-wrap has-unit"><input type="number" id="s-area" value="400" min="0" step="10" inputmode="decimal"><span class="unit">sq ft</span></div>
+                  </div>
+                  <div class="field">
+                    <label for="s-psi">Concrete strength</label>
+                    <div class="input-wrap">
+                      <select id="s-psi">
+                        <option value="2500">2,500 PSI</option>
+                        <option value="3000" selected>3,000 PSI</option>
+                        <option value="3500">3,500 PSI</option>
+                        <option value="4000">4,000 PSI</option>
+                        <option value="5000">5,000 PSI</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="field">
+                    <label for="s-region">Region</label>
+                    <div class="input-wrap">
+                      <select id="s-region">
+                        <option value="national" selected>National average</option>
+                        <option value="southeast">Southeast</option>
+                        <option value="midwest">Midwest</option>
+                        <option value="southwest">Southwest</option>
+                        <option value="northeast">Northeast</option>
+                        <option value="west">West Coast</option>
+                        <option value="hawaii">Hawaii &amp; remote</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="field">
+                    <label for="s-reinf">Reinforcement</label>
+                    <div class="input-wrap">
+                      <select id="s-reinf">
+                        <option value="none">None</option>
+                        <option value="fiber">Fiber mesh</option>
+                        <option value="wire" selected>Welded wire mesh</option>
+                        <option value="rebar">Rebar grid</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="field">
+                    <label for="s-finish">Finish</label>
+                    <div class="input-wrap">
+                      <select id="s-finish">
+                        <option value="broom" selected>Broom (standard)</option>
+                        <option value="trowel">Smooth trowel</option>
+                        <option value="stamped">Stamped / decorative</option>
+                        <option value="exposed">Exposed aggregate</option>
+                        <option value="polished">Polished / ground</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="field">
+                    <label for="s-waste">Waste allowance</label>
+                    <div class="input-wrap">
+                      <select id="s-waste">
+                        <option value="5">5%</option>
+                        <option value="10" selected>10%</option>
+                        <option value="15">15%</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+
+        <aside class="results" aria-live="polite">
+          <div class="results__head"><span class="results__title">Cost Per Sq Ft</span><span class="badge badge--green">Live</span></div>
+          <div class="results__body">
+            <div class="headline-cost">
+              <div class="headline-cost__label">Installed cost per square foot</div>
+              <div class="headline-cost__value" id="sqft-typ">—</div>
+              <div class="headline-cost__sub">Range <span id="sqft-low">—</span> to <span id="sqft-high">—</span></div>
+            </div>
+            <div class="stat-grid">
+              <div class="stat"><div class="stat__label">Project total</div><div class="stat__value" id="sqft-project-total">—</div></div>
+              <div class="stat"><div class="stat__label">Concrete share</div><div class="stat__value" id="sqft-concrete-share">—</div></div>
+              <div class="stat"><div class="stat__label">Labor share</div><div class="stat__value" id="sqft-labor-share">—</div></div>
+              <div class="stat"><div class="stat__label">Coverage per yd³</div><div class="stat__value" id="sqft-coverage">—</div></div>
+            </div>
+            <div class="breakdown">
+              <div class="breakdown__title">Cost per sq ft by component</div>
+              <div id="sqft-breakdown"></div>
+            </div>
+            <div class="totals">
+              <div class="total-row"><span class="total-row__label">Low estimate</span><span class="total-row__value" id="sqft-total-low">—</span></div>
+              <div class="total-row"><span class="total-row__label">Typical estimate</span><span class="total-row__value" id="sqft-total-typ">—</span></div>
+              <div class="total-row"><span class="total-row__label">High estimate</span><span class="total-row__value" id="sqft-total-high">—</span></div>
+              <div class="total-row total-row--grand"><span class="total-row__label">Concrete needed</span><span class="total-row__value" id="sqft-yards">—</span></div>
+            </div>
+            <div class="verdict verdict--info" id="sqft-verdict">Set your parameters to see the comparison.</div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--white">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Reference tables</span>
+        <h2>Concrete cost per square foot, by thickness</h2>
+        <p>Material cost scales linearly with thickness; the total installed cost does not, because labor and delivery stay put.</p>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Thickness</th><th class="num">Yd³ per sq ft</th><th class="num">Coverage per yd³</th><th class="num">Concrete only</th><th class="num">+ 10% waste</th><th>Typical use</th></tr></thead>
+          <tbody id="table-thickness"></tbody>
+        </table>
+      </div>
+      <p class="table-note">Ready-mix at $155 per cubic yard, 3,000 PSI. One cubic yard covers 324 ÷ thickness in inches square feet.</p>
+
+      <h3 class="mt-6" style="margin-bottom:14px">Total project cost by slab size</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Slab size</th><th class="num">Area</th><th class="num">Cubic yards</th><th class="num">80 lb bags</th><th class="num">Cost at $8/sq ft</th><th class="num">Cost at $12/sq ft</th></tr></thead>
+          <tbody id="table-sizes"></tbody>
+        </table>
+      </div>
+      <p class="table-note">4-inch slab, broom finish, mesh, 4-inch base. Bag counts include 10% waste.</p>
+
+      <h3 class="mt-6" style="margin-bottom:14px">Decorative finish adders</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Finish</th><th class="num">Added per sq ft</th><th>Best for</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Broom (standard)</strong></td><td class="num">included</td><td>Driveways, utility areas, most residential flatwork</td></tr>
+            <tr><td><strong>Smooth trowel</strong></td><td class="num">$0.75 – $2.00</td><td>Interior floors, garages, where a finished look matters</td></tr>
+            <tr><td><strong>Exposed aggregate</strong></td><td class="num">$2.50 – $5.50</td><td>Patios, pool decks — a durable, textured surface</td></tr>
+            <tr><td><strong>Stamped</strong></td><td class="num">$5.00 – $10.00</td><td>Decorative patios and walkways that mimic stone or brick</td></tr>
+            <tr><td><strong>Polished / ground</strong></td><td class="num">$6.00 – $14.00</td><td>Showcase interiors, commercial lobbies</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="table-note">Stamping roughly doubles the finishing labor, which is why a stamped patio can cost as much as the structural slab beneath it.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="grid grid-2" style="align-items:start;gap:56px">
+        <div>
+          <span class="eyebrow">Regional pricing</span>
+          <h2>Concrete cost varies by region</h2>
+          <p>Ready-mix pricing tracks local construction volume, fuel costs, and plant competition. Labor moves the installed price even more.</p>
+          <div class="table-wrap" style="margin-top:16px">
+            <table>
+              <thead><tr><th>Region</th><th class="num">Ready-mix / yd³</th><th class="num">vs national</th></tr></thead>
+              <tbody>
+                <tr><td><strong>Southeast</strong> (FL, GA, AL)</td><td class="num">$125 – $145</td><td class="num">−10%</td></tr>
+                <tr><td><strong>Midwest</strong> (OH, IN, IL)</td><td class="num">$135 – $155</td><td class="num">−4%</td></tr>
+                <tr><td><strong>Southwest</strong> (TX, AZ, NM)</td><td class="num">$140 – $160</td><td class="num">≈</td></tr>
+                <tr><td><strong>Northeast</strong> (NY, MA, PA)</td><td class="num">$155 – $180</td><td class="num">+10%</td></tr>
+                <tr><td><strong>West Coast</strong> (CA, WA, OR)</td><td class="num">$165 – $195</td><td class="num">+16%</td></tr>
+                <tr><td><strong>National average</strong></td><td class="num">$135 – $160</td><td class="num">baseline</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="table-note">On installed cost, the Northeast adds 15–25% and the West Coast 20–35% versus the Southeast and Midwest. Island and remote sites can push ready-mix past $250 per yard.</p>
+        </div>
+        <div>
+          <span class="eyebrow">Why prices differ</span>
+          <h2>What pushes a quote up or down</h2>
+          <div class="stack">
+            <div class="card card--flat">
+              <div class="card__title">Site access</div>
+              <p class="small">If the truck can back up and chute the concrete in, there is no extra charge. If the pour is in a backyard, uphill, or past a fence, you need a pump — $450 to $900 minimum, rising with volume. Wheelbarrow-only access adds $1–$2 per sq ft in labor.</p>
+            </div>
+            <div class="card card--flat">
+              <div class="card__title">Ground condition</div>
+              <p class="small">Poor soil needs engineering fill, extra compaction, and deeper excavation. This can add $1–$2.50 per sq ft, and it is the first place to look when a bid seems high.</p>
+            </div>
+            <div class="card card--flat">
+              <div class="card__title">Slab size</div>
+              <p class="small">Small slabs carry more fixed cost per square foot. A 10 x 10 pad runs $8.50–$15.00 per sq ft; a 40 x 60 driveway runs $6.50–$12.50. The rate drops because delivery and crew setup spread out.</p>
+            </div>
+            <div class="card card--flat">
+              <div class="card__title">Removal and haul-off</div>
+              <p class="small">Tearing out an old 4-inch slab runs about $4 per sq ft to demo and haul, more as it gets thicker. Often the second-biggest line item after labor.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--white" id="faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">FAQ</span>
+        <h2>Concrete cost questions, answered</h2>
+        <p class="small muted"><span id="faq-count"><!--FAQ_COUNT--></span> questions, each with a real 2026 number.</p>
+      </div>
+      <div class="faq-nav">
+<!--FAQ_NAV-->
+      </div>
+      <div class="faq" id="faq-list">
+<!--FAQ_LIST-->
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tight">
+    <div class="wrap">
+      <div class="cta-band">
+        <div>
+          <h2>Get your project's actual number</h2>
+          <p>Enter your slab's real dimensions and the calculator applies this same pricing model line by line, with a low / typical / high range.</p>
+        </div>
+        <div class="cluster">
+          <a class="btn btn--primary" href="/">Concrete slab cost calculator</a>
+          <a class="btn btn--light" href="/about.html">Methodology</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+{{FOOTER}}
+
+<script src="/assets/js/engine.js"></script>
+<script src="/assets/js/faq.js"></script>
+<script src="/assets/js/app.js"></script>
+<script src="/assets/js/calc-sqft.js"></script>
+<script>
+(function () {
+  function build() {
+    if (!window.PourCost) return;
+    var PC = window.PourCost;
+    var t = document.getElementById("table-thickness");
+    if (t) {
+      t.innerHTML = PC.thicknessTable(155).map(function (r) {
+        var use = { 3: "Overlays, shed floors on solid base", 4: "Patios, walkways, shed pads",
+                    5: "Residential driveways, garage floors", 6: "Heavy vehicle driveways, commercial",
+                    8: "Post-tensioned, industrial slabs" }[r.thickness] || "";
+        return "<tr><td><strong>" + r.thickness + ' in</strong></td>' +
+          "<td class='num'>" + r.ydPerSqFt.toFixed(4) + "</td>" +
+          "<td class='num'>" + r.coverage + "</td>" +
+          "<td class='num'>$" + r.materialPerSqFt.toFixed(2) + "</td>" +
+          "<td class='num'>$" + r.materialWithWaste.toFixed(2) + "</td>" +
+          "<td>" + use + "</td></tr>";
+      }).join("");
+    }
+    var s = document.getElementById("table-sizes");
+    if (s) {
+      s.innerHTML = PC.sizeTable(8, 4).map(function (r) {
+        return "<tr><td><strong>" + r.label + ' ft</strong></td>' +
+          "<td class='num'>" + r.area + "</td>" +
+          "<td class='num'>" + r.cuYd.toFixed(2) + "</td>" +
+          "<td class='num'>" + r.bags80 + "</td>" +
+          "<td class='num'>$" + Math.round(r.typ).toLocaleString() + "</td>" +
+          "<td class='num'>$" + Math.round(r.typ * 1.5).toLocaleString() + "</td></tr>";
+      }).join("");
+    }
+  }
+  if (document.readyState !== "loading") build();
+  else document.addEventListener("DOMContentLoaded", build);
+})();
+</script>
+</body>
+</html>
