@@ -1,13 +1,28 @@
 /* Verify the spec-compliance round: triangle + custom shapes, cubic metres,
    gravel base volume, rebar recommendation table, and the FAQ de-duplication. */
 import { chromium } from "/usr/local/lib/node_modules/playwright/index.mjs";
+// Resolve the Playwright Chromium binary at runtime so a sandbox/browser
+// upgrade never breaks the suites with a hard-coded build number.
+import { readdirSync, existsSync } from "node:fs";
+import { join } from "node:path";
+function chromiumPath() {
+  const base = "/root/.cache/ms-playwright";
+  const dirs = existsSync(base) ? readdirSync(base).filter((d) => d.startsWith("chromium-")).sort().reverse() : [];
+  for (const d of dirs) {
+    for (const p of [`${base}/${d}/chrome-linux64/chrome`, `${base}/${d}/chrome-linux/chrome`]) {
+      if (existsSync(p)) return p;
+    }
+  }
+  return undefined; // fall back to Playwright's bundled download
+}
+
 import { createServer } from "node:http";
 import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const DIST = path.join(__dirname, "dist");
+const DIST = path.join(__dirname, "docs");
 const MIME = { ".html": "text/html", ".css": "text/css", ".js": "text/javascript", ".svg": "image/svg+xml", ".png": "image/png", ".xml": "application/xml", ".txt": "text/plain" };
 const server = createServer(async (req, res) => {
   try {
@@ -21,7 +36,7 @@ const server = createServer(async (req, res) => {
 await new Promise((r) => server.listen(8190, r));
 
 const browser = await chromium.launch({
-  executablePath: "/root/.cache/ms-playwright/chromium-1243/chrome-linux/chrome",
+  executablePath: chromiumPath(),
   args: ["--no-sandbox", "--disable-dev-shm-usage"]
 });
 const errors = [];

@@ -5,7 +5,7 @@ A static website for **PourCost**, a utility that prices concrete slabs.
 The whole site is vanilla HTML, CSS and JavaScript — no framework, no build
 dependencies, no runtime services. `build.mjs` is a ~300 line Node script that
 injects the shared header/footer, renders the FAQ accordion and the JSON-LD
-structured data, and writes `dist/`.
+structured data, and writes `docs/`.
 
 **Live site:** https://pourcost.com
 
@@ -69,7 +69,7 @@ Sources and method: [`/about.html`](src/about.html).
 ## Getting started
 
 ```bash
-node build.mjs          # writes dist/
+node build.mjs          # writes docs/
 ```
 
 That is the only build step. No `npm install` is required.
@@ -79,7 +79,7 @@ That is the only build step. No `npm install` is required.
 ```bash
 node -e "const{createServer}=require('http'),{readFile}=require('fs/promises'),path=require('path');\
 createServer(async(q,s)=>{try{let p=q.url.split('?')[0];if(p==='/')p='/index.html';\
-let b=await readFile(path.join('dist',p));s.writeHead(200,{'Content-Type':{'.html':'text/html','.css':'text/css','.js':'text/javascript','.svg':'image/svg+xml','.png':'image/png','.xml':'application/xml','.txt':'text/plain'}[path.extname(p)]||'text/plain'});s.end(b)}catch{s.writeHead(404);s.end('nf')}}).listen(8080)"
+let b=await readFile(path.join('docs',p));s.writeHead(200,{'Content-Type':{'.html':'text/html','.css':'text/css','.js':'text/javascript','.svg':'image/svg+xml','.png':'image/png','.xml':'application/xml','.txt':'text/plain'}[path.extname(p)]||'text/plain'});s.end(b)}catch{s.writeHead(404);s.end('nf')}}).listen(8080)"
 ```
 
 ### Tests
@@ -127,18 +127,36 @@ assets/js/        engine.js (pricing + geometry), faq.js (content), calc-*.js (o
 public/           robots.txt
 build.mjs         the build: injects partials, FAQ, JSON-LD, canonical/OG tags, sitemap
 verify*.mjs       Playwright test suites
-dist/             build output — what GitHub Pages serves
+docs/             build output — what GitHub Pages serves
 ```
 
 ## Deployment
 
-`.github/workflows/pages.yml` builds `dist/` and publishes it to GitHub Pages
-on every push to `main`. Set **Settings → Pages → Source → GitHub Actions**.
+The built site lives in **`docs/`**, which is the folder GitHub Pages serves.
+
+**Settings → Pages → Build and deployment**, then pick one:
+
+| Source | Folder | Notes |
+|---|---|---|
+| **Deploy from a branch** | **`/docs`** | Branch `main`, folder `/docs`. Publishes the committed build straight away — no Actions needed. |
+| **GitHub Actions** | n/a | `.github/workflows/pages.yml` builds `docs/` and publishes it on every push to `main`. |
+
+**Do not choose "/ (root)"** — there is no `index.html` at the repository root,
+because the root holds the source (`src/`, `assets/`, `build.mjs`) and the
+Pages site is the built output in `docs/`.
+
+After switching the source, GitHub serves the site at
+`https://<user>.github.io/<repo>/`. For a custom domain, add a `CNAME` file
+containing the domain to `docs/`.
+
+> The site hardcodes `pourcost.com` in the canonical and Open Graph tags.
+> Change `SITE_URL` in `build.mjs` and rebuild if you publish on a different
+> domain, or the tags will point somewhere else.
 
 ## Notes
 
 - No tracking, no cookies, no third-party scripts except Google Fonts.
 - The domain is hardcoded to `pourcost.com` in `build.mjs`; change `SITE_URL`
   there if the real domain differs.
-- `README.md`, the source and `dist/` are committed; `.deploy-keys/` and
+- `README.md`, the source and `docs/` are committed; `.deploy-keys/` and
   `node_modules/` are not.

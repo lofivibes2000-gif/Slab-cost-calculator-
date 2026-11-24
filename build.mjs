@@ -15,7 +15,7 @@ import { createRequire } from "node:module";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const require = createRequire(import.meta.url);
 const SRC = path.join(__dirname, "src");
-const OUT = path.join(__dirname, "dist");
+const OUT = path.join(__dirname, "docs");
 const ASSETS = path.join(__dirname, "assets");
 const PUBLIC = path.join(__dirname, "public");
 
